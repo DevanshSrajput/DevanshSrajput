@@ -29,3 +29,7 @@
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=devanshsrajput&show_icons=true&locale=en" alt="devanshsrajput" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=devanshsrajput&" alt="devanshsrajput" /></p>
+
+<p align="center">
+ <img width="1000" src="assets/github-snake.svg" alt="snake"/>
+</p>
