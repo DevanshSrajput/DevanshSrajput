@@ -8,13 +8,13 @@
 
 <p align="left"> <a href="https://twitter.com/" target="blank"><img src="https://img.shields.io/twitter/follow/?logo=twitter&style=for-the-badge" alt="" /></a> </p>
 
-- 🔭 I’m currently working on **JAVA Projects**
+- 🔭 I’m currently working on **AI and Blockchain Technologies**
 
-- 🌱 I’m currently learning **C++, JAVA**
+- 🌱 I’m currently learning **Python, JAVA**
 
 - 📫 How to reach me **dksdevansh@gmail.com**
 
-- ⚡ Fun fact **NASA still uses programs from the 1970s in their spacecraft**
+- ⚡ **It’s all 0’s and 1’s**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
