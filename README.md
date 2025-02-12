@@ -1,5 +1,7 @@
-<h1 align="center">Hi 👋, I'm Devansh Singh</h1>
-<h3 align="center">An Aspiring WEB3 Developer</h3>
+ <h1 align="center">
+ <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&pause=1000&color=B3C8CF&width=500&lines=Hi+there!+👋+I'm+Devansh+Singh.;An+Aspiring+WEB3+Developer.;Welcome+to+my+GitHub+Profile!" alt="Typing Animation">
+</h1>
+<p>
 <img align="right" alt="Coding" width="400" src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif">
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=devanshsrajput&label=Profile%20views&color=0e75b6&style=flat" alt="devanshsrajput" /> </p>
 
