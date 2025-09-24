@@ -37,6 +37,8 @@ Setup and Installation
 
 How to Use
 
+Implementation Screenshots
+
 Machine Learning Workflow
 
 Project Overview
@@ -71,16 +73,22 @@ Data Visualization: Matplotlib, Seaborn
 Model Persistence: Joblib
 
 Project Structure
-The project is organized into a main application, a training script, and a separate page for analysis.
+The project is organized into a main application, a training script, and a separate page for analysis. The images folder contains screenshots of the application.
 
 loan_predictor/
 ├── pages/
-│   └── 1_Analysis_Dashboard.py  # The Streamlit page for detailed analysis.
-├── app.py                       # The main Streamlit script for the prediction UI.
-├── train_model.py               # Script to preprocess data and train the ML model.
-├── requirements.txt             # A list of all necessary Python packages.
-├── train_u6lujuX_CVtuZ9i.csv    # The training dataset.
-└── test_Y3wMUE5_7gLdaTN.csv     # The test dataset (for reference).
+│   └── 1_Analysis_Dashboard.py
+├── images/
+│   ├── 1.png
+│   ├── 2.png
+│   ├── 3.png
+│   ├── 4.png
+│   └── 5.png
+├── app.py
+├── train_model.py
+├── requirements.txt
+├── train_u6lujuX_CVtuZ9i.csv
+└── test_Y3wMUE5_7gLdaTN.csv
 
 Setup and Installation
 Follow these steps to set up and run the project on your local machine.
@@ -108,7 +116,7 @@ Install all the required libraries from the requirements.txt file.
 pip install -r requirements.txt
 
 4. Train the Model
-Before launching the app, you must first run the training script. This will perform the analysis and create the loan_predictor_model.joblib, scaler.joblib, and model_columns.joblib files.
+Before launching the app, you must first run the training script. This will create the necessary model files.
 
 python train_model.py
 
@@ -122,19 +130,36 @@ Your web browser will automatically open to the application's URL (usually http:
 How to Use
 The application is split into two pages, accessible from the sidebar navigation:
 
-Loan Predictor (Main Page):
+1. Loan Predictor (Main Page)
+This page contains the form to input applicant data and receive a prediction.
 
-Fill in the applicant's details in the form.
+Fill in the applicant's details.
 
 Click the "Predict Eligibility" button.
 
 The application will display the result ("Loan Approved" or "Loan Rejected") along with a confidence score.
 
-Analysis Dashboard:
+2. Analysis Dashboard
+Navigate to this page using the sidebar to view the complete model analysis.
 
-Navigate to this page using the sidebar.
+View EDA plots.
 
-Here you can view the EDA plots, performance metrics for both Logistic Regression and Random Forest, confusion matrices, and ROC curves.
+Compare performance metrics for Logistic Regression and Random Forest.
+
+See the confusion matrices and ROC curves.
+
+Implementation Screenshots
+Here are some screenshots showcasing the application's interface and features.
+
+1. Main Prediction Page
+
+2. Prediction Result - Approved
+
+3. Prediction Result - Rejected
+
+4. Analysis Dashboard - EDA and Model Performance
+
+5. Analysis Dashboard - Confusion Matrices and ROC Curves
 
 Machine Learning Workflow
 The modeling process follows these key steps:
@@ -143,18 +168,18 @@ Data Preprocessing:
 
 Handling Missing Values: Numerical columns are imputed with the mean, and categorical columns with the mode.
 
-Feature Encoding: Categorical features (like Gender, Married) are converted into numerical format using one-hot encoding.
+Feature Encoding: Categorical features are converted into numerical format using one-hot encoding.
 
-Data Scaling: Numerical features are normalized using StandardScaler to ensure they are on a consistent scale.
+Data Scaling: Numerical features are normalized using StandardScaler.
 
 Model Training:
 
-The preprocessed data is split into an 80% training set and a 20% validation set.
+The data is split into an 80% training set and a 20% validation set.
 
-Two models, Logistic Regression and Random Forest, are trained on the data.
+Logistic Regression and Random Forest models are trained.
 
 Model Evaluation:
 
-The models are evaluated on the validation set using Accuracy and Area Under the ROC Curve (AUC) as the primary metrics.
+The models are evaluated using Accuracy and AUC scores.
 
-The train_model.py script automatically compares the models and saves the one with the higher accuracy for use in the Streamlit application.
+The train_model.py script automatically saves the best-performing model for the live application.
