@@ -71,7 +71,7 @@ me.say_hello()
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=DevanshSrajput&theme=terminal&background=0D1117&border=00FF41&stroke=00FF41&ring=00FF41&fire=FF6B35&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=00FF41&sideLabels=00FF41&dates=888888)](https://git.io/streak-stats)
 
-![Snake animation](https://raw.githubusercontent.com/DevanshSrajput/DevanshSrajput/output/github-contribution-grid-snake-dark.svg)
+
 
 </div>
 
