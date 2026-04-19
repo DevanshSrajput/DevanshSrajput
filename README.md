@@ -81,7 +81,7 @@ me.say_hello()
 
 <div align="center">
 
-[![Portfolio](https://img.shields.io/badge/🌐_devanshsingh.dev-00FF41?style=for-the-badge&labelColor=0d1117)](https://devanshsingh.dev)
+[![Portfolio](https://img.shields.io/badge/🌐_devanshsingh.dev-0d1117?style=for-the-badge&labelColor=00FF41)](https://devanshsingh.dev)
 [![GitHub](https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=00FF41)](https://github.com/DevanshSrajput)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=0A66C2)](https://linkedin.com/in/DevanshSrajput)
 [![Email](https://img.shields.io/badge/Email-0d1117?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:your@email.com)
