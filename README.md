@@ -11,9 +11,9 @@
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=900&color=00FF41&center=true&vCenter=true&width=650&lines=%3E+loading+neural+pathways...;%3E+fine-tuning+on+hard+problems...;%3E+sudo+chmod+%2Bx+build_the_future.sh;%3E+access+granted+%E2%80%94+welcome%2C+human.)](https://git.io/typing-svg)
 
-<img src="https://komarev.com/ghpvc/?username=DevanshSrajput&style=for-the-badge&color=00ff41&labelColor=0d1117&label=VISITORS" />
+<img src="https://komarev.com/ghpvc/?username=DevanshSrajput&style=for-the-badge&color=000000&labelColor=0d1117&label=VISITORS" />
 &nbsp;
-<img src="https://img.shields.io/github/followers/DevanshSrajput?style=for-the-badge&color=00ff41&labelColor=0d1117&label=FOLLOWERS" />
+<img src="https://img.shields.io/github/followers/DevanshSrajput?style=for-the-badge&color=000000&labelColor=0d1117&label=FOLLOWERS" />
 
 </div>
 
