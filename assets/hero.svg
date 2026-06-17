@@ -117,29 +117,30 @@
   <!-- Subtitle — SMIL fade-in (was opacity:0 + CSS animation, now SMIL) -->
   <text x="450" y="138" text-anchor="middle" class="subtitle" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2s" dur="0.8s" fill="freeze"/>CS Undergrad @ SRM-IST  ·  Research Intern @ IIT(ISM) Dhanbad  ·  2027</text>
 
-  <!-- Role tag 1: Edge AI / LLMs -->
-  <rect x="110" y="160" width="140" height="26" rx="4" class="tag1" opacity="0">
+  <!-- Role tags — centered group (130+150+13)*4 = 639px, start=130, center=450 -->
+  <!-- Tag 1: Edge AI / LLMs -->
+  <rect x="130" y="160" width="150" height="26" rx="4" class="tag1" opacity="0">
     <animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.6s" fill="freeze"/>
   </rect>
-  <text x="180" y="178" text-anchor="middle" class="role1" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.6s" fill="freeze"/>Edge AI / LLMs</text>
+  <text x="205" y="178" text-anchor="middle" class="role1" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.6s" fill="freeze"/>Edge AI / LLMs</text>
 
-  <!-- Role tag 2: MLOps & Systems -->
-  <rect x="265" y="160" width="130" height="26" rx="4" class="tag2" opacity="0">
+  <!-- Tag 2: MLOps & Systems -->
+  <rect x="293" y="160" width="150" height="26" rx="4" class="tag2" opacity="0">
     <animate attributeName="opacity" from="0" to="1" begin="0.8s" dur="0.6s" fill="freeze"/>
   </rect>
-  <text x="330" y="178" text-anchor="middle" class="role2" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.8s" dur="0.6s" fill="freeze"/>MLOps &amp; Systems</text>
+  <text x="368" y="178" text-anchor="middle" class="role2" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.8s" dur="0.6s" fill="freeze"/>MLOps &amp; Systems</text>
 
-  <!-- Role tag 3: Data Science -->
-  <rect x="410" y="160" width="130" height="26" rx="4" class="tag3" opacity="0">
+  <!-- Tag 3: Data Science -->
+  <rect x="456" y="160" width="150" height="26" rx="4" class="tag3" opacity="0">
     <animate attributeName="opacity" from="0" to="1" begin="1.2s" dur="0.6s" fill="freeze"/>
   </rect>
-  <text x="475" y="178" text-anchor="middle" class="role3" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.2s" dur="0.6s" fill="freeze"/>Data Science</text>
+  <text x="531" y="178" text-anchor="middle" class="role3" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.2s" dur="0.6s" fill="freeze"/>Data Science</text>
 
-  <!-- Role tag 4: Agentic Systems -->
-  <rect x="555" y="160" width="140" height="26" rx="4" class="tag4" opacity="0">
+  <!-- Tag 4: Agentic Systems -->
+  <rect x="619" y="160" width="150" height="26" rx="4" class="tag4" opacity="0">
     <animate attributeName="opacity" from="0" to="1" begin="1.6s" dur="0.6s" fill="freeze"/>
   </rect>
-  <text x="625" y="178" text-anchor="middle" class="role4" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.6s" dur="0.6s" fill="freeze"/>Agentic Systems</text>
+  <text x="694" y="178" text-anchor="middle" class="role4" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.6s" dur="0.6s" fill="freeze"/>Agentic Systems</text>
 
   <!-- Progress bar track -->
   <rect x="110" y="228" width="680" height="2" rx="1" fill="#ffffff10"/>
