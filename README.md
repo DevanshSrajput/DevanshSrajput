@@ -1,8 +1,9 @@
 <div align="center">
 
-<!-- HERO BANNER -->
-<!-- GitHub strips width="100%" on img — use raw githubusercontent path once pushed -->
-<img src="assets/hero.svg" alt="Devansh Singh Rajput" style="max-width:100%;"/>
+<!-- HERO BANNER — wrapped in <a> so clicking it opens the portfolio -->
+<a href="https://devanshsingh.dev" target="_blank" rel="noopener noreferrer">
+  <img src="assets/hero.svg" alt="Devansh Singh Rajput — devanshsingh.dev" style="max-width:100%;"/>
+</a>
 
 <!-- TYPING TAGLINE -->
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Courier+Prime&size=16&pause=1200&color=00FF41&center=true&vCenter=true&width=700&lines=%3E+Running+Qwen2.5+on+Jetson+hardware+from+a+hostel+room.;%3E+Building+HiSLM+%E2%80%94+distributed+SLM+inference+on+edge+devices.;%3E+Amazon+ML+Summer+School+%2725+selectee.;%3E+One+overnight+Flutter+app+because+dad%27s+fleet+needed+it.;%3E+CGPA+8.91+%C2%B7+47%2B+repos+%C2%B7+still+shipping.)](https://git.io/typing-svg)
