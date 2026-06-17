@@ -99,18 +99,6 @@ class DevanshSinghRajput:
 
 </div>
 
----
-
-<!-- CONTRIBUTION SNAKE -->
-<div align="center">
-
-## `> git log --graph`
-
-<img src="https://raw.githubusercontent.com/DevanshSrajput/DevanshSrajput/output/github-contribution-grid-snake-dark.svg" alt="contribution snake"/>
-
-<!-- Snake setup: add .github/workflows/snake.yml using Platane/snk@v3, push to output branch -->
-
-</div>
 
 ---
 
