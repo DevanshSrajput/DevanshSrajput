@@ -15,7 +15,7 @@
 &nbsp;
 <img src="https://img.shields.io/github/followers/DevanshSrajput?style=for-the-badge&color=000000&labelColor=0d1117&label=FOLLOWERS"/>
 &nbsp;
-<img src="https://img.shields.io/badge/CGPA-8.91-00ff41?style=for-the-badge&labelColor=0d1117"/>
+<img src="https://img.shields.io/badge/CGPA-8.91-0d1117?style=for-the-badge&labelColor=00ff41"/>
 &nbsp;
 <img src="https://img.shields.io/badge/Amazon_ML_SS-2025-FF9900?style=for-the-badge&logo=amazon&labelColor=0d1117"/>
 &nbsp;
