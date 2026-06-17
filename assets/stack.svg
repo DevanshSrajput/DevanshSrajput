@@ -1,0 +1,146 @@
+<svg viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg" width="900" height="200">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap');
+      .bg { fill: #0d1117; }
+      .node { fill: #161b22; stroke-width: 1; }
+      .label { font-family: 'Share Tech Mono', monospace; font-size: 11px; text-anchor: middle; }
+      .header { font-family: 'Share Tech Mono', monospace; font-size: 15px; fill: #00ff41; }
+      .sub { font-family: 'Share Tech Mono', monospace; font-size: 11px; fill: #444d56; }
+
+      /* Node fade-in stagger */
+      .n { opacity: 0; }
+      .n0  { animation: nIn 0.4s 0.0s ease forwards; }
+      .n1  { animation: nIn 0.4s 0.1s ease forwards; }
+      .n2  { animation: nIn 0.4s 0.2s ease forwards; }
+      .n3  { animation: nIn 0.4s 0.3s ease forwards; }
+      .n4  { animation: nIn 0.4s 0.4s ease forwards; }
+      .n5  { animation: nIn 0.4s 0.5s ease forwards; }
+      .n6  { animation: nIn 0.4s 0.6s ease forwards; }
+      .n7  { animation: nIn 0.4s 0.7s ease forwards; }
+      .n8  { animation: nIn 0.4s 0.8s ease forwards; }
+      .n9  { animation: nIn 0.4s 0.9s ease forwards; }
+      .n10 { animation: nIn 0.4s 1.0s ease forwards; }
+      .n11 { animation: nIn 0.4s 1.1s ease forwards; }
+      .n12 { animation: nIn 0.4s 1.2s ease forwards; }
+      .n13 { animation: nIn 0.4s 1.3s ease forwards; }
+      .n14 { animation: nIn 0.4s 1.4s ease forwards; }
+      .n15 { animation: nIn 0.4s 1.5s ease forwards; }
+      @keyframes nIn {
+        from { opacity: 0; transform: scale(0.7); }
+        to   { opacity: 1; transform: scale(1); }
+      }
+
+      /* Ripple pulse per color group */
+      .pg { animation: pglow 2.8s ease-in-out infinite alternate; }
+      .bg2 { animation: bglow 2.8s 0.4s ease-in-out infinite alternate; }
+      .og { animation: oglow 2.8s 0.8s ease-in-out infinite alternate; }
+      .gg { animation: gglow 2.8s 1.2s ease-in-out infinite alternate; }
+
+      @keyframes pglow { from { filter: drop-shadow(0 0 2px #cc3300); } to { filter: drop-shadow(0 0 7px #ee4c2c); } }
+      @keyframes bglow { from { filter: drop-shadow(0 0 2px #ffd21e40); } to { filter: drop-shadow(0 0 7px #ffd21e99); } }
+      @keyframes oglow { from { filter: drop-shadow(0 0 2px #00ff4140); } to { filter: drop-shadow(0 0 7px #00ff4199); } }
+      @keyframes gglow { from { filter: drop-shadow(0 0 2px #2496ed40); } to { filter: drop-shadow(0 0 7px #2496ed99); } }
+    </style>
+  </defs>
+
+  <rect width="900" height="200" class="bg" rx="8"/>
+  <text x="20" y="28" class="header">&gt; cat ./stack.conf</text>
+  <text x="20" y="46" class="sub">core technologies · verified by shipped code</text>
+  <line x1="20" y1="54" x2="880" y2="54" stroke="#00ff4125" stroke-width="1"/>
+
+  <!-- ROW 1: Deep Learning / Core ML -->
+  <!-- PyTorch -->
+  <g class="n n0 pg">
+    <rect x="20"  y="68" width="78" height="40" rx="5" class="node" stroke="#EE4C2C"/>
+    <text x="59"  y="83" class="label" fill="#EE4C2C">PyTorch</text>
+    <text x="59"  y="97" class="label" style="font-size:9px;fill:#666">🔥 primary</text>
+  </g>
+  <g class="n n1 pg">
+    <rect x="106" y="68" width="88" height="40" rx="5" class="node" stroke="#FF6F00"/>
+    <text x="150" y="83" class="label" fill="#FF6F00">TensorFlow</text>
+    <text x="150" y="97" class="label" style="font-size:9px;fill:#666">secondary</text>
+  </g>
+  <g class="n n2 bg2">
+    <rect x="202" y="68" width="98" height="40" rx="5" class="node" stroke="#FFD21E"/>
+    <text x="251" y="83" class="label" fill="#FFD21E">HuggingFace</text>
+    <text x="251" y="97" class="label" style="font-size:9px;fill:#666">🤗 transformers</text>
+  </g>
+  <g class="n n3 og">
+    <rect x="308" y="68" width="88" height="40" rx="5" class="node" stroke="#00FF41"/>
+    <text x="352" y="83" class="label" fill="#00FF41">LangGraph</text>
+    <text x="352" y="97" class="label" style="font-size:9px;fill:#666">agents</text>
+  </g>
+  <g class="n n4 og">
+    <rect x="404" y="68" width="78" height="40" rx="5" class="node" stroke="#00CC33"/>
+    <text x="443" y="83" class="label" fill="#00CC33">llama.cpp</text>
+    <text x="443" y="97" class="label" style="font-size:9px;fill:#666">edge infer</text>
+  </g>
+  <g class="n n5 og">
+    <rect x="490" y="68" width="68" height="40" rx="5" class="node" stroke="#009688"/>
+    <text x="524" y="83" class="label" fill="#009688">FastAPI</text>
+    <text x="524" y="97" class="label" style="font-size:9px;fill:#666">serving</text>
+  </g>
+  <g class="n n6 gg">
+    <rect x="566" y="68" width="68" height="40" rx="5" class="node" stroke="#2496ED"/>
+    <text x="600" y="83" class="label" fill="#2496ED">Docker</text>
+    <text x="600" y="97" class="label" style="font-size:9px;fill:#666">container</text>
+  </g>
+  <g class="n n7 pg">
+    <rect x="642" y="68" width="68" height="40" rx="5" class="node" stroke="#5C3EE8"/>
+    <text x="676" y="83" class="label" fill="#5C3EE8">OpenCV</text>
+    <text x="676" y="97" class="label" style="font-size:9px;fill:#666">vision</text>
+  </g>
+  <g class="n n8 og">
+    <rect x="718" y="68" width="80" height="40" rx="5" class="node" stroke="#F7931E"/>
+    <text x="758" y="83" class="label" fill="#F7931E">scikit-learn</text>
+    <text x="758" y="97" class="label" style="font-size:9px;fill:#666">classical ML</text>
+  </g>
+  <g class="n n9 gg">
+    <rect x="806" y="68" width="76" height="40" rx="5" class="node" stroke="#00CC33"/>
+    <text x="844" y="83" class="label" fill="#00CC33">ChromaDB</text>
+    <text x="844" y="97" class="label" style="font-size:9px;fill:#666">vector store</text>
+  </g>
+
+  <!-- ROW 2 -->
+  <g class="n n10 og">
+    <rect x="20"  y="120" width="58" height="40" rx="5" class="node" stroke="#3776AB"/>
+    <text x="49"  y="135" class="label" fill="#3776AB">Python</text>
+    <text x="49"  y="149" class="label" style="font-size:9px;fill:#666">🐍 base</text>
+  </g>
+  <g class="n n11 gg">
+    <rect x="86"  y="120" width="56" height="40" rx="5" class="node" stroke="#00599C"/>
+    <text x="114" y="135" class="label" fill="#00599C">C++</text>
+    <text x="114" y="149" class="label" style="font-size:9px;fill:#666">perf</text>
+  </g>
+  <g class="n n12 bg2">
+    <rect x="150" y="120" width="58" height="40" rx="5" class="node" stroke="#02569B"/>
+    <text x="179" y="135" class="label" fill="#02569B">Flutter</text>
+    <text x="179" y="149" class="label" style="font-size:9px;fill:#666">mobile</text>
+  </g>
+  <g class="n n13 gg">
+    <rect x="216" y="120" width="60" height="40" rx="5" class="node" stroke="#F05032"/>
+    <text x="246" y="135" class="label" fill="#F05032">Git</text>
+    <text x="246" y="149" class="label" style="font-size:9px;fill:#666">version ctrl</text>
+  </g>
+  <g class="n n14 gg">
+    <rect x="284" y="120" width="58" height="40" rx="5" class="node" stroke="#FCC624"/>
+    <text x="313" y="135" class="label" fill="#FCC624">Linux</text>
+    <text x="313" y="149" class="label" style="font-size:9px;fill:#666">native</text>
+  </g>
+  <g class="n n15 pg">
+    <rect x="350" y="120" width="68" height="40" rx="5" class="node" stroke="#F37626"/>
+    <text x="384" y="135" class="label" fill="#F37626">Jupyter</text>
+    <text x="384" y="149" class="label" style="font-size:9px;fill:#666">notebooks</text>
+  </g>
+
+  <!-- Right side legend -->
+  <rect x="500" y="120" width="380" height="66" rx="4" fill="#161b22" stroke="#ffffff10" stroke-width="1"/>
+  <text x="516" y="140" font-family="'Share Tech Mono', monospace" font-size="10" fill="#00ff41">&gt; currently running:</text>
+  <text x="516" y="156" font-family="'Share Tech Mono', monospace" font-size="10" fill="#8b949e">Qwen2.5-1.5B fine-tune on Jetson NX</text>
+  <text x="516" y="170" font-family="'Share Tech Mono', monospace" font-size="10" fill="#8b949e">FastAPI inference server · TailScale mesh</text>
+  <circle cx="860" cy="133" r="5" fill="#00ff41">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="850" y="188" font-family="'Share Tech Mono', monospace" font-size="9" fill="#444d56" text-anchor="end">deadline: June 25 →</text>
+</svg>
