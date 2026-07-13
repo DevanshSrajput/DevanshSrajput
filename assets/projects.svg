@@ -2,8 +2,8 @@
   <defs>
     <style>
       .bg { fill: #06080f; }
-      .fn { font-family: 'Segoe UI','Helvetica Neue',Arial,sans-serif; }
-      .fm { font-family: 'Courier New',Courier,monospace; }
+      .fn { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+      .fm { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
       .card { fill: #0d1224; stroke-width: 1; rx: 10; }
       .card-title { font-size: 14px; font-weight: 700; }
       .card-sub { font-size: 10px; fill: #64748b; font-weight: 600; }
