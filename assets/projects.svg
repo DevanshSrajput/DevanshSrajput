@@ -1,282 +1,241 @@
-<svg viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg" width="900" height="620">
+<svg viewBox="0 0 900 580" xmlns="http://www.w3.org/2000/svg" width="900" height="580">
   <defs>
     <style>
-      .bg { fill: #0d1117; }
-      .card { fill: #161b22; stroke-width: 1; }
-      .c-green  { stroke: #00ff41; }
-      .c-blue   { stroke: #00bfff; }
-      .c-orange { stroke: #ff6b35; }
-      .c-purple { stroke: #a371f7; }
-      .c-pink   { stroke: #f778ba; }
-      .c-yellow { stroke: #ffd700; }
-      .c-cyan   { stroke: #00e5ff; }
-      .title { font-family: 'Courier New',Courier,monospace; font-size: 13px; font-weight: bold; }
-      .desc  { font-family: 'Courier New',Courier,monospace; font-size: 10px; fill: #8b949e; }
-      .tag   { font-family: 'Courier New',Courier,monospace; font-size: 9px; }
-      .icon  { font-family: 'Courier New',Courier,monospace; font-size: 18px; }
-      .star  { font-family: 'Courier New',Courier,monospace; font-size: 10px; fill: #ffd70099; }
-      .t-green  { fill: #00ff41; }
-      .t-blue   { fill: #00bfff; }
-      .t-orange { fill: #ff6b35; }
-      .t-purple { fill: #a371f7; }
-      .t-pink   { fill: #f778ba; }
-      .t-yellow { fill: #ffd700; }
-      .t-cyan   { fill: #00e5ff; }
-      .tag-bg-green  { fill: #00ff4115; stroke: #00ff4140; stroke-width: 0.5; }
-      .tag-bg-blue   { fill: #00bfff15; stroke: #00bfff40; stroke-width: 0.5; }
-      .tag-bg-orange { fill: #ff6b3515; stroke: #ff6b3540; stroke-width: 0.5; }
-      .tag-bg-purple { fill: #a371f715; stroke: #a371f740; stroke-width: 0.5; }
-      .tag-bg-pink   { fill: #f778ba15; stroke: #f778ba40; stroke-width: 0.5; }
-      .tag-bg-yellow { fill: #ffd70015; stroke: #ffd70040; stroke-width: 0.5; }
-      .tag-bg-cyan   { fill: #00e5ff15; stroke: #00e5ff40; stroke-width: 0.5; }
-      .section-header { font-family: 'Courier New',Courier,monospace; font-size: 15px; fill: #00ff41; }
-      .section-sub    { font-family: 'Courier New',Courier,monospace; font-size: 11px; fill: #444d56; }
+      .bg { fill: #06080f; }
+      .fn { font-family: 'Segoe UI','Helvetica Neue',Arial,sans-serif; }
+      .fm { font-family: 'Courier New',Courier,monospace; }
+      .card { fill: #0d1224; stroke-width: 1; rx: 10; }
+      .card-title { font-size: 14px; font-weight: 700; }
+      .card-sub { font-size: 10px; fill: #64748b; font-weight: 600; }
+      .card-desc { font-size: 10px; fill: #94a3b8; }
+      .card-footer { font-size: 9px; font-weight: 600; }
+      .tag { font-size: 8px; font-weight: 600; text-anchor: middle; }
+      .hdr { font-size: 14px; fill: #e0e7ff; font-weight: 700; letter-spacing: 0.5px; }
+      .hsub { font-size: 10px; fill: #475569; }
     </style>
+
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06080f"/>
+      <stop offset="50%" stop-color="#0d1224"/>
+      <stop offset="100%" stop-color="#06080f"/>
+    </linearGradient>
   </defs>
 
-  <rect width="900" height="620" class="bg" rx="8"/>
-  <text x="20" y="30" class="section-header">&gt; ls ./projects --top</text>
-  <text x="20" y="48" class="section-sub">7 entries · sorted by impact</text>
-  <line x1="20" y1="56" x2="880" y2="56" stroke="#00ff4125" stroke-width="1"/>
+  <!-- Background -->
+  <rect width="900" height="580" fill="url(#bg-grad)" rx="10"/>
+  <rect width="900" height="580" fill="none" stroke="#1e293b" stroke-width="1" rx="10"/>
 
-  <!-- ══ ROW 1 ══ -->
+  <!-- Header -->
+  <text x="30" y="32" class="fn hdr">Featured Projects</text>
+  <text x="30" y="46" class="fn hsub">Impact-driven engineering — sorted by complexity</text>
+  <line x1="30" y1="56" x2="870" y2="56" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- ========== ROW 1: Three cards ========== -->
 
   <!-- Card 0: HiSLM -->
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="0.1s" dur="0.5s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="0 14" to="0 0" begin="0.1s" dur="0.5s" fill="freeze"/>
-    <!-- background -->
-    <rect x="18" y="70" width="274" height="148" rx="6" class="card c-green"/>
-    <!-- border draw animation — stroke-dashoffset from full perimeter → 0 -->
-    <rect x="18" y="70" width="274" height="148" rx="6" fill="none" stroke="#00ff41" stroke-width="1.5" stroke-dasharray="900" stroke-dashoffset="900">
-      <animate attributeName="stroke-dashoffset" from="900" to="0" begin="0.1s" dur="1.0s" fill="freeze"/>
+  <g transform="translate(20, 68)">
+    <rect width="274" height="152" rx="10" class="card" stroke="#f59e0b30"/>
+    <!-- Top accent -->
+    <rect x="0" y="0" width="274" height="3" rx="10" fill="#f59e0b" opacity="0.6"/>
+    <!-- Animated border trace -->
+    <rect width="274" height="152" rx="10" fill="none" stroke="#f59e0b" stroke-width="1" stroke-dasharray="120 740" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" values="860;0" dur="6s" repeatCount="indefinite"/>
     </rect>
-    <!-- accent bar grow -->
-    <rect x="18" y="70" width="0" height="2" rx="1" fill="#00ff41">
-      <animate attributeName="width" from="0" to="274" dur="0.8s" begin="0.1s" fill="freeze"/>
-    </rect>
-    <!-- shimmer after bar completes -->
-    <rect x="18" y="70" width="8" height="2" rx="1" fill="#ffffff" opacity="0">
-      <animate attributeName="opacity" values="0;0.9;0" dur="0.35s" begin="0.9s"/>
-      <animate attributeName="x" from="18" to="292" dur="0.35s" begin="0.9s"/>
-    </rect>
-    <text x="36" y="98" class="icon t-green">⬡</text>
-    <text x="60" y="96" class="title t-green">HiSLM</text>
-    <text x="60" y="111" class="desc">Distributed SLM inference</text>
-    <text x="26" y="130" class="desc">AGX Orin + Orin NX · TailScale mesh.</text>
-    <text x="26" y="143" class="desc">FastAPI · WebSocket · Qwen2.5 SFT'd</text>
-    <text x="26" y="156" class="desc">Med + mining data. Real hardware.</text>
-    <rect x="26"  y="168" width="52"  height="16" rx="3" class="tag-bg-green"/>
-    <text x="52"  y="180" text-anchor="middle" class="tag t-green">llama.cpp</text>
-    <rect x="84"  y="168" width="46"  height="16" rx="3" class="tag-bg-green"/>
-    <text x="107" y="180" text-anchor="middle" class="tag t-green">FastAPI</text>
-    <rect x="136" y="168" width="60"  height="16" rx="3" class="tag-bg-green"/>
-    <text x="166" y="180" text-anchor="middle" class="tag t-green">Edge AI</text>
-    <rect x="202" y="168" width="56"  height="16" rx="3" class="tag-bg-green"/>
-    <text x="230" y="180" text-anchor="middle" class="tag t-green">NVIDIA</text>
-    <text x="26"  y="208" class="star"><animate attributeName="opacity" values="0.5;1;0.5" dur="3s" begin="2s" repeatCount="indefinite"/>★ IIT(ISM) Dhanbad Research · Jun 2025</text>
+
+    <circle cx="22" cy="30" r="4" fill="#f59e0b" opacity="0.8"/>
+    <text x="34" y="34" class="fn card-title" fill="#fbbf24">HiSLM</text>
+    <text x="34" y="46" class="fn card-sub">Distributed Edge Inference System</text>
+
+    <text x="16" y="68" class="fm card-desc">Jetson AGX Orin + NX cluster running</text>
+    <text x="16" y="81" class="fm card-desc">Qwen2.5 over TailScale mesh. FastAPI</text>
+    <text x="16" y="94" class="fm card-desc">orchestration for medical QA inference.</text>
+
+    <!-- Tags -->
+    <rect x="16" y="106" width="52" height="14" rx="7" fill="#f59e0b10" stroke="#f59e0b35" stroke-width="0.5"/>
+    <text x="42" y="116" class="fn tag" fill="#fbbf24">llama.cpp</text>
+    <rect x="73" y="106" width="44" height="14" rx="7" fill="#f59e0b10" stroke="#f59e0b35" stroke-width="0.5"/>
+    <text x="95" y="116" class="fn tag" fill="#fbbf24">FastAPI</text>
+    <rect x="122" y="106" width="48" height="14" rx="7" fill="#f59e0b10" stroke="#f59e0b35" stroke-width="0.5"/>
+    <text x="146" y="116" class="fn tag" fill="#fbbf24">Edge AI</text>
+    <rect x="175" y="106" width="44" height="14" rx="7" fill="#f59e0b10" stroke="#f59e0b35" stroke-width="0.5"/>
+    <text x="197" y="116" class="fn tag" fill="#fbbf24">NVIDIA</text>
+
+    <text x="16" y="140" class="fn card-footer" fill="#f59e0b">IIT(ISM) Dhanbad Research</text>
   </g>
 
   <!-- Card 1: NexusPay -->
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="0.3s" dur="0.5s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="0 14" to="0 0" begin="0.3s" dur="0.5s" fill="freeze"/>
-    <rect x="312" y="70" width="274" height="148" rx="6" class="card c-blue"/>
-    <rect x="312" y="70" width="274" height="148" rx="6" fill="none" stroke="#00bfff" stroke-width="1.5" stroke-dasharray="900" stroke-dashoffset="900">
-      <animate attributeName="stroke-dashoffset" from="900" to="0" begin="0.3s" dur="1.0s" fill="freeze"/>
+  <g transform="translate(313, 68)">
+    <rect width="274" height="152" rx="10" class="card" stroke="#8b5cf630"/>
+    <rect x="0" y="0" width="274" height="3" rx="10" fill="#8b5cf6" opacity="0.6"/>
+    <rect width="274" height="152" rx="10" fill="none" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="120 740" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" values="860;0" dur="6s" begin="1s" repeatCount="indefinite"/>
     </rect>
-    <rect x="312" y="70" width="0"   height="2"   rx="1" fill="#00bfff">
-      <animate attributeName="width" from="0" to="274" dur="0.8s" begin="0.3s" fill="freeze"/>
-    </rect>
-    <rect x="312" y="70" width="8" height="2" rx="1" fill="#ffffff" opacity="0">
-      <animate attributeName="opacity" values="0;0.9;0" dur="0.35s" begin="1.1s"/>
-      <animate attributeName="x" from="312" to="586" dur="0.35s" begin="1.1s"/>
-    </rect>
-    <text x="330" y="98" class="icon t-blue">⬡</text>
-    <text x="354" y="96" class="title t-blue">NexusPay</text>
-    <text x="354" y="111" class="desc">Autonomous AI payment agent</text>
-    <text x="320" y="130" class="desc">Pay-per-call via x402 · budget caps,</text>
-    <text x="320" y="143" class="desc">SQLite audit · Gemini synthesis.</text>
-    <text x="320" y="156" class="desc">Per-request billing baked in.</text>
-    <rect x="320" y="168" width="56" height="16" rx="3" class="tag-bg-blue"/>
-    <text x="348" y="180" text-anchor="middle" class="tag t-blue">x402</text>
-    <rect x="382" y="168" width="54" height="16" rx="3" class="tag-bg-blue"/>
-    <text x="409" y="180" text-anchor="middle" class="tag t-blue">Gemini</text>
-    <rect x="442" y="168" width="56" height="16" rx="3" class="tag-bg-blue"/>
-    <text x="470" y="180" text-anchor="middle" class="tag t-blue">SQLite</text>
-    <rect x="504" y="168" width="52" height="16" rx="3" class="tag-bg-blue"/>
-    <text x="530" y="180" text-anchor="middle" class="tag t-blue">Agents</text>
-    <text x="320" y="208" class="star"><animate attributeName="opacity" values="0.5;1;0.5" dur="3s" begin="2.2s" repeatCount="indefinite"/>★ Autonomous · Per-call billing · Audit trail</text>
+
+    <circle cx="22" cy="30" r="4" fill="#8b5cf6" opacity="0.8"/>
+    <text x="34" y="34" class="fn card-title" fill="#a78bfa">NexusPay</text>
+    <text x="34" y="46" class="fn card-sub">Autonomous AI Payment Agent</text>
+
+    <text x="16" y="68" class="fm card-desc">Pay-per-call billing via x402 protocol.</text>
+    <text x="16" y="81" class="fm card-desc">Budget caps, SQLite audit log, Gemini</text>
+    <text x="16" y="94" class="fm card-desc">synthesis. Per-request cost governance.</text>
+
+    <rect x="16" y="106" width="32" height="14" rx="7" fill="#8b5cf610" stroke="#8b5cf635" stroke-width="0.5"/>
+    <text x="32" y="116" class="fn tag" fill="#a78bfa">x402</text>
+    <rect x="53" y="106" width="44" height="14" rx="7" fill="#8b5cf610" stroke="#8b5cf635" stroke-width="0.5"/>
+    <text x="75" y="116" class="fn tag" fill="#a78bfa">Gemini</text>
+    <rect x="102" y="106" width="42" height="14" rx="7" fill="#8b5cf610" stroke="#8b5cf635" stroke-width="0.5"/>
+    <text x="123" y="116" class="fn tag" fill="#a78bfa">SQLite</text>
+    <rect x="149" y="106" width="44" height="14" rx="7" fill="#8b5cf610" stroke="#8b5cf635" stroke-width="0.5"/>
+    <text x="171" y="116" class="fn tag" fill="#a78bfa">Agents</text>
+
+    <text x="16" y="140" class="fn card-footer" fill="#8b5cf6">Autonomous agent billing</text>
   </g>
 
-  <!-- Card 2: Data Analyst Agent -->
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="0.5s" dur="0.5s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="0 14" to="0 0" begin="0.5s" dur="0.5s" fill="freeze"/>
-    <rect x="608" y="70" width="274" height="148" rx="6" class="card c-orange"/>
-    <rect x="608" y="70" width="274" height="148" rx="6" fill="none" stroke="#ff6b35" stroke-width="1.5" stroke-dasharray="900" stroke-dashoffset="900">
-      <animate attributeName="stroke-dashoffset" from="900" to="0" begin="0.5s" dur="1.0s" fill="freeze"/>
+  <!-- Card 2: Dataa_Analyst_Agent -->
+  <g transform="translate(606, 68)">
+    <rect width="274" height="152" rx="10" class="card" stroke="#f43f5e30"/>
+    <rect x="0" y="0" width="274" height="3" rx="10" fill="#f43f5e" opacity="0.6"/>
+    <rect width="274" height="152" rx="10" fill="none" stroke="#f43f5e" stroke-width="1" stroke-dasharray="120 740" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" values="860;0" dur="6s" begin="2s" repeatCount="indefinite"/>
     </rect>
-    <rect x="608" y="70" width="0"   height="2"   rx="1" fill="#ff6b35">
-      <animate attributeName="width" from="0" to="274" dur="0.8s" begin="0.5s" fill="freeze"/>
-    </rect>
-    <rect x="608" y="70" width="8" height="2" rx="1" fill="#ffffff" opacity="0">
-      <animate attributeName="opacity" values="0;0.9;0" dur="0.35s" begin="1.3s"/>
-      <animate attributeName="x" from="608" to="882" dur="0.35s" begin="1.3s"/>
-    </rect>
-    <text x="626" y="98" class="icon t-orange">⬡</text>
-    <text x="650" y="96" class="title t-orange">Dataa_Analyst_Agent</text>
-    <text x="650" y="111" class="desc">⭐ 21 stars</text>
-    <text x="616" y="130" class="desc">Multi-agent LangGraph · NL → SQL</text>
-    <text x="616" y="143" class="desc">→ charts → insight. Autonomous</text>
-    <text x="616" y="156" class="desc">analysis. Deployed. Still ships.</text>
-    <rect x="616" y="168" width="62" height="16" rx="3" class="tag-bg-orange"/>
-    <text x="647" y="180" text-anchor="middle" class="tag t-orange">LangGraph</text>
-    <rect x="684" y="168" width="42" height="16" rx="3" class="tag-bg-orange"/>
-    <text x="705" y="180" text-anchor="middle" class="tag t-orange">SQL</text>
-    <rect x="732" y="168" width="54" height="16" rx="3" class="tag-bg-orange"/>
-    <text x="759" y="180" text-anchor="middle" class="tag t-orange">Agents</text>
-    <rect x="792" y="168" width="56" height="16" rx="3" class="tag-bg-orange"/>
-    <text x="820" y="180" text-anchor="middle" class="tag t-orange">Prod</text>
-    <text x="616" y="208" class="star"><animate attributeName="opacity" values="0.5;1;0.5" dur="3s" begin="2.4s" repeatCount="indefinite"/>★ 21 GitHub stars · Highest in account</text>
+
+    <circle cx="22" cy="30" r="4" fill="#f43f5e" opacity="0.8"/>
+    <text x="34" y="34" class="fn card-title" fill="#fb7185">Dataa_Analyst_Agent</text>
+    <text x="34" y="46" class="fn card-sub">NL-to-SQL Multi-Agent Pipeline</text>
+
+    <text x="16" y="68" class="fm card-desc">LangGraph multi-agent: natural language</text>
+    <text x="16" y="81" class="fm card-desc">to SQL queries to charts to written</text>
+    <text x="16" y="94" class="fm card-desc">insights. Deployed and actively used.</text>
+
+    <rect x="16" y="106" width="56" height="14" rx="7" fill="#f43f5e10" stroke="#f43f5e35" stroke-width="0.5"/>
+    <text x="44" y="116" class="fn tag" fill="#fb7185">LangGraph</text>
+    <rect x="77" y="106" width="30" height="14" rx="7" fill="#f43f5e10" stroke="#f43f5e35" stroke-width="0.5"/>
+    <text x="92" y="116" class="fn tag" fill="#fb7185">SQL</text>
+    <rect x="112" y="106" width="44" height="14" rx="7" fill="#f43f5e10" stroke="#f43f5e35" stroke-width="0.5"/>
+    <text x="134" y="116" class="fn tag" fill="#fb7185">Agents</text>
+    <rect x="161" y="106" width="36" height="14" rx="7" fill="#f43f5e10" stroke="#f43f5e35" stroke-width="0.5"/>
+    <text x="179" y="116" class="fn tag" fill="#fb7185">Prod</text>
+
+    <text x="16" y="140" class="fn card-footer" fill="#f43f5e">21 GitHub Stars</text>
   </g>
 
-  <!-- ══ ROW 2 ══ -->
+  <!-- ========== ROW 2: Two wider cards ========== -->
 
   <!-- Card 3: SignalHire -->
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="0.7s" dur="0.5s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="0 14" to="0 0" begin="0.7s" dur="0.5s" fill="freeze"/>
-    <rect x="18" y="238" width="420" height="148" rx="6" class="card c-purple"/>
-    <rect x="18" y="238" width="420" height="148" rx="6" fill="none" stroke="#a371f7" stroke-width="1.5" stroke-dasharray="1200" stroke-dashoffset="1200">
-      <animate attributeName="stroke-dashoffset" from="1200" to="0" begin="0.7s" dur="1.1s" fill="freeze"/>
+  <g transform="translate(20, 240)">
+    <rect width="424" height="148" rx="10" class="card" stroke="#06b6d430"/>
+    <rect x="0" y="0" width="424" height="3" rx="10" fill="#06b6d4" opacity="0.6"/>
+    <rect width="424" height="148" rx="10" fill="none" stroke="#06b6d4" stroke-width="1" stroke-dasharray="140 1004" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" values="1144;0" dur="7s" begin="0.5s" repeatCount="indefinite"/>
     </rect>
-    <rect x="18" y="238" width="0"   height="2"   rx="1" fill="#a371f7">
-      <animate attributeName="width" from="0" to="420" dur="0.8s" begin="0.7s" fill="freeze"/>
-    </rect>
-    <rect x="18" y="238" width="8" height="2" rx="1" fill="#ffffff" opacity="0">
-      <animate attributeName="opacity" values="0;0.9;0" dur="0.35s" begin="1.5s"/>
-      <animate attributeName="x" from="18" to="438" dur="0.35s" begin="1.5s"/>
-    </rect>
-    <text x="36" y="266" class="icon t-purple">⬡</text>
-    <text x="60" y="264" class="title t-purple">SignalHire</text>
-    <text x="60" y="279" class="desc">AI candidate ranking · Redrob Hackathon</text>
-    <text x="26" y="298" class="desc">Two-phase unsupervised pipeline: rule-based</text>
-    <text x="26" y="311" class="desc">composite score → sentence-transformer embeds.</text>
-    <text x="26" y="324" class="desc">100K candidates, CPU-only, 16GB RAM sandbox.</text>
-    <text x="26" y="337" class="desc">No LLM at inference. Constraint-first design.</text>
-    <rect x="26"  y="352" width="88" height="16" rx="3" class="tag-bg-purple"/>
-    <text x="70"  y="364" text-anchor="middle" class="tag t-purple">MiniLM-L6-v2</text>
-    <rect x="120" y="352" width="58" height="16" rx="3" class="tag-bg-purple"/>
-    <text x="149" y="364" text-anchor="middle" class="tag t-purple">NLP Rank</text>
-    <rect x="184" y="352" width="54" height="16" rx="3" class="tag-bg-purple"/>
-    <text x="211" y="364" text-anchor="middle" class="tag t-purple">CPU-only</text>
-    <rect x="244" y="352" width="62" height="16" rx="3" class="tag-bg-purple"/>
-    <text x="275" y="364" text-anchor="middle" class="tag t-purple">Hackathon</text>
-    <text x="26"  y="376" class="star"><animate attributeName="opacity" values="0.5;1;0.5" dur="3s" begin="2.6s" repeatCount="indefinite"/>★ India Runs / Redrob · Constraint-first design</text>
+
+    <circle cx="22" cy="28" r="4" fill="#06b6d4" opacity="0.8"/>
+    <text x="34" y="32" class="fn card-title" fill="#22d3ee">SignalHire</text>
+    <text x="34" y="44" class="fn card-sub">AI Candidate Ranking — Redrob Hackathon</text>
+
+    <text x="16" y="66" class="fm card-desc">Two-phase unsupervised pipeline: rule-based composite scoring + sentence-transformer</text>
+    <text x="16" y="79" class="fm card-desc">semantic embeddings. 100K candidates ranked CPU-only in a 16GB RAM sandbox.</text>
+    <text x="16" y="92" class="fm card-desc">No LLM at inference. Constraint-first architecture built under hackathon pressure.</text>
+
+    <rect x="16" y="103" width="74" height="14" rx="7" fill="#06b6d410" stroke="#06b6d435" stroke-width="0.5"/>
+    <text x="53" y="113" class="fn tag" fill="#22d3ee">MiniLM-L6-v2</text>
+    <rect x="95" y="103" width="60" height="14" rx="7" fill="#06b6d410" stroke="#06b6d435" stroke-width="0.5"/>
+    <text x="125" y="113" class="fn tag" fill="#22d3ee">NLP Ranking</text>
+    <rect x="160" y="103" width="52" height="14" rx="7" fill="#06b6d410" stroke="#06b6d435" stroke-width="0.5"/>
+    <text x="186" y="113" class="fn tag" fill="#22d3ee">CPU-only</text>
+    <rect x="217" y="103" width="58" height="14" rx="7" fill="#06b6d410" stroke="#06b6d435" stroke-width="0.5"/>
+    <text x="246" y="113" class="fn tag" fill="#22d3ee">Hackathon</text>
+
+    <text x="16" y="136" class="fn card-footer" fill="#06b6d4">Redrob Hackathon Finalist</text>
   </g>
 
   <!-- Card 4: Learning Agent System -->
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="0.9s" dur="0.5s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="0 14" to="0 0" begin="0.9s" dur="0.5s" fill="freeze"/>
-    <rect x="462" y="238" width="420" height="148" rx="6" class="card c-pink"/>
-    <rect x="462" y="238" width="420" height="148" rx="6" fill="none" stroke="#f778ba" stroke-width="1.5" stroke-dasharray="1200" stroke-dashoffset="1200">
-      <animate attributeName="stroke-dashoffset" from="1200" to="0" begin="0.9s" dur="1.1s" fill="freeze"/>
+  <g transform="translate(462, 240)">
+    <rect width="418" height="148" rx="10" class="card" stroke="#10b98130"/>
+    <rect x="0" y="0" width="418" height="3" rx="10" fill="#10b981" opacity="0.6"/>
+    <rect width="418" height="148" rx="10" fill="none" stroke="#10b981" stroke-width="1" stroke-dasharray="140 992" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" values="1132;0" dur="7s" begin="1.5s" repeatCount="indefinite"/>
     </rect>
-    <rect x="462" y="238" width="0"   height="2"   rx="1" fill="#f778ba">
-      <animate attributeName="width" from="0" to="420" dur="0.8s" begin="0.9s" fill="freeze"/>
-    </rect>
-    <rect x="462" y="238" width="8" height="2" rx="1" fill="#ffffff" opacity="0">
-      <animate attributeName="opacity" values="0;0.9;0" dur="0.35s" begin="1.7s"/>
-      <animate attributeName="x" from="462" to="882" dur="0.35s" begin="1.7s"/>
-    </rect>
-    <text x="480" y="266" class="icon t-pink">⬡</text>
-    <text x="504" y="264" class="title t-pink">Learning Agent System</text>
-    <text x="504" y="279" class="desc">Multi-agent · Production deployed</text>
-    <text x="470" y="298" class="desc">LangGraph-based autonomous learning assistant</text>
-    <text x="470" y="311" class="desc">with tool-use, memory, and planning sub-agents.</text>
-    <text x="470" y="324" class="desc">ChromaDB for retrieval, deployed on Streamlit.</text>
-    <text x="470" y="337" class="desc">One of the first agentic systems. Prod. Runs.</text>
-    <rect x="470" y="352" width="62" height="16" rx="3" class="tag-bg-pink"/>
-    <text x="501" y="364" text-anchor="middle" class="tag t-pink">LangGraph</text>
-    <rect x="538" y="352" width="62" height="16" rx="3" class="tag-bg-pink"/>
-    <text x="569" y="364" text-anchor="middle" class="tag t-pink">ChromaDB</text>
-    <rect x="606" y="352" width="62" height="16" rx="3" class="tag-bg-pink"/>
-    <text x="637" y="364" text-anchor="middle" class="tag t-pink">Streamlit</text>
-    <rect x="674" y="352" width="44" height="16" rx="3" class="tag-bg-pink"/>
-    <text x="696" y="364" text-anchor="middle" class="tag t-pink">RAG</text>
-    <text x="470" y="376" class="star"><animate attributeName="opacity" values="0.5;1;0.5" dur="3s" begin="2.8s" repeatCount="indefinite"/>★ Deployed · Multi-agent architecture · Tool-use</text>
+
+    <circle cx="22" cy="28" r="4" fill="#10b981" opacity="0.8"/>
+    <text x="34" y="32" class="fn card-title" fill="#34d399">Learning Agent System</text>
+    <text x="34" y="44" class="fn card-sub">Multi-Agent Autonomous Assistant</text>
+
+    <text x="16" y="66" class="fm card-desc">LangGraph-based system with tool-use, memory consolidation, and planning sub-agents.</text>
+    <text x="16" y="79" class="fm card-desc">ChromaDB for semantic retrieval. Deployed on Streamlit Cloud for study support.</text>
+    <text x="16" y="92" class="fm card-desc">One of my first production agentic systems. Still running, still learning.</text>
+
+    <rect x="16" y="103" width="56" height="14" rx="7" fill="#10b98110" stroke="#10b98135" stroke-width="0.5"/>
+    <text x="44" y="113" class="fn tag" fill="#34d399">LangGraph</text>
+    <rect x="77" y="103" width="56" height="14" rx="7" fill="#10b98110" stroke="#10b98135" stroke-width="0.5"/>
+    <text x="105" y="113" class="fn tag" fill="#34d399">ChromaDB</text>
+    <rect x="138" y="103" width="56" height="14" rx="7" fill="#10b98110" stroke="#10b98135" stroke-width="0.5"/>
+    <text x="166" y="113" class="fn tag" fill="#34d399">Streamlit</text>
+    <rect x="199" y="103" width="30" height="14" rx="7" fill="#10b98110" stroke="#10b98135" stroke-width="0.5"/>
+    <text x="214" y="113" class="fn tag" fill="#34d399">RAG</text>
+
+    <text x="16" y="136" class="fn card-footer" fill="#10b981">Deployed multi-agent architecture</text>
   </g>
 
-  <!-- ══ ROW 3 ══ -->
+  <!-- ========== ROW 3: Two wider cards ========== -->
 
   <!-- Card 5: Hindi Toxicity Bias -->
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="1.1s" dur="0.5s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="0 14" to="0 0" begin="1.1s" dur="0.5s" fill="freeze"/>
-    <rect x="18" y="406" width="420" height="148" rx="6" class="card c-yellow"/>
-    <rect x="18" y="406" width="420" height="148" rx="6" fill="none" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="1200" stroke-dashoffset="1200">
-      <animate attributeName="stroke-dashoffset" from="1200" to="0" begin="1.1s" dur="1.1s" fill="freeze"/>
+  <g transform="translate(20, 406)">
+    <rect width="424" height="148" rx="10" class="card" stroke="#eab30830"/>
+    <rect x="0" y="0" width="424" height="3" rx="10" fill="#eab308" opacity="0.6"/>
+    <rect width="424" height="148" rx="10" fill="none" stroke="#eab308" stroke-width="1" stroke-dasharray="140 1004" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" values="1144;0" dur="7s" begin="2.5s" repeatCount="indefinite"/>
     </rect>
-    <rect x="18" y="406" width="0"   height="2"   rx="1" fill="#ffd700">
-      <animate attributeName="width" from="0" to="420" dur="0.8s" begin="1.1s" fill="freeze"/>
-    </rect>
-    <rect x="18" y="406" width="8" height="2" rx="1" fill="#ffffff" opacity="0">
-      <animate attributeName="opacity" values="0;0.9;0" dur="0.35s" begin="1.9s"/>
-      <animate attributeName="x" from="18" to="438" dur="0.35s" begin="1.9s"/>
-    </rect>
-    <text x="36" y="434" class="icon t-yellow">⬡</text>
-    <text x="60" y="432" class="title t-yellow">Hindi-Toxicity-Bias</text>
-    <text x="60" y="447" class="desc">NLP Research · Bias Detection</text>
-    <text x="26" y="466" class="desc">HASOC 2021 dataset. Counterfactual data</text>
-    <text x="26" y="479" class="desc">augmentation + adversarial training to reduce</text>
-    <text x="26" y="492" class="desc">bias in Hindi toxicity classifiers. The kind</text>
-    <text x="26" y="505" class="desc">of NLP that matters more than it trends.</text>
-    <rect x="26"  y="520" width="38" height="16" rx="3" class="tag-bg-yellow"/>
-    <text x="45"  y="532" text-anchor="middle" class="tag t-yellow">NLP</text>
-    <rect x="70"  y="520" width="32" height="16" rx="3" class="tag-bg-yellow"/>
-    <text x="86"  y="532" text-anchor="middle" class="tag t-yellow">CDA</text>
-    <rect x="108" y="520" width="62" height="16" rx="3" class="tag-bg-yellow"/>
-    <text x="139" y="532" text-anchor="middle" class="tag t-yellow">Adversarial</text>
-    <rect x="176" y="520" width="58" height="16" rx="3" class="tag-bg-yellow"/>
-    <text x="205" y="532" text-anchor="middle" class="tag t-yellow">HASOC'21</text>
-    <text x="26"  y="544" class="star"><animate attributeName="opacity" values="0.5;1;0.5" dur="3s" begin="3.0s" repeatCount="indefinite"/>★ Bias-aware NLP · Hindi · Social impact</text>
+
+    <circle cx="22" cy="28" r="4" fill="#eab308" opacity="0.8"/>
+    <text x="34" y="32" class="fn card-title" fill="#fbbf24">Hindi-Toxicity-Bias</text>
+    <text x="34" y="44" class="fn card-sub">NLP Fairness Research — Bias Mitigation</text>
+
+    <text x="16" y="66" class="fm card-desc">HASOC 2021 dataset. Counterfactual data augmentation + adversarial training</text>
+    <text x="16" y="79" class="fm card-desc">to reduce demographic bias in Hindi toxicity classifiers. Maintains F1 while</text>
+    <text x="16" y="92" class="fm card-desc">improving fairness metrics. The kind of NLP work that matters more than it trends.</text>
+
+    <rect x="16" y="103" width="30" height="14" rx="7" fill="#eab30810" stroke="#eab30835" stroke-width="0.5"/>
+    <text x="31" y="113" class="fn tag" fill="#fbbf24">NLP</text>
+    <rect x="51" y="103" width="30" height="14" rx="7" fill="#eab30810" stroke="#eab30835" stroke-width="0.5"/>
+    <text x="66" y="113" class="fn tag" fill="#fbbf24">CDA</text>
+    <rect x="86" y="103" width="60" height="14" rx="7" fill="#eab30810" stroke="#eab30835" stroke-width="0.5"/>
+    <text x="116" y="113" class="fn tag" fill="#fbbf24">Adversarial</text>
+    <rect x="151" y="103" width="54" height="14" rx="7" fill="#eab30810" stroke="#eab30835" stroke-width="0.5"/>
+    <text x="178" y="113" class="fn tag" fill="#fbbf24">HASOC '21</text>
+
+    <text x="16" y="136" class="fn card-footer" fill="#eab308">Fairness research for low-resource languages</text>
   </g>
 
   <!-- Card 6: FleetTax -->
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="1.3s" dur="0.5s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="0 14" to="0 0" begin="1.3s" dur="0.5s" fill="freeze"/>
-    <rect x="462" y="406" width="420" height="148" rx="6" class="card c-cyan"/>
-    <rect x="462" y="406" width="420" height="148" rx="6" fill="none" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="1200" stroke-dashoffset="1200">
-      <animate attributeName="stroke-dashoffset" from="1200" to="0" begin="1.3s" dur="1.1s" fill="freeze"/>
+  <g transform="translate(462, 406)">
+    <rect width="418" height="148" rx="10" class="card" stroke="#ec489930"/>
+    <rect x="0" y="0" width="418" height="3" rx="10" fill="#ec4899" opacity="0.6"/>
+    <rect width="418" height="148" rx="10" fill="none" stroke="#ec4899" stroke-width="1" stroke-dasharray="140 992" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" values="1132;0" dur="7s" begin="3s" repeatCount="indefinite"/>
     </rect>
-    <rect x="462" y="406" width="0"   height="2"   rx="1" fill="#00e5ff">
-      <animate attributeName="width" from="0" to="420" dur="0.8s" begin="1.3s" fill="freeze"/>
-    </rect>
-    <rect x="462" y="406" width="8" height="2" rx="1" fill="#ffffff" opacity="0">
-      <animate attributeName="opacity" values="0;0.9;0" dur="0.35s" begin="2.1s"/>
-      <animate attributeName="x" from="462" to="882" dur="0.35s" begin="2.1s"/>
-    </rect>
-    <text x="480" y="434" class="icon t-cyan">⬡</text>
-    <text x="504" y="432" class="title t-cyan">FleetTax</text>
-    <text x="504" y="447" class="desc">Flutter Android · Built overnight</text>
-    <text x="470" y="466" class="desc">Vahan 4.0 road tax tracker for multi-vehicle</text>
-    <text x="470" y="479" class="desc">fleets. Built in one night with zero prior</text>
-    <text x="470" y="492" class="desc">Flutter exp — dad's Bihar transport needed it.</text>
-    <text x="470" y="505" class="desc">Real problem. Real users. Shipped same night.</text>
-    <rect x="470" y="520" width="44" height="16" rx="3" class="tag-bg-cyan"/>
-    <text x="492" y="532" text-anchor="middle" class="tag t-cyan">Flutter</text>
-    <rect x="520" y="520" width="58" height="16" rx="3" class="tag-bg-cyan"/>
-    <text x="549" y="532" text-anchor="middle" class="tag t-cyan">Vahan 4.0</text>
-    <rect x="584" y="520" width="56" height="16" rx="3" class="tag-bg-cyan"/>
-    <text x="612" y="532" text-anchor="middle" class="tag t-cyan">Android</text>
-    <rect x="646" y="520" width="46" height="16" rx="3" class="tag-bg-cyan"/>
-    <text x="669" y="532" text-anchor="middle" class="tag t-cyan">Family</text>
-    <text x="470" y="544" class="star"><animate attributeName="opacity" values="0.5;1;0.5" dur="3s" begin="3.2s" repeatCount="indefinite"/>★ Zero Flutter exp → shipped overnight</text>
+
+    <circle cx="22" cy="28" r="4" fill="#ec4899" opacity="0.8"/>
+    <text x="34" y="32" class="fn card-title" fill="#f472b6">FleetTax</text>
+    <text x="34" y="44" class="fn card-sub">Flutter Android — Built Overnight</text>
+
+    <text x="16" y="66" class="fm card-desc">Vahan 4.0 road tax tracker for multi-vehicle fleets. Built in one night with zero</text>
+    <text x="16" y="79" class="fm card-desc">prior Flutter experience because dad's Bihar transport fleet needed it.</text>
+    <text x="16" y="92" class="fm card-desc">Real problem. Real users. Shipped same night. The bus is still on the road.</text>
+
+    <rect x="16" y="103" width="42" height="14" rx="7" fill="#ec489910" stroke="#ec489935" stroke-width="0.5"/>
+    <text x="37" y="113" class="fn tag" fill="#f472b6">Flutter</text>
+    <rect x="63" y="103" width="54" height="14" rx="7" fill="#ec489910" stroke="#ec489935" stroke-width="0.5"/>
+    <text x="90" y="113" class="fn tag" fill="#f472b6">Vahan 4.0</text>
+    <rect x="122" y="103" width="46" height="14" rx="7" fill="#ec489910" stroke="#ec489935" stroke-width="0.5"/>
+    <text x="145" y="113" class="fn tag" fill="#f472b6">Android</text>
+    <rect x="173" y="103" width="42" height="14" rx="7" fill="#ec489910" stroke="#ec489935" stroke-width="0.5"/>
+    <text x="194" y="113" class="fn tag" fill="#f472b6">Family</text>
+
+    <text x="16" y="136" class="fn card-footer" fill="#ec4899">Zero-to-shipped overnight</text>
   </g>
 
-  <line x1="20" y1="612" x2="880" y2="612" stroke="#00ff4125" stroke-width="1"/>
-  <text x="880" y="608" text-anchor="end" font-family="'Courier New',Courier,monospace" font-size="10" fill="#444d56">github.com/DevanshSrajput</text>
+  <!-- Footer -->
+  <line x1="30" y1="566" x2="870" y2="566" stroke="#1e293b" stroke-width="0.75"/>
+  <text x="870" y="576" text-anchor="end" class="fm" font-size="9" fill="#475569">github.com/DevanshSrajput</text>
 </svg>

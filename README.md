@@ -1,72 +1,32 @@
 <div align="center">
 
-<!-- HERO BANNER — wrapped in <a> so clicking it opens the portfolio -->
+<!-- HERO BANNER -->
 <a href="https://devanshsingh.dev" target="_blank" rel="noopener noreferrer">
   <img src="assets/hero.svg" alt="Devansh Singh Rajput — devanshsingh.dev" style="max-width:100%;"/>
 </a>
 
 <!-- TYPING TAGLINE -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Courier+Prime&size=16&pause=1200&color=00FF41&center=true&vCenter=true&width=700&lines=%3E+Running+Qwen2.5+on+Jetson+hardware+from+a+hostel+room.;%3E+Building+HiSLM+%E2%80%94+distributed+SLM+inference+on+edge+devices.;%3E+Amazon+ML+Summer+School+%2725+selectee.;%3E+One+overnight+Flutter+app+because+dad%27s+fleet+needed+it.;%3E+CGPA+8.91+%C2%B7+47%2B+repos+%C2%B7+still+shipping.)](https://git.io/typing-svg)
-
-<br/>
-
-<!-- PROFILE BADGES -->
-<img src="https://komarev.com/ghpvc/?username=DevanshSrajput&style=for-the-badge&color=000000&labelColor=0d1117&label=VISITORS"/>
-&nbsp;
-<img src="https://img.shields.io/github/followers/DevanshSrajput?style=for-the-badge&color=000000&labelColor=0d1117&label=FOLLOWERS"/>
-&nbsp;
-<img src="https://img.shields.io/badge/CGPA-8.91-00843d?style=for-the-badge&labelColor=0d1117&color=00843d"/>
-&nbsp;
-<img src="https://img.shields.io/badge/Amazon_ML_SS-2025-FF9900?style=for-the-badge&logo=amazon&labelColor=0d1117"/>
-&nbsp;
-<img src="https://img.shields.io/badge/ACM-Web_Master-0d1117?style=for-the-badge&logo=acm&labelColor=0052cc"/>
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Outfit&weight=500&size=16&pause=1200&color=94A3B8&center=true&vCenter=true&width=700&lines=building+things+that+didn't+exist+yesterday;distributed+inference+on+edge+hardware;multi-agent+systems+that+actually+ship;47%2B+repos+%C2%B7+21+stars+on+top+project+%C2%B7+still+going)](https://git.io/typing-svg)
 
 </div>
 
 ---
 
-<!-- ABOUT -->
 ```python
-class DevanshSinghRajput:
-    # SRM University Delhi-NCR · B.Tech CSE · 2027 · CGPA 8.91
-    # Research Intern @ IIT(ISM) Dhanbad under Prof. Dr. Amogth Tarachand
-    # Web Master, ACM Chapter SRMIST Delhi-NCR
-    # Amazon ML Summer School 2025 · Selected
-
-    current_obsession = "HiSLM — hierarchical SLM inference across Jetson AGX Orin + NX"
-    origin_story       = "Family runs a transport fleet in Bihar → built FleetTax overnight"
-    philosophy         = "Ship real things. Don't claim tools without GitHub evidence."
-
-    def what_im_building(self) -> dict:
-        return {
-            "research":  "Distributed edge inference · confidence-threshold escalation · paper due Jun 25",
-            "portfolio": "NexusPay (x402 autonomous payments) · SignalHire (100K candidate ranking)",
-            "always":    "Something that didn't exist yesterday",
-        }
-
-    def find_me(self) -> dict:
-        return {
-            "open_to":     ["Data Science", "Analytics", "ML Engineering", "Research collabs"],
-            "not_open_to": "Roles where I'd just be prompt-engineering ChatGPT for 8 hours",
-            "portfolio":   "https://devanshsingh.dev",
-            "github":      "github.com/DevanshSrajput",  # 47+ repos, top: Dataa_Analyst_Agent ⭐21
-        }
-
-    def fun_facts(self) -> list:
-        return [
-            "Running Qwen2.5 fine-tuned on PubMedQA from a hostel room over TailScale",
-            "Built a Flutter app overnight with zero prior Flutter experience. It works.",
-            "GSSoC contributor · 2nd place Auto-Coder Hackathon · ACM Web Master",
-            "The bus that got a tax deadline reminder is still on the road",
-        ]
+class DevanshSinghRajput:  # SRM-IST Delhi-NCR · B.Tech CSE '27 · CGPA 8.91
+    role       = "Research Intern @ IIT(ISM) Dhanbad"
+    building   = ["Edge AI on Jetson", "Multi-agent pipelines", "NLP fairness research"]
+    shipped    = ["HiSLM", "NexusPay", "Dataa_Analyst_Agent ⭐21", "FleetTax", "SignalHire"]
+    selected   = ["Amazon ML Summer School '25", "GSSoC", "Auto-Coder Hackathon 🥈"]
+    open_to    = ["ML Engineering", "Data Science", "Research Collabs"]
+    philosophy = "Ship real things. Don't claim tools without GitHub evidence."
 ```
 
 ---
 
-<!-- PROJECTS -->
 <div align="center">
 
-## `> ls ./projects --top`
+## Featured Projects
 
 <img src="assets/projects.svg" alt="Projects — HiSLM, NexusPay, Dataa_Analyst_Agent, SignalHire, Learning Agent, Hindi-Toxicity-Bias, FleetTax"/>
 
@@ -74,10 +34,9 @@ class DevanshSinghRajput:
 
 ---
 
-<!-- TECH STACK -->
 <div align="center">
 
-## `> cat ./stack.conf`
+## Tech Stack
 
 <img src="assets/stack.svg" alt="Tech Stack"/>
 
@@ -85,45 +44,36 @@ class DevanshSinghRajput:
 
 ---
 
-<!-- GITHUB STATS -->
 <div align="center">
 
-## `> cat ./stats.log`
+## GitHub Stats
 
-<img height="170em" src="https://github-readme-stats.vercel.app/api?username=DevanshSrajput&show_icons=true&bg_color=0d1117&border_color=00ff41&icon_color=00ff41&title_color=00ff41&text_color=c9d1d9&include_all_commits=true&count_private=true"/>
+<img height="170em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=DevanshSrajput&show_icons=true&bg_color=0d1224&border_color=1e293b&icon_color=f59e0b&title_color=e0e7ff&text_color=94a3b8&include_all_commits=true&hide_border=false"/>
 &nbsp;
-<img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DevanshSrajput&layout=compact&bg_color=0d1117&border_color=00ff41&title_color=00ff41&text_color=c9d1d9&langs_count=6"/>
+<img height="170em" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=DevanshSrajput&layout=compact&bg_color=0d1224&border_color=1e293b&title_color=e0e7ff&text_color=94a3b8&langs_count=6&hide_border=false"/>
 
 <br/><br/>
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=DevanshSrajput&theme=terminal&background=0D1117&border=00FF41&stroke=00FF41&ring=00FF41&fire=FF6B35&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=00FF41&sideLabels=00FF41&dates=888888)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=DevanshSrajput&background=06080F&border=1E293B&stroke=1E293B&ring=F59E0B&fire=F59E0B&currStreakNum=E0E7FF&sideNums=94A3B8&currStreakLabel=F59E0B&sideLabels=64748B&dates=475569)](https://git.io/streak-stats)
 
 </div>
 
-
 ---
 
-<!-- CONNECT -->
 <div align="center">
 
-## `> ./connect.sh`
+## Connect
 
-[![Portfolio](https://img.shields.io/badge/🌐_devanshsingh.dev-000000?style=for-the-badge&labelColor=00FF41)](https://devanshsingh.dev)
+[![Portfolio](https://img.shields.io/badge/devanshsingh.dev-06080f?style=for-the-badge&logo=safari&logoColor=f59e0b&labelColor=0d1224)](https://devanshsingh.dev)
 &nbsp;
-[![GitHub](https://img.shields.io/badge/GitHub-DevanshSrajput-000000?style=for-the-badge&logo=github&logoColor=00FF41)](https://github.com/DevanshSrajput)
+[![GitHub](https://img.shields.io/badge/GitHub-06080f?style=for-the-badge&logo=github&logoColor=e0e7ff&labelColor=0d1224)](https://github.com/DevanshSrajput)
 &nbsp;
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-DevanshSRajput-000000?style=for-the-badge&logo=linkedin&logoColor=0A66C2)](https://linkedin.com/in/DevanshSrajput)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-06080f?style=for-the-badge&logo=linkedin&logoColor=0A66C2&labelColor=0d1224)](https://linkedin.com/in/DevanshSrajput)
 &nbsp;
-[![Email](https://img.shields.io/badge/Email-hit_me_up-000000?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:your@email.com)
+[![Email](https://img.shields.io/badge/Email-06080f?style=for-the-badge&logo=gmail&logoColor=EA4335&labelColor=0d1224)](mailto:dksdevansh@gmail.com)
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,2,5,30&height=80&section=footer" alt="footer"/>
-
-```
-[████████████████████████░░░] HiSLM training in progress · loss: decreasing · deadline: June 25
-```
-
-*Running models on Jetson hardware from a hostel room. This is fine.*
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,5,10,15,20&height=80&section=footer" alt="footer"/>
 
 </div>
