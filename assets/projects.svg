@@ -133,9 +133,9 @@
     <text x="34" y="32" class="fn card-title" fill="#22d3ee">SignalHire</text>
     <text x="34" y="44" class="fn card-sub">AI Candidate Ranking — Redrob Hackathon</text>
 
-    <text x="16" y="66" class="fm card-desc">Two-phase unsupervised pipeline: rule-based composite scoring + sentence-transformer</text>
-    <text x="16" y="79" class="fm card-desc">semantic embeddings. 100K candidates ranked CPU-only in a 16GB RAM sandbox.</text>
-    <text x="16" y="92" class="fm card-desc">No LLM at inference. Constraint-first architecture built under hackathon pressure.</text>
+    <text x="16" y="66" class="fm card-desc">Two-phase pipeline: rule-based scoring + sentence-transformer</text>
+    <text x="16" y="79" class="fm card-desc">100K candidates ranked CPU-only in a 16GB RAM sandbox.</text>
+    <text x="16" y="92" class="fm card-desc">No LLM at inference; constraint-first hackathon architecture.</text>
 
     <rect x="16" y="103" width="74" height="14" rx="7" fill="#06b6d410" stroke="#06b6d435" stroke-width="0.5"/>
     <text x="53" y="113" class="fn tag" fill="#22d3ee">MiniLM-L6-v2</text>
@@ -161,9 +161,9 @@
     <text x="34" y="32" class="fn card-title" fill="#34d399">Learning Agent System</text>
     <text x="34" y="44" class="fn card-sub">Multi-Agent Autonomous Assistant</text>
 
-    <text x="16" y="66" class="fm card-desc">LangGraph-based system with tool-use, memory consolidation, and planning sub-agents.</text>
-    <text x="16" y="79" class="fm card-desc">ChromaDB for semantic retrieval. Deployed on Streamlit Cloud for study support.</text>
-    <text x="16" y="92" class="fm card-desc">One of my first production agentic systems. Still running, still learning.</text>
+    <text x="16" y="66" class="fm card-desc">LangGraph system: tool-use, memory, and planning agents.</text>
+    <text x="16" y="79" class="fm card-desc">ChromaDB semantic retrieval. Deployed on Streamlit Cloud.</text>
+    <text x="16" y="92" class="fm card-desc">One of my first production agentic systems; still running.</text>
 
     <rect x="16" y="103" width="56" height="14" rx="7" fill="#10b98110" stroke="#10b98135" stroke-width="0.5"/>
     <text x="44" y="113" class="fn tag" fill="#34d399">LangGraph</text>
@@ -191,9 +191,9 @@
     <text x="34" y="32" class="fn card-title" fill="#fbbf24">Hindi-Toxicity-Bias</text>
     <text x="34" y="44" class="fn card-sub">NLP Fairness Research — Bias Mitigation</text>
 
-    <text x="16" y="66" class="fm card-desc">HASOC 2021 dataset. Counterfactual data augmentation + adversarial training</text>
-    <text x="16" y="79" class="fm card-desc">to reduce demographic bias in Hindi toxicity classifiers. Maintains F1 while</text>
-    <text x="16" y="92" class="fm card-desc">improving fairness metrics. The kind of NLP work that matters more than it trends.</text>
+    <text x="16" y="66" class="fm card-desc">HASOC '21. Counterfactual augmentation + adversarial training</text>
+    <text x="16" y="79" class="fm card-desc">Reduces bias in Hindi toxicity classifiers; maintains F1 score.</text>
+    <text x="16" y="92" class="fm card-desc">Fairness-focused NLP research that matters more than it trends.</text>
 
     <rect x="16" y="103" width="30" height="14" rx="7" fill="#eab30810" stroke="#eab30835" stroke-width="0.5"/>
     <text x="31" y="113" class="fn tag" fill="#fbbf24">NLP</text>
@@ -219,9 +219,9 @@
     <text x="34" y="32" class="fn card-title" fill="#f472b6">FleetTax</text>
     <text x="34" y="44" class="fn card-sub">Flutter Android — Built Overnight</text>
 
-    <text x="16" y="66" class="fm card-desc">Vahan 4.0 road tax tracker for multi-vehicle fleets. Built in one night with zero</text>
-    <text x="16" y="79" class="fm card-desc">prior Flutter experience because dad's Bihar transport fleet needed it.</text>
-    <text x="16" y="92" class="fm card-desc">Real problem. Real users. Shipped same night. The bus is still on the road.</text>
+    <text x="16" y="66" class="fm card-desc">Vahan 4.0 road tax tracker for fleets. Built overnight with</text>
+    <text x="16" y="79" class="fm card-desc">zero prior Flutter experience for my dad's transport fleet.</text>
+    <text x="16" y="92" class="fm card-desc">Real problem, real users, shipped same night. Still running.</text>
 
     <rect x="16" y="103" width="42" height="14" rx="7" fill="#ec489910" stroke="#ec489935" stroke-width="0.5"/>
     <text x="37" y="113" class="fn tag" fill="#f472b6">Flutter</text>
