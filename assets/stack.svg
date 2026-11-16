@@ -1,252 +1,371 @@
-<svg viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" width="900" height="360">
+<svg viewBox="0 0 920 460" xmlns="http://www.w3.org/2000/svg" width="100%" height="460" style="background:#07090e;border-radius:12px;">
   <defs>
     <style>
-      .bg { fill: #06080f; }
-      .fn { font-family: 'Segoe UI','Helvetica Neue',Arial,sans-serif; }
-      .fm { font-family: 'Courier New',Courier,monospace; }
-      .hdr { font-size: 14px; fill: #e0e7ff; font-weight: 700; letter-spacing: 0.5px; }
-      .hsub { font-size: 10px; fill: #475569; }
-      .cat { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; }
-      .skill-name { font-size: 11px; fill: #cbd5e1; font-weight: 500; }
-      .skill-pct { font-size: 9px; fill: #64748b; font-weight: 700; text-anchor: end; }
-      .bar-track { fill: #1e293b; rx: 3; }
-      .panel-bg { fill: #0d1224; stroke: #1e293b; stroke-width: 1; }
-      .pill-name { font-size: 9px; font-weight: 600; text-anchor: middle; }
-      .widget-title { font-size: 10px; font-weight: 700; letter-spacing: 0.5px; }
-      .widget-label { font-size: 9px; fill: #94a3b8; }
-      .widget-val { font-size: 9px; fill: #cbd5e1; font-weight: 600; }
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&amp;family=Space+Grotesk:wght@600;700;800&amp;display=swap');
+      .hdr-title { font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 800; font-size: 15px; letter-spacing: 1px; }
+      .cat-title { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; font-weight: 800; letter-spacing: 1.2px; }
+      .skill-name { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 11.5px; fill: #e2e8f0; font-weight: 600; }
+      .skill-val { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 9.5px; font-weight: 700; text-anchor: end; }
+      .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+      .sans { font-family: 'Space Grotesk', system-ui, sans-serif; }
+      .tag-text { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 8.5px; font-weight: 600; text-anchor: middle; }
     </style>
 
-    <!-- Bar fill gradients -->
-    <linearGradient id="fill-amber" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#f59e0b"/>
-      <stop offset="100%" stop-color="#fbbf24"/>
-    </linearGradient>
-    <linearGradient id="fill-violet" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#8b5cf6"/>
-      <stop offset="100%" stop-color="#a78bfa"/>
-    </linearGradient>
-    <linearGradient id="fill-rose" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#f43f5e"/>
-      <stop offset="100%" stop-color="#fb7185"/>
-    </linearGradient>
-    <linearGradient id="fill-cyan" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#06b6d4"/>
-      <stop offset="100%" stop-color="#22d3ee"/>
+    <linearGradient id="cyber-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070b"/>
+      <stop offset="50%" stop-color="#0a0e17"/>
+      <stop offset="100%" stop-color="#060911"/>
     </linearGradient>
 
-    <!-- Gauge gradients -->
-    <linearGradient id="gauge-grad" x1="0" y1="1" x2="0" y2="0">
-      <stop offset="0%" stop-color="#f59e0b"/>
-      <stop offset="100%" stop-color="#22d3ee"/>
+    <!-- Fills -->
+    <linearGradient id="fill-amber" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff9e00"/>
+      <stop offset="100%" stop-color="#ffb703"/>
+    </linearGradient>
+
+    <linearGradient id="fill-violet" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7928ca"/>
+      <stop offset="100%" stop-color="#9d4edd"/>
+    </linearGradient>
+
+    <linearGradient id="fill-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#00f5d4"/>
+    </linearGradient>
+
+    <linearGradient id="fill-rose" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff0055"/>
+      <stop offset="100%" stop-color="#ff758f"/>
+    </linearGradient>
+
+    <linearGradient id="scan-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00f0ff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
     </linearGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="900" height="360" fill="#06080f" rx="10"/>
-  <rect width="900" height="360" fill="none" stroke="#1e293b" stroke-width="1" rx="10"/>
+  <!-- Background Frame -->
+  <rect width="920" height="460" fill="url(#cyber-bg)" rx="12"/>
+  <rect width="918" height="458" x="1" y="1" fill="none" stroke="#172238" stroke-width="1.5" rx="12"/>
 
-  <!-- Header -->
-  <text x="30" y="32" class="fn hdr">Tech Stack</text>
-  <text x="30" y="46" class="fn hsub">Proficiency by domain — only claiming tools with production evidence</text>
-  <line x1="30" y1="56" x2="870" y2="56" stroke="#1e293b" stroke-width="1"/>
+  <!-- Corner Brackets -->
+  <path d="M 2 24 L 2 2 L 24 2" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
+  <path d="M 918 24 L 918 2 L 896 2" fill="none" stroke="#ffb703" stroke-width="2" opacity="0.8"/>
+  <path d="M 2 436 L 2 458 L 24 458" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
+  <path d="M 918 436 L 918 458 L 896 458" fill="none" stroke="#ffb703" stroke-width="2" opacity="0.8"/>
 
-  <!-- ========== COLUMN 1: ML and DL (x=20..280) ========== -->
-
-  <!-- Category: Deep Learning -->
-  <circle cx="32" cy="78" r="3" fill="#f59e0b"/>
-  <text x="42" y="82" class="fn cat" fill="#f59e0b">DEEP LEARNING</text>
-
-  <!-- PyTorch -->
-  <text x="30" y="103" class="fn skill-name">PyTorch</text>
-  <text x="262" y="103" class="fm skill-pct">95%</text>
-  <rect x="30" y="107" width="232" height="5" class="bar-track"/>
-  <rect x="30" y="107" width="220" height="5" rx="3" fill="url(#fill-amber)"/>
-
-  <!-- HuggingFace -->
-  <text x="30" y="126" class="fn skill-name">HuggingFace</text>
-  <text x="262" y="126" class="fm skill-pct">90%</text>
-  <rect x="30" y="130" width="232" height="5" class="bar-track"/>
-  <rect x="30" y="130" width="209" height="5" rx="3" fill="url(#fill-amber)"/>
-
-  <!-- TensorFlow -->
-  <text x="30" y="149" class="fn skill-name">TensorFlow</text>
-  <text x="262" y="149" class="fm skill-pct">78%</text>
-  <rect x="30" y="153" width="232" height="5" class="bar-track"/>
-  <rect x="30" y="153" width="181" height="5" rx="3" fill="url(#fill-amber)"/>
-
-  <!-- OpenCV -->
-  <text x="30" y="172" class="fn skill-name">OpenCV</text>
-  <text x="262" y="172" class="fm skill-pct">82%</text>
-  <rect x="30" y="176" width="232" height="5" class="bar-track"/>
-  <rect x="30" y="176" width="190" height="5" rx="3" fill="url(#fill-amber)"/>
-
-  <line x1="30" y1="194" x2="262" y2="194" stroke="#1e293b" stroke-width="0.5"/>
-
-  <!-- Category: NLP / LLMs -->
-  <circle cx="32" cy="212" r="3" fill="#8b5cf6"/>
-  <text x="42" y="216" class="fn cat" fill="#8b5cf6">NLP / LLMs</text>
-
-  <!-- Transformers -->
-  <text x="30" y="237" class="fn skill-name">Transformers</text>
-  <text x="262" y="237" class="fm skill-pct">88%</text>
-  <rect x="30" y="241" width="232" height="5" class="bar-track"/>
-  <rect x="30" y="241" width="204" height="5" rx="3" fill="url(#fill-violet)"/>
-
-  <!-- llama.cpp -->
-  <text x="30" y="260" class="fn skill-name">llama.cpp / GGUF</text>
-  <text x="262" y="260" class="fm skill-pct">85%</text>
-  <rect x="30" y="264" width="232" height="5" class="bar-track"/>
-  <rect x="30" y="264" width="197" height="5" rx="3" fill="url(#fill-violet)"/>
-
-  <!-- Fine-tuning -->
-  <text x="30" y="283" class="fn skill-name">Fine-tuning (SFT/LoRA)</text>
-  <text x="262" y="283" class="fm skill-pct">80%</text>
-  <rect x="30" y="287" width="232" height="5" class="bar-track"/>
-  <rect x="30" y="287" width="186" height="5" rx="3" fill="url(#fill-violet)"/>
-
-  <!-- RAG -->
-  <text x="30" y="306" class="fn skill-name">RAG / ChromaDB</text>
-  <text x="262" y="306" class="fm skill-pct">83%</text>
-  <rect x="30" y="310" width="232" height="5" class="bar-track"/>
-  <rect x="30" y="310" width="193" height="5" rx="3" fill="url(#fill-violet)"/>
-
-  <!-- Separator -->
-  <line x1="284" y1="68" x2="284" y2="330" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,4"/>
-
-  <!-- ========== COLUMN 2: Agents / Systems (x=300..560) ========== -->
-
-  <!-- Category: Agentic / MLOps -->
-  <circle cx="312" cy="78" r="3" fill="#f43f5e"/>
-  <text x="322" y="82" class="fn cat" fill="#f43f5e">AGENTIC / MLOPS</text>
-
-  <!-- LangGraph -->
-  <text x="310" y="103" class="fn skill-name">LangGraph</text>
-  <text x="542" y="103" class="fm skill-pct">88%</text>
-  <rect x="310" y="107" width="232" height="5" class="bar-track"/>
-  <rect x="310" y="107" width="204" height="5" rx="3" fill="url(#fill-rose)"/>
-
-  <!-- FastAPI -->
-  <text x="310" y="126" class="fn skill-name">FastAPI / WebSockets</text>
-  <text x="542" y="126" class="fm skill-pct">90%</text>
-  <rect x="310" y="130" width="232" height="5" class="bar-track"/>
-  <rect x="310" y="130" width="209" height="5" rx="3" fill="url(#fill-rose)"/>
-
-  <!-- scikit-learn -->
-  <text x="310" y="149" class="fn skill-name">scikit-learn</text>
-  <text x="542" y="149" class="fm skill-pct">87%</text>
-  <rect x="310" y="153" width="232" height="5" class="bar-track"/>
-  <rect x="310" y="153" width="202" height="5" rx="3" fill="url(#fill-rose)"/>
-
-  <!-- Docker -->
-  <text x="310" y="172" class="fn skill-name">Docker</text>
-  <text x="542" y="172" class="fm skill-pct">75%</text>
-  <rect x="310" y="176" width="232" height="5" class="bar-track"/>
-  <rect x="310" y="176" width="174" height="5" rx="3" fill="url(#fill-rose)"/>
-
-  <line x1="310" y1="194" x2="542" y2="194" stroke="#1e293b" stroke-width="0.5"/>
-
-  <!-- Category: Systems / Infra -->
-  <circle cx="312" cy="212" r="3" fill="#06b6d4"/>
-  <text x="322" y="216" class="fn cat" fill="#06b6d4">SYSTEMS / INFRA</text>
-
-  <!-- Python -->
-  <text x="310" y="237" class="fn skill-name">Python</text>
-  <text x="542" y="237" class="fm skill-pct">95%</text>
-  <rect x="310" y="241" width="232" height="5" class="bar-track"/>
-  <rect x="310" y="241" width="220" height="5" rx="3" fill="url(#fill-cyan)"/>
-
-  <!-- Linux / Bash -->
-  <text x="310" y="260" class="fn skill-name">Linux / Bash</text>
-  <text x="542" y="260" class="fm skill-pct">88%</text>
-  <rect x="310" y="264" width="232" height="5" class="bar-track"/>
-  <rect x="310" y="264" width="204" height="5" rx="3" fill="url(#fill-cyan)"/>
-
-  <!-- C++ -->
-  <text x="310" y="283" class="fn skill-name">C++</text>
-  <text x="542" y="283" class="fm skill-pct">70%</text>
-  <rect x="310" y="287" width="232" height="5" class="bar-track"/>
-  <rect x="310" y="287" width="162" height="5" rx="3" fill="url(#fill-cyan)"/>
-
-  <!-- Flutter -->
-  <text x="310" y="306" class="fn skill-name">Flutter / Dart</text>
-  <text x="542" y="306" class="fm skill-pct">65%</text>
-  <rect x="310" y="310" width="232" height="5" class="bar-track"/>
-  <rect x="310" y="310" width="151" height="5" rx="3" fill="url(#fill-cyan)"/>
-
-  <!-- Separator -->
-  <line x1="564" y1="68" x2="564" y2="330" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,4"/>
-
-  <!-- ========== COLUMN 3: Right panel ========== -->
-
-  <!-- Active Setup Widget -->
-  <rect x="580" y="68" width="295" height="110" rx="8" class="panel-bg"/>
-  <rect x="580" y="68" width="295" height="110" rx="8" fill="none" stroke="#f59e0b" stroke-width="0.75" opacity="0.3">
-    <animate attributeName="opacity" values="0.15;0.4;0.15" dur="3s" repeatCount="indefinite"/>
+  <!-- Scanning Line -->
+  <rect x="0" y="0" width="920" height="2" fill="url(#scan-grad)" rx="1">
+    <animate attributeName="y" values="-2;462;-2" dur="7s" repeatCount="indefinite"/>
   </rect>
 
-  <circle cx="596" cy="87" r="3.5" fill="#10b981">
-    <animate attributeName="opacity" values="1;0.4;1" dur="1.5s" repeatCount="indefinite"/>
-  </circle>
-  <text x="607" y="91" class="fn widget-title" fill="#fbbf24">ACTIVE HARDWARE</text>
+  <!-- ==================== HEADER SECTION ==================== -->
+  <g transform="translate(35, 24)">
+    <text x="0" y="16" class="hdr-title" fill="#e2e8f0">🌳 NEURAL ARSENAL // SYSTEM ARCHITECTURE &amp; TALENTS</text>
+    <text x="0" y="32" class="mono" font-size="9.5" fill="#64748b">&gt; Verified proficiencies backed by production commits, benchmarks &amp; active hardware</text>
 
-  <text x="596" y="110" class="fm widget-label">Platform  <tspan class="widget-val">Jetson AGX Orin + NX</tspan></text>
-  <text x="596" y="124" class="fm widget-label">Runtime   <tspan class="widget-val">llama.cpp + FastAPI</tspan></text>
-  <text x="596" y="138" class="fm widget-label">Network   <tspan class="widget-val">TailScale mesh VPN</tspan></text>
-  <text x="596" y="152" class="fm widget-label">Model     <tspan class="widget-val">Qwen2.5-1.5B SFT</tspan></text>
+    <!-- Top Right Synergies Badge -->
+    <rect x="635" y="0" width="215" height="28" rx="4" fill="#111927" stroke="#00f0ff" stroke-width="1" stroke-opacity="0.6"/>
+    <circle cx="650" cy="14" r="3.5" fill="#00f0ff">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="660" y="18" class="mono" font-size="9.5" font-weight="700" fill="#00f0ff">SYSTEM SYNERGY: 96%</text>
+  </g>
+  <line x1="35" y1="68" x2="885" y2="68" stroke="#172238" stroke-width="1"/>
 
-  <!-- Blinking cursor -->
-  <rect x="596" y="160" width="5" height="10" fill="#f59e0b" opacity="0.6">
-    <animate attributeName="opacity" values="0.6;0;0.6" dur="1s" repeatCount="indefinite"/>
-  </rect>
+  <!-- ========================================================================= -->
+  <!-- COLUMN 1: DEEP LEARNING & ANALYTICS ENGINES (x=35..300, width=265)        -->
+  <!-- ========================================================================= -->
+  <g transform="translate(35, 82)">
+    <!-- Sub-header 1 -->
+    <circle cx="4" cy="5" r="3.5" fill="#ffb703"/>
+    <text x="14" y="9" class="cat-title" fill="#ffb703">DEEP LEARNING</text>
 
-  <!-- Also Used Pills -->
-  <rect x="580" y="192" width="295" height="130" rx="8" class="panel-bg"/>
-  <text x="596" y="212" class="fn widget-title" fill="#a78bfa">OTHER TOOLS IN PRODUCTION</text>
+    <!-- PyTorch -->
+    <g transform="translate(0, 24)">
+      <text x="0" y="10" class="skill-name">PyTorch</text>
+      <text x="260" y="10" class="skill-val" fill="#ffb703">95%</text>
+      <rect x="0" y="16" width="260" height="6" rx="3" fill="#131c2c"/>
+      <rect x="0" y="16" width="0" height="6" rx="3" fill="url(#fill-amber)">
+        <animate attributeName="width" from="0" to="247" dur="1.6s" fill="freeze"/>
+      </rect>
+    </g>
 
-  <!-- Row 1 -->
-  <rect x="596" y="222" width="46" height="16" rx="8" fill="#f59e0b0d" stroke="#f59e0b30" stroke-width="0.5"/>
-  <text x="619" y="233" class="fn pill-name" fill="#fbbf24">Pandas</text>
-  <rect x="648" y="222" width="58" height="16" rx="8" fill="#8b5cf60d" stroke="#8b5cf630" stroke-width="0.5"/>
-  <text x="677" y="233" class="fn pill-name" fill="#a78bfa">Streamlit</text>
-  <rect x="712" y="222" width="42" height="16" rx="8" fill="#f43f5e0d" stroke="#f43f5e30" stroke-width="0.5"/>
-  <text x="733" y="233" class="fn pill-name" fill="#fb7185">SQLite</text>
-  <rect x="760" y="222" width="62" height="16" rx="8" fill="#06b6d40d" stroke="#06b6d430" stroke-width="0.5"/>
-  <text x="791" y="233" class="fn pill-name" fill="#22d3ee">LangChain</text>
+    <!-- HuggingFace -->
+    <g transform="translate(0, 50)">
+      <text x="0" y="10" class="skill-name">HuggingFace</text>
+      <text x="260" y="10" class="skill-val" fill="#ffb703">90%</text>
+      <rect x="0" y="16" width="260" height="6" rx="3" fill="#131c2c"/>
+      <rect x="0" y="16" width="0" height="6" rx="3" fill="url(#fill-amber)">
+        <animate attributeName="width" from="0" to="234" dur="1.6s" begin="0.15s" fill="freeze"/>
+      </rect>
+    </g>
 
-  <!-- Row 2 -->
-  <rect x="596" y="244" width="44" height="16" rx="8" fill="#eab3080d" stroke="#eab30830" stroke-width="0.5"/>
-  <text x="618" y="255" class="fn pill-name" fill="#fbbf24">Jupyter</text>
-  <rect x="646" y="244" width="44" height="16" rx="8" fill="#8b5cf60d" stroke="#8b5cf630" stroke-width="0.5"/>
-  <text x="668" y="255" class="fn pill-name" fill="#a78bfa">Gemini</text>
-  <rect x="696" y="244" width="46" height="16" rx="8" fill="#10b9810d" stroke="#10b98130" stroke-width="0.5"/>
-  <text x="719" y="255" class="fn pill-name" fill="#34d399">YOLOv8</text>
-  <rect x="748" y="244" width="34" height="16" rx="8" fill="#f43f5e0d" stroke="#f43f5e30" stroke-width="0.5"/>
-  <text x="765" y="255" class="fn pill-name" fill="#fb7185">NLTK</text>
-  <rect x="788" y="244" width="40" height="16" rx="8" fill="#06b6d40d" stroke="#06b6d430" stroke-width="0.5"/>
-  <text x="808" y="255" class="fn pill-name" fill="#22d3ee">Plotly</text>
+    <!-- OpenCV -->
+    <g transform="translate(0, 76)">
+      <text x="0" y="10" class="skill-name">OpenCV</text>
+      <text x="260" y="10" class="skill-val" fill="#ffb703">82%</text>
+      <rect x="0" y="16" width="260" height="6" rx="3" fill="#131c2c"/>
+      <rect x="0" y="16" width="0" height="6" rx="3" fill="url(#fill-amber)">
+        <animate attributeName="width" from="0" to="213" dur="1.6s" begin="0.3s" fill="freeze"/>
+      </rect>
+    </g>
 
-  <!-- Row 3 -->
-  <rect x="596" y="266" width="60" height="16" rx="8" fill="#eab3080d" stroke="#eab30830" stroke-width="0.5"/>
-  <text x="626" y="277" class="fn pill-name" fill="#fbbf24">x402 proto</text>
-  <rect x="662" y="266" width="54" height="16" rx="8" fill="#8b5cf60d" stroke="#8b5cf630" stroke-width="0.5"/>
-  <text x="689" y="277" class="fn pill-name" fill="#a78bfa">TailScale</text>
-  <rect x="722" y="266" width="36" height="16" rx="8" fill="#10b9810d" stroke="#10b98130" stroke-width="0.5"/>
-  <text x="740" y="277" class="fn pill-name" fill="#34d399">CUDA</text>
-  <rect x="764" y="266" width="64" height="16" rx="8" fill="#ec48990d" stroke="#ec489930" stroke-width="0.5"/>
-  <text x="796" y="277" class="fn pill-name" fill="#f472b6">JetPack 6.x</text>
+    <!-- TensorFlow -->
+    <g transform="translate(0, 102)">
+      <text x="0" y="10" class="skill-name">TensorFlow / Keras</text>
+      <text x="260" y="10" class="skill-val" fill="#ffb703">78%</text>
+      <rect x="0" y="16" width="260" height="6" rx="3" fill="#131c2c"/>
+      <rect x="0" y="16" width="0" height="6" rx="3" fill="url(#fill-amber)">
+        <animate attributeName="width" from="0" to="202" dur="1.6s" begin="0.45s" fill="freeze"/>
+      </rect>
+    </g>
 
-  <!-- Row 4 -->
-  <rect x="596" y="288" width="36" height="16" rx="8" fill="#f59e0b0d" stroke="#f59e0b30" stroke-width="0.5"/>
-  <text x="614" y="299" class="fn pill-name" fill="#fbbf24">Git</text>
-  <rect x="638" y="288" width="44" height="16" rx="8" fill="#06b6d40d" stroke="#06b6d430" stroke-width="0.5"/>
-  <text x="660" y="299" class="fn pill-name" fill="#22d3ee">Plotly</text>
-  <rect x="688" y="288" width="70" height="16" rx="8" fill="#f43f5e0d" stroke="#f43f5e30" stroke-width="0.5"/>
-  <text x="723" y="299" class="fn pill-name" fill="#fb7185">WebSockets</text>
+    <!-- Mid Separator -->
+    <line x1="0" y1="138" x2="260" y2="138" stroke="#152136" stroke-width="1"/>
 
-  <text x="596" y="316" class="fn" font-size="7.5" fill="#334155">* self-assessed proficiency — backed by active repositories</text>
+    <!-- Sub-header 2 -->
+    <g transform="translate(0, 154)">
+      <circle cx="4" cy="5" r="3.5" fill="#9d4edd"/>
+      <text x="14" y="9" class="cat-title" fill="#a78bfa">NLP / LLM RUNTIMES</text>
 
-  <!-- Footer -->
-  <line x1="30" y1="340" x2="870" y2="340" stroke="#1e293b" stroke-width="0.5"/>
-  <text x="870" y="353" text-anchor="end" class="fm" font-size="9" fill="#475569">devanshsingh.dev</text>
+      <!-- Transformers -->
+      <g transform="translate(0, 24)">
+        <text x="0" y="10" class="skill-name">Transformers</text>
+        <text x="260" y="10" class="skill-val" fill="#a78bfa">88%</text>
+        <rect x="0" y="16" width="260" height="6" rx="3" fill="#131c2c"/>
+        <rect x="0" y="16" width="0" height="6" rx="3" fill="url(#fill-violet)">
+          <animate attributeName="width" from="0" to="228" dur="1.6s" begin="0.6s" fill="freeze"/>
+        </rect>
+      </g>
+
+      <!-- llama.cpp / GGUF -->
+      <g transform="translate(0, 50)">
+        <text x="0" y="10" class="skill-name">llama.cpp / GGUF</text>
+        <text x="260" y="10" class="skill-val" fill="#a78bfa">85%</text>
+        <rect x="0" y="16" width="260" height="6" rx="3" fill="#131c2c"/>
+        <rect x="0" y="16" width="0" height="6" rx="3" fill="url(#fill-violet)">
+          <animate attributeName="width" from="0" to="221" dur="1.6s" begin="0.75s" fill="freeze"/>
+        </rect>
+      </g>
+
+      <!-- RAG / ChromaDB -->
+      <g transform="translate(0, 76)">
+        <text x="0" y="10" class="skill-name">RAG / Vector DBs</text>
+        <text x="260" y="10" class="skill-val" fill="#a78bfa">83%</text>
+        <rect x="0" y="16" width="260" height="6" rx="3" fill="#131c2c"/>
+        <rect x="0" y="16" width="0" height="6" rx="3" fill="url(#fill-violet)">
+          <animate attributeName="width" from="0" to="215" dur="1.6s" begin="0.9s" fill="freeze"/>
+        </rect>
+      </g>
+
+      <!-- SFT / LoRA Fine-Tuning -->
+      <g transform="translate(0, 102)">
+        <text x="0" y="10" class="skill-name">Fine-Tuning (LoRA / SFT)</text>
+        <text x="260" y="10" class="skill-val" fill="#a78bfa">80%</text>
+        <rect x="0" y="16" width="260" height="6" rx="3" fill="#131c2c"/>
+        <rect x="0" y="16" width="0" height="6" rx="3" fill="url(#fill-violet)">
+          <animate attributeName="width" from="0" to="208" dur="1.6s" begin="1.05s" fill="freeze"/>
+        </rect>
+      </g>
+    </g>
+  </g>
+
+  <!-- Vertical Divider 1 -->
+  <line x1="312" y1="82" x2="312" y2="410" stroke="#17233a" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- ========================================================================= -->
+  <!-- COLUMN 2: AUTONOMOUS AGENTS & SYSTEMS (x=330..595, width=265)             -->
+  <!-- ========================================================================= -->
+  <g transform="translate(330, 82)">
+    <!-- Sub-header 3 -->
+    <circle cx="4" cy="5" r="3.5" fill="#00f5d4"/>
+    <text x="14" y="9" class="cat-title" fill="#00f5d4">AGENTIC &amp; MLOPS</text>
+
+    <!-- LangGraph -->
+    <g transform="translate(0, 24)">
+      <text x="0" y="10" class="skill-name">LangGraph</text>
+      <text x="260" y="10" class="skill-val" fill="#00f5d4">88%</text>
+      <rect x="0" y="16" width="260" height="6" rx="3" fill="#131c2c"/>
+      <rect x="0" y="16" width="0" height="6" rx="3" fill="url(#fill-cyan)">
+        <animate attributeName="width" from="0" to="228" dur="1.6s" begin="0.2s" fill="freeze"/>
+      </rect>
+    </g>
+
+    <!-- FastAPI -->
+    <g transform="translate(0, 50)">
+      <text x="0" y="10" class="skill-name">FastAPI / WebSockets</text>
+      <text x="260" y="10" class="skill-val" fill="#00f5d4">90%</text>
+      <rect x="0" y="16" width="260" height="6" rx="3" fill="#131c2c"/>
+      <rect x="0" y="16" width="0" height="6" rx="3" fill="url(#fill-cyan)">
+        <animate attributeName="width" from="0" to="234" dur="1.6s" begin="0.35s" fill="freeze"/>
+      </rect>
+    </g>
+
+    <!-- scikit-learn -->
+    <g transform="translate(0, 76)">
+      <text x="0" y="10" class="skill-name">scikit-learn</text>
+      <text x="260" y="10" class="skill-val" fill="#00f5d4">87%</text>
+      <rect x="0" y="16" width="260" height="6" rx="3" fill="#131c2c"/>
+      <rect x="0" y="16" width="0" height="6" rx="3" fill="url(#fill-cyan)">
+        <animate attributeName="width" from="0" to="226" dur="1.6s" begin="0.5s" fill="freeze"/>
+      </rect>
+    </g>
+
+    <!-- Docker -->
+    <g transform="translate(0, 102)">
+      <text x="0" y="10" class="skill-name">Docker / Containers</text>
+      <text x="260" y="10" class="skill-val" fill="#00f5d4">75%</text>
+      <rect x="0" y="16" width="260" height="6" rx="3" fill="#131c2c"/>
+      <rect x="0" y="16" width="0" height="6" rx="3" fill="url(#fill-cyan)">
+        <animate attributeName="width" from="0" to="195" dur="1.6s" begin="0.65s" fill="freeze"/>
+      </rect>
+    </g>
+
+    <!-- Mid Separator -->
+    <line x1="0" y1="138" x2="260" y2="138" stroke="#152136" stroke-width="1"/>
+
+    <!-- Sub-header 4 -->
+    <g transform="translate(0, 154)">
+      <circle cx="4" cy="5" r="3.5" fill="#ff0055"/>
+      <text x="14" y="9" class="cat-title" fill="#fb7185">SYSTEMS &amp; INFRA</text>
+
+      <!-- Python -->
+      <g transform="translate(0, 24)">
+        <text x="0" y="10" class="skill-name">Python 3.x</text>
+        <text x="260" y="10" class="skill-val" fill="#fb7185">95%</text>
+        <rect x="0" y="16" width="260" height="6" rx="3" fill="#131c2c"/>
+        <rect x="0" y="16" width="0" height="6" rx="3" fill="url(#fill-rose)">
+          <animate attributeName="width" from="0" to="247" dur="1.6s" begin="0.8s" fill="freeze"/>
+        </rect>
+      </g>
+
+      <!-- Linux / Bash -->
+      <g transform="translate(0, 50)">
+        <text x="0" y="10" class="skill-name">Linux / Bash / Shell</text>
+        <text x="260" y="10" class="skill-val" fill="#fb7185">88%</text>
+        <rect x="0" y="16" width="260" height="6" rx="3" fill="#131c2c"/>
+        <rect x="0" y="16" width="0" height="6" rx="3" fill="url(#fill-rose)">
+          <animate attributeName="width" from="0" to="228" dur="1.6s" begin="0.95s" fill="freeze"/>
+        </rect>
+      </g>
+
+      <!-- C++ -->
+      <g transform="translate(0, 76)">
+        <text x="0" y="10" class="skill-name">C++</text>
+        <text x="260" y="10" class="skill-val" fill="#fb7185">70%</text>
+        <rect x="0" y="16" width="260" height="6" rx="3" fill="#131c2c"/>
+        <rect x="0" y="16" width="0" height="6" rx="3" fill="url(#fill-rose)">
+          <animate attributeName="width" from="0" to="182" dur="1.6s" begin="1.1s" fill="freeze"/>
+        </rect>
+      </g>
+
+      <!-- Flutter / Dart -->
+      <g transform="translate(0, 102)">
+        <text x="0" y="10" class="skill-name">Flutter / Dart</text>
+        <text x="260" y="10" class="skill-val" fill="#fb7185">65%</text>
+        <rect x="0" y="16" width="260" height="6" rx="3" fill="#131c2c"/>
+        <rect x="0" y="16" width="0" height="6" rx="3" fill="url(#fill-rose)">
+          <animate attributeName="width" from="0" to="169" dur="1.6s" begin="1.25s" fill="freeze"/>
+        </rect>
+      </g>
+    </g>
+  </g>
+
+  <!-- Vertical Divider 2 -->
+  <line x1="608" y1="82" x2="608" y2="410" stroke="#17233a" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- ========================================================================= -->
+  <!-- COLUMN 3: DATA & HARDWARE HUD + EQUIPPED ARSENAL (x=625..885, width=260)  -->
+  <!-- ========================================================================= -->
+  <g transform="translate(625, 82)">
+    <!-- TOP BOX: DATA PLATFORMS & HARDWARE -->
+    <rect width="260" height="152" rx="8" fill="#090e18" stroke="#00f0ff" stroke-width="1" stroke-opacity="0.5"/>
+    <circle cx="16" cy="18" r="3.5" fill="#00f0ff">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="28" y="22" class="mono" font-size="9" font-weight="700" fill="#00f0ff">DATA ENGINES &amp; HARDWARE</text>
+    <line x1="16" y1="30" x2="244" y2="30" stroke="#152136" stroke-width="1"/>
+
+    <g transform="translate(16, 44)">
+      <text x="0" y="8" class="mono" font-size="8.5" fill="#64748b">OLAP SQL</text>
+      <text x="75" y="8" class="mono" font-size="8.5" font-weight="600" fill="#00f0ff">DuckDB (Columnar)</text>
+
+      <text x="0" y="24" class="mono" font-size="8.5" fill="#64748b">BI &amp; VIZ</text>
+      <text x="75" y="24" class="mono" font-size="8.5" font-weight="600" fill="#ffb703">Tableau Public</text>
+
+      <text x="0" y="40" class="mono" font-size="8.5" fill="#64748b">HARDWARE</text>
+      <text x="75" y="40" class="mono" font-size="8.5" font-weight="600" fill="#e2e8f0">Jetson AGX Orin + NX</text>
+
+      <text x="0" y="56" class="mono" font-size="8.5" fill="#64748b">INFERENCE</text>
+      <text x="75" y="56" class="mono" font-size="8.5" font-weight="600" fill="#00f5d4">llama.cpp + TailScale</text>
+
+      <text x="0" y="72" class="mono" font-size="8.5" fill="#64748b">STATUS</text>
+      <text x="75" y="72" class="mono" font-size="8.5" font-weight="600" fill="#34d399">Research Milestone Done</text>
+
+      <rect x="0" y="84" width="4" height="8" fill="#00f0ff">
+        <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/>
+      </rect>
+      <text x="10" y="91" class="mono" font-size="7.5" fill="#475569">ready for next deployment</text>
+    </g>
+
+    <!-- BOTTOM BOX: EQUIPPED INVENTORY PILLS -->
+    <g transform="translate(0, 168)">
+      <rect width="260" height="160" rx="8" fill="#090e18" stroke="#17233a" stroke-width="1"/>
+      <text x="16" y="20" class="mono" font-size="9" font-weight="700" fill="#a78bfa">EQUIPPED INVENTORY</text>
+      <line x1="16" y1="28" x2="244" y2="28" stroke="#152136" stroke-width="1"/>
+
+      <!-- Pills Row 1 -->
+      <g transform="translate(16, 40)">
+        <rect x="0" y="0" width="56" height="18" rx="3" fill="#00f0ff" fill-opacity="0.1" stroke="#00f0ff" stroke-width="0.5"/>
+        <text x="28" y="12" class="tag-text" fill="#00f0ff">DuckDB</text>
+        <rect x="62" y="0" width="58" height="18" rx="3" fill="#ffb703" fill-opacity="0.1" stroke="#ffb703" stroke-width="0.5"/>
+        <text x="91" y="12" class="tag-text" fill="#ffb703">Tableau</text>
+        <rect x="126" y="0" width="48" height="18" rx="3" fill="#00f5d4" fill-opacity="0.1" stroke="#00f5d4" stroke-width="0.5"/>
+        <text x="150" y="12" class="tag-text" fill="#00f5d4">Pandas</text>
+        <rect x="180" y="0" width="42" height="18" rx="3" fill="#9d4edd" fill-opacity="0.1" stroke="#9d4edd" stroke-width="0.5"/>
+        <text x="201" y="12" class="tag-text" fill="#a78bfa">SQLite</text>
+      </g>
+
+      <!-- Pills Row 2 -->
+      <g transform="translate(16, 66)">
+        <rect x="0" y="0" width="60" height="18" rx="3" fill="#00f0ff" fill-opacity="0.1" stroke="#00f0ff" stroke-width="0.5"/>
+        <text x="30" y="12" class="tag-text" fill="#00f0ff">Streamlit</text>
+        <rect x="66" y="0" width="44" height="18" rx="3" fill="#00f5d4" fill-opacity="0.1" stroke="#00f5d4" stroke-width="0.5"/>
+        <text x="88" y="12" class="tag-text" fill="#00f5d4">CUDA</text>
+        <rect x="116" y="0" width="50" height="18" rx="3" fill="#ffb703" fill-opacity="0.1" stroke="#ffb703" stroke-width="0.5"/>
+        <text x="141" y="12" class="tag-text" fill="#ffb703">Gemini</text>
+        <rect x="172" y="0" width="44" height="18" rx="3" fill="#9d4edd" fill-opacity="0.1" stroke="#9d4edd" stroke-width="0.5"/>
+        <text x="194" y="12" class="tag-text" fill="#a78bfa">Plotly</text>
+      </g>
+
+      <!-- Pills Row 3 -->
+      <g transform="translate(16, 92)">
+        <rect x="0" y="0" width="68" height="18" rx="3" fill="#9d4edd" fill-opacity="0.1" stroke="#9d4edd" stroke-width="0.5"/>
+        <text x="34" y="12" class="tag-text" fill="#a78bfa">x402 Proto</text>
+        <rect x="74" y="0" width="54" height="18" rx="3" fill="#00f5d4" fill-opacity="0.1" stroke="#00f5d4" stroke-width="0.5"/>
+        <text x="101" y="12" class="tag-text" fill="#00f5d4">YOLOv8</text>
+        <rect x="134" y="0" width="68" height="18" rx="3" fill="#ff0055" fill-opacity="0.1" stroke="#ff0055" stroke-width="0.5"/>
+        <text x="168" y="12" class="tag-text" fill="#fb7185">WebSockets</text>
+      </g>
+
+      <!-- Pills Row 4 -->
+      <g transform="translate(16, 118)">
+        <rect x="0" y="0" width="34" height="18" rx="3" fill="#00f5d4" fill-opacity="0.1" stroke="#00f5d4" stroke-width="0.5"/>
+        <text x="17" y="12" class="tag-text" fill="#00f5d4">Git</text>
+        <rect x="40" y="0" width="64" height="18" rx="3" fill="#ffb703" fill-opacity="0.1" stroke="#ffb703" stroke-width="0.5"/>
+        <text x="72" y="12" class="tag-text" fill="#ffb703">JupyterLab</text>
+        <rect x="110" y="0" width="66" height="18" rx="3" fill="#00f0ff" fill-opacity="0.1" stroke="#00f0ff" stroke-width="0.5"/>
+        <text x="143" y="12" class="tag-text" fill="#00f0ff">SentenceTF</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== FOOTER ==================== -->
+  <line x1="35" y1="425" x2="885" y2="425" stroke="#172238" stroke-width="1"/>
+  <g transform="translate(35, 444)">
+    <text x="0" y="4" class="mono" font-size="9" fill="#475569">// FULL ARSENAL VERIFIED THROUGH PUBLIC REPOSITORIES &amp; DEPLOYMENTS</text>
+    <text x="850" y="4" text-anchor="end" class="mono" font-size="9" font-weight="600" fill="#00f0ff">DEV POWER RATING: S-TIER</text>
+  </g>
 </svg>
