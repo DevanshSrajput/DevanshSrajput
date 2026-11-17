@@ -1,0 +1,30 @@
+{
+  "total_repos": 60,
+  "total_stars": 47,
+  "total_forks": 13,
+  "total_contributions": 1088,
+  "longest_streak": 83,
+  "current_streak": 0,
+  "top_languages": [
+    [
+      "Python",
+      32
+    ],
+    [
+      "Java",
+      8
+    ],
+    [
+      "HTML",
+      8
+    ],
+    [
+      "JavaScript",
+      3
+    ],
+    [
+      "C",
+      2
+    ]
+  ]
+}

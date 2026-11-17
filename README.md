@@ -5,7 +5,7 @@
 <!-- ========================================================================= -->
 
 <a href="https://devanshsingh.dev" target="_blank" rel="noopener noreferrer">
-  <img src="assets/hero.svg" alt="Devansh Singh Rajput — Operator HUD" width="100%"/>
+  <img src="assets/hero.svg" alt="Devansh Singh Rajput — Minimalist HUD" width="100%"/>
 </a>
 
 <br/>
@@ -31,12 +31,12 @@
 <div align="center">
 
 <!-- ========================================================================= -->
-<!--                      📜 OPERATIONAL MISSIONS (PROJECTS)                   -->
+<!--                      💻 FEATURED ARCHITECTURES                            -->
 <!-- ========================================================================= -->
 
-## 📜 Operational Missions Matrix
+## 💻 Featured Architectures
 
-<img src="assets/projects.svg" alt="Operational Missions Matrix — olist-delivery-analysis, HiSLM, NexusPay, Dataa_Analyst_Agent, SignalHire, Learning Agent, Hindi-Toxicity-Bias, FleetTax" width="100%"/>
+<img src="assets/projects.svg" alt="Featured Architectures — olist-delivery-analysis, Dataa_Analyst_Agent, SignalHire, Learning-Agent-System" width="100%"/>
 
 </div>
 
@@ -45,66 +45,45 @@
 <div align="center">
 
 <!-- ========================================================================= -->
-<!--                      🌳 NEURAL ARSENAL (TECH STACK)                       -->
+<!--                      📊 TELEMETRY & ACTIVITY (GLASSMORPHISM)              -->
 <!-- ========================================================================= -->
 
-## 🌳 Neural Arsenal &amp; System Architecture
+## 📊 Telemetry &amp; Activity
 
-<img src="assets/stack.svg" alt="Neural Arsenal — DuckDB, Tableau, PyTorch, LangGraph, FastAPI, Jetson, x402" width="100%"/>
-
-</div>
-
----
-
-<!-- ========================================================================= -->
-<!--                      📊 COMBAT TELEMETRY & STATS                          -->
-<!-- ========================================================================= -->
-
-<div align="center">
-
-## 📊 Combat Telemetry &amp; Brutalist Stats Matrix
-
-<!-- CUSTOM BRUTALIST GITHUB STATS -->
+<!-- CUSTOM MINIMAL GLASSMORPHISM STATS (REAL-TIME DATA) -->
 <a href="https://github.com/DevanshSrajput">
-  <img src="assets/stats.svg" alt="Devansh's Brutalist GitHub Stats Matrix" width="100%"/>
-</a>
-
-<br/><br/>
-
-<!-- COMBO STREAK TRACKER -->
-<a href="https://github.com/DevanshSrajput">
-  <img src="https://streak-stats.demolab.com?user=DevanshSrajput&background=090e18&border=172238&stroke=172238&ring=00F0FF&fire=FFB703&currStreakNum=00F5D4&sideNums=94A3B8&currStreakLabel=FFB703&sideLabels=64748B&dates=475569&type=svg" alt="GitHub Streak Meter" width="820"/>
+  <img src="assets/stats.svg" alt="Devansh's Live Glassmorphic GitHub Telemetry" width="100%"/>
 </a>
 
 </div>
 
 ---
 
-<!-- ========================================================================= -->
-<!--                      🏙️ CONTRIBUTION CITY (3D ISOMETRIC SKYLINE)          -->
-<!-- ========================================================================= -->
-
 <div align="center">
 
-## 🏙️ Contribution City // 3D Isometric Skyline
+<!-- ========================================================================= -->
+<!--                      🏙️ CONTRIBUTION SKYLINE (3D ISOMETRIC)              -->
+<!-- ========================================================================= -->
+
+## 🏙️ 3D Contribution Skyline
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-view.svg" />
   <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-green-animate.svg" />
-  <img src="./profile-3d-contrib/profile-night-view.svg" alt="Devansh's 3D Contribution City" width="100%"/>
+  <img src="./profile-3d-contrib/profile-night-view.svg" alt="Devansh's 3D Contribution Skyline" width="100%"/>
 </picture>
 
 </div>
 
 ---
 
-<!-- ========================================================================= -->
-<!--                      📡 DIRECT COMMS LINK (JOIN THE PARTY)               -->
-<!-- ========================================================================= -->
-
 <div align="center">
 
-## 📡 Direct Comms Link // Join the Party
+<!-- ========================================================================= -->
+<!--                      📬 CONNECT                                           -->
+<!-- ========================================================================= -->
+
+## 📬 Connect
 
 [![Portfolio](https://img.shields.io/badge/PORTFOLIO-devanshsingh.dev-090e18?style=for-the-badge&logo=safari&logoColor=00f0ff&labelColor=05070b)](https://devanshsingh.dev)
 &nbsp;
@@ -112,11 +91,7 @@
 &nbsp;
 [![LinkedIn](https://img.shields.io/badge/LINKEDIN-devansh--singh9-090e18?style=for-the-badge&logo=linkedin&logoColor=0077b5&labelColor=05070b)](https://linkedin.com/in/devansh-singh9)
 &nbsp;
-[![Email](https://img.shields.io/badge/DISPATCH-dksdevansh%40gmail.com-090e18?style=for-the-badge&logo=gmail&logoColor=ea4335&labelColor=05070b)](mailto:dksdevansh@gmail.com)
-
-<br/><br/>
-
-[![Profile Views](https://komarev.com/ghpvc/?username=DevanshSrajput&color=ffb703&style=for-the-badge&label=SYSTEM+VISITS&labelColor=05070b)](https://github.com/DevanshSrajput)
+[![Email](https://img.shields.io/badge/EMAIL-dksdevansh%40gmail.com-090e18?style=for-the-badge&logo=gmail&logoColor=ea4335&labelColor=05070b)](mailto:dksdevansh@gmail.com)
 
 <br/><br/>
 

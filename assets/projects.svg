@@ -1,365 +1,174 @@
-<svg viewBox="0 0 920 830" xmlns="http://www.w3.org/2000/svg" width="100%" height="830" style="background:#07090e;border-radius:12px;">
+<svg viewBox="0 0 920 400" xmlns="http://www.w3.org/2000/svg" width="100%" height="400" style="background:#07090e;border-radius:10px;">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&amp;family=Space+Grotesk:wght@600;700;800&amp;display=swap');
-      .hdr-title { font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 800; font-size: 15px; letter-spacing: 1px; }
-      .card-title { font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 700; font-size: 14px; }
-      .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
-      .sans { font-family: 'Space Grotesk', system-ui, sans-serif; }
-      .desc { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 9.5px; fill: #94a3b8; }
-      .tag-text { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 8px; font-weight: 600; text-anchor: middle; }
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700;800&amp;display=swap');
+      .title { font-family: 'Space Grotesk', -apple-system, sans-serif; font-weight: 700; font-size: 14px; fill: #f8fafc; }
+      .mono { font-family: 'JetBrains Mono', monospace; font-size: 8.5px; fill: #94a3b8; }
+      .desc { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; fill: #94a3b8; line-height: 1.5; }
+      .pill-text { font-family: 'JetBrains Mono', monospace; font-size: 8px; font-weight: 600; text-anchor: middle; }
+      .card-bg { fill: #0b1120; fill-opacity: 0.5; stroke: #1e293b; stroke-width: 1; rx: 6px; }
     </style>
 
-    <linearGradient id="cyber-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#05070b"/>
-      <stop offset="50%" stop-color="#0a0e17"/>
-      <stop offset="100%" stop-color="#060911"/>
+    <linearGradient id="p-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.1"/>
     </linearGradient>
 
-    <!-- Scan Line Gradient -->
-    <linearGradient id="scan-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#00f0ff" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
-    </linearGradient>
-
-    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
+    <!-- Subtle Dot Grid -->
+    <pattern id="proj-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="0.5" fill="#1e293b" opacity="0.4"/>
+    </pattern>
   </defs>
 
-  <!-- Background -->
-  <rect width="920" height="830" fill="url(#cyber-bg)" rx="12"/>
-  <rect width="918" height="828" x="1" y="1" fill="none" stroke="#172238" stroke-width="1.5" rx="12"/>
+  <!-- Frame Background -->
+  <rect width="920" height="400" fill="#07090e" rx="10"/>
+  <rect width="920" height="400" fill="url(#proj-grid)" rx="10"/>
+  <rect width="918" height="398" x="1" y="1" fill="none" stroke="#172238" stroke-width="1" rx="10"/>
 
-  <!-- Corner Brackets -->
-  <path d="M 2 24 L 2 2 L 24 2" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
-  <path d="M 918 24 L 918 2 L 896 2" fill="none" stroke="#ffb703" stroke-width="2" opacity="0.8"/>
-  <path d="M 2 806 L 2 828 L 24 828" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
-  <path d="M 918 806 L 918 828 L 896 828" fill="none" stroke="#ffb703" stroke-width="2" opacity="0.8"/>
+  <!-- Minimal Header -->
+  <g transform="translate(24, 20)">
+    <text x="0" y="14" class="title" font-size="12" font-weight="800" fill="#f8fafc" letter-spacing="1">FEATURED ARCHITECTURES &amp; SYSTEMS</text>
+    <text x="320" y="14" class="mono" fill="#475569">|</text>
+    <text x="335" y="14" class="mono" fill="#64748b">// 4 CORE REPOSITORIES WITH EVIDENCE</text>
 
-  <!-- Scanning Line -->
-  <rect x="0" y="0" width="920" height="2" fill="url(#scan-grad)" rx="1">
-    <animate attributeName="y" values="-2;832;-2" dur="9s" repeatCount="indefinite"/>
-  </rect>
-
-  <!-- ==================== HEADER SECTION ==================== -->
-  <g transform="translate(35, 24)">
-    <text x="0" y="16" class="hdr-title" fill="#e2e8f0">📜 OPERATIONAL MISSIONS MATRIX // VERIFIED ARTIFACTS</text>
-    <text x="0" y="32" class="mono" font-size="9.5" fill="#64748b">&gt; Deployed case studies, data architectures &amp; completed research checkpoints</text>
-
-    <!-- Top Right XP Counter HUD -->
-    <rect x="635" y="0" width="215" height="28" rx="4" fill="#111927" stroke="#00f0ff" stroke-width="1" stroke-opacity="0.6"/>
-    <circle cx="650" cy="14" r="3.5" fill="#00f0ff">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <text x="660" y="18" class="mono" font-size="9.5" font-weight="700" fill="#00f0ff">TOTAL CAMPAIGN XP: 27,800</text>
+    <!-- Count Pill -->
+    <rect x="760" y="0" width="112" height="20" rx="3" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+    <text x="816" y="13" text-anchor="middle" class="mono" font-size="8" font-weight="700" fill="#38bdf8">4 KEY REPOSITORIES</text>
   </g>
-  <line x1="35" y1="68" x2="885" y2="68" stroke="#172238" stroke-width="1"/>
+  <line x1="24" y1="46" x2="896" y2="46" stroke="#151f33" stroke-width="1"/>
 
-  <!-- ========================================================================= -->
-  <!-- ROW 1: olist-delivery-analysis (NEWEST) & HiSLM (COMPLETED RESEARCH)      -->
-  <!-- ========================================================================= -->
+  <!-- ==================== 2x2 MINIMAL PROJECTS GRID ==================== -->
 
-  <!-- CARD 1: olist-delivery-analysis (FRESH COMPLETED / CYAN-AMBER) -->
-  <g transform="translate(35, 82)">
-    <rect width="415" height="160" rx="8" fill="#090e18" stroke="#00f0ff" stroke-width="1.2" stroke-opacity="0.6"/>
-    <rect width="415" height="3" fill="#00f0ff" opacity="0.9" rx="2"/>
-    <rect width="415" height="160" rx="8" fill="none" stroke="#00f0ff" stroke-width="1" stroke-dasharray="90 1060">
-      <animate attributeName="stroke-dashoffset" values="1150;0" dur="5.5s" repeatCount="indefinite"/>
-    </rect>
+  <!-- PROJECT 1: Olist Delivery Analysis -->
+  <g transform="translate(24, 60)">
+    <rect width="426" height="150" class="card-bg"/>
+    <rect width="4" height="150" rx="1" fill="#00f0ff"/>
 
-    <rect x="16" y="12" width="76" height="16" rx="3" fill="#00f0ff" fill-opacity="0.15" stroke="#00f0ff" stroke-width="0.5"/>
-    <text x="54" y="23" text-anchor="middle" class="mono" font-size="8" font-weight="700" fill="#00f0ff">⚡ FRESH RELEASE</text>
-    <text x="120" y="24" class="mono" font-size="8.5" fill="#64748b">NOV 2026</text>
-    <text x="398" y="24" text-anchor="end" class="mono" font-size="9" font-weight="700" fill="#00f0ff">+5,000 XP</text>
+    <!-- Title & Badge -->
+    <text x="18" y="24" class="title">olist-delivery-analysis</text>
+    <rect x="280" y="10" width="130" height="18" rx="3" fill="#00f0ff" fill-opacity="0.08" stroke="#00f0ff" stroke-width="0.8" stroke-opacity="0.4"/>
+    <text x="345" y="22" text-anchor="middle" class="mono" font-size="7.5" font-weight="700" fill="#00f0ff">BI &amp; DATA ENGINE</text>
 
-    <circle cx="22" cy="44" r="3.5" fill="#00f0ff" filter="url(#glow-cyan)"/>
-    <text x="32" y="48" class="card-title" fill="#38bdf8">olist-delivery-analysis</text>
+    <!-- Description -->
+    <text x="18" y="50" class="desc">Production case study of 96,470 Brazilian e-commerce orders.</text>
+    <text x="18" y="66" class="desc">Engineered OLAP aggregations isolating delivery delay bottlenecks</text>
+    <text x="18" y="82" class="desc">vs review scores with an interactive Tableau Public dashboard.</text>
 
-    <text x="16" y="68" class="desc">DuckDB + Tableau case study of 96,470 delivered Olist orders.</text>
-    <text x="16" y="81" class="desc">Dissects delivery delays vs review scores, geographic late clusters,</text>
-    <text x="16" y="94" class="desc">and NLP text mining on customer negative feedback reviews.</text>
+    <!-- Tech Stack Pills -->
+    <g transform="translate(18, 108)">
+      <rect x="0" y="0" width="65" height="20" rx="3" fill="#0f172a" stroke="#00f0ff" stroke-width="0.75" stroke-opacity="0.5"/>
+      <text x="32" y="13" class="pill-text" fill="#00f0ff">DuckDB</text>
 
-    <g transform="translate(16, 108)">
-      <rect x="0" y="0" width="56" height="16" rx="3" fill="#00f0ff" fill-opacity="0.1" stroke="#00f0ff" stroke-width="0.5"/>
-      <text x="28" y="11" class="tag-text" fill="#00f0ff">DuckDB</text>
-      <rect x="62" y="0" width="58" height="16" rx="3" fill="#ffb703" fill-opacity="0.1" stroke="#ffb703" stroke-width="0.5"/>
-      <text x="91" y="11" class="tag-text" fill="#ffb703">Tableau</text>
-      <rect x="126" y="0" width="46" height="16" rx="3" fill="#00f0ff" fill-opacity="0.1" stroke="#00f0ff" stroke-width="0.5"/>
-      <text x="149" y="11" class="tag-text" fill="#00f0ff">Python</text>
-      <rect x="178" y="0" width="36" height="16" rx="3" fill="#00f0ff" fill-opacity="0.1" stroke="#00f0ff" stroke-width="0.5"/>
-      <text x="196" y="11" class="tag-text" fill="#00f0ff">SQL</text>
+      <rect x="73" y="0" width="75" height="20" rx="3" fill="#0f172a" stroke="#ffb703" stroke-width="0.75" stroke-opacity="0.5"/>
+      <text x="110" y="13" class="pill-text" fill="#ffb703">Tableau</text>
+
+      <rect x="156" y="0" width="60" height="20" rx="3" fill="#0f172a" stroke="#38bdf8" stroke-width="0.75" stroke-opacity="0.5"/>
+      <text x="186" y="13" class="pill-text" fill="#38bdf8">Python</text>
+
+      <rect x="224" y="0" width="45" height="20" rx="3" fill="#0f172a" stroke="#94a3b8" stroke-width="0.75" stroke-opacity="0.3"/>
+      <text x="246" y="13" class="pill-text" fill="#94a3b8">SQL</text>
+
+      <!-- Scope Tag -->
+      <text x="390" y="13" text-anchor="end" class="mono" font-size="8" fill="#00f5d4">96.4K ORDERS</text>
     </g>
-
-    <line x1="16" y1="134" x2="398" y2="134" stroke="#151f33" stroke-width="1"/>
-    <circle cx="22" cy="146" r="3" fill="#00f5d4"/>
-    <text x="30" y="149" class="mono" font-size="8" fill="#00f5d4">96,470 ORDERS ANALYZED · LIVE TABLEAU DASHBOARD</text>
   </g>
 
-  <!-- CARD 2: HiSLM (RESEARCH @ IIT DHANBAD - COMPLETED) -->
-  <g transform="translate(470, 82)">
-    <rect width="415" height="160" rx="8" fill="#090e18" stroke="#ffb703" stroke-width="1.2" stroke-opacity="0.5"/>
-    <rect width="415" height="3" fill="#ffb703" opacity="0.9" rx="2"/>
-    <rect width="415" height="160" rx="8" fill="none" stroke="#ffb703" stroke-width="1" stroke-dasharray="90 1060">
-      <animate attributeName="stroke-dashoffset" values="1150;0" dur="5.5s" begin="0.8s" repeatCount="indefinite"/>
-    </rect>
+  <!-- PROJECT 2: Dataa_Analyst_Agent -->
+  <g transform="translate(470, 60)">
+    <rect width="426" height="150" class="card-bg"/>
+    <rect width="4" height="150" rx="1" fill="#00f5d4"/>
 
-    <rect x="16" y="12" width="70" height="16" rx="3" fill="#ffb703" fill-opacity="0.15" stroke="#ffb703" stroke-width="0.5"/>
-    <text x="51" y="23" text-anchor="middle" class="mono" font-size="8" font-weight="700" fill="#ffb703">🔬 COMPLETED</text>
-    <text x="110" y="24" class="mono" font-size="8.5" fill="#64748b">IIT(ISM) RESEARCH</text>
-    <text x="398" y="24" text-anchor="end" class="mono" font-size="9" font-weight="700" fill="#ffb703">+4,500 XP</text>
+    <!-- Title & Badge -->
+    <text x="18" y="24" class="title">Dataa_Analyst_Agent</text>
+    <rect x="290" y="10" width="120" height="18" rx="3" fill="#00f5d4" fill-opacity="0.08" stroke="#00f5d4" stroke-width="0.8" stroke-opacity="0.4"/>
+    <text x="350" y="22" text-anchor="middle" class="mono" font-size="7.5" font-weight="700" fill="#00f5d4">&#9733; 23 STARS</text>
 
-    <circle cx="22" cy="44" r="3.5" fill="#ffb703"/>
-    <text x="32" y="48" class="card-title" fill="#fbbf24">HiSLM: Distributed Edge Inference</text>
+    <!-- Description -->
+    <text x="18" y="50" class="desc">Multi-agent autonomous framework for exploratory data analysis.</text>
+    <text x="18" y="66" class="desc">Executes automated statistical tests, dynamic anomaly detection,</text>
+    <text x="18" y="82" class="desc">and automated chart generation directly from raw CSV/SQL tables.</text>
 
-    <text x="16" y="68" class="desc">Hierarchical Small Language Model inference on Jetson AGX Orin + NX.</text>
-    <text x="16" y="81" class="desc">FastAPI router with llama.cpp backends over TailScale mesh VPN.</text>
-    <text x="16" y="94" class="desc">Low-latency medical QA inference on edge hardware.</text>
+    <!-- Tech Stack Pills -->
+    <g transform="translate(18, 108)">
+      <rect x="0" y="0" width="60" height="20" rx="3" fill="#0f172a" stroke="#00f5d4" stroke-width="0.75" stroke-opacity="0.5"/>
+      <text x="30" y="13" class="pill-text" fill="#00f5d4">Python</text>
 
-    <g transform="translate(16, 108)">
-      <rect x="0" y="0" width="66" height="16" rx="3" fill="#ffb703" fill-opacity="0.1" stroke="#ffb703" stroke-width="0.5"/>
-      <text x="33" y="11" class="tag-text" fill="#ffb703">Jetson AGX</text>
-      <rect x="72" y="0" width="60" height="16" rx="3" fill="#ffb703" fill-opacity="0.1" stroke="#ffb703" stroke-width="0.5"/>
-      <text x="102" y="11" class="tag-text" fill="#ffb703">llama.cpp</text>
-      <rect x="138" y="0" width="54" height="16" rx="3" fill="#ffb703" fill-opacity="0.1" stroke="#ffb703" stroke-width="0.5"/>
-      <text x="165" y="11" class="tag-text" fill="#ffb703">FastAPI</text>
-      <rect x="198" y="0" width="60" height="16" rx="3" fill="#ffb703" fill-opacity="0.1" stroke="#ffb703" stroke-width="0.5"/>
-      <text x="228" y="11" class="tag-text" fill="#ffb703">TailScale</text>
+      <rect x="68" y="0" width="80" height="20" rx="3" fill="#0f172a" stroke="#a78bfa" stroke-width="0.75" stroke-opacity="0.5"/>
+      <text x="108" y="13" class="pill-text" fill="#a78bfa">LangGraph</text>
+
+      <rect x="156" y="0" width="55" height="20" rx="3" fill="#0f172a" stroke="#38bdf8" stroke-width="0.75" stroke-opacity="0.5"/>
+      <text x="183" y="13" class="pill-text" fill="#38bdf8">LLMs</text>
+
+      <rect x="219" y="0" width="70" height="20" rx="3" fill="#0f172a" stroke="#94a3b8" stroke-width="0.75" stroke-opacity="0.3"/>
+      <text x="254" y="13" class="pill-text" fill="#94a3b8">Auto-EDA</text>
+
+      <text x="390" y="13" text-anchor="end" class="mono" font-size="8" fill="#00f5d4">AGENTIC</text>
     </g>
-
-    <line x1="16" y1="134" x2="398" y2="134" stroke="#151f33" stroke-width="1"/>
-    <circle cx="22" cy="146" r="3" fill="#ffb703"/>
-    <text x="30" y="149" class="mono" font-size="8" fill="#fbbf24">IIT(ISM) DHANBAD RESEARCH INTERNSHIP · COMPLETED</text>
   </g>
 
-  <!-- ========================================================================= -->
-  <!-- ROW 2: Dataa_Analyst_Agent & NexusPay                                     -->
-  <!-- ========================================================================= -->
+  <!-- PROJECT 3: SignalHire -->
+  <g transform="translate(24, 226)">
+    <rect width="426" height="150" class="card-bg"/>
+    <rect width="4" height="150" rx="1" fill="#ffb703"/>
 
-  <!-- CARD 3: Dataa_Analyst_Agent (POPULAR PROD AGENT) -->
-  <g transform="translate(35, 256)">
-    <rect width="415" height="160" rx="8" fill="#090e18" stroke="#f43f5e" stroke-width="1.2" stroke-opacity="0.4"/>
-    <rect width="415" height="3" fill="#f43f5e" opacity="0.9" rx="2"/>
-    <rect width="415" height="160" rx="8" fill="none" stroke="#f43f5e" stroke-width="1" stroke-dasharray="90 1060">
-      <animate attributeName="stroke-dashoffset" values="1150;0" dur="5.5s" begin="1.6s" repeatCount="indefinite"/>
-    </rect>
+    <!-- Title & Badge -->
+    <text x="18" y="24" class="title">SignalHire</text>
+    <rect x="270" y="10" width="140" height="18" rx="3" fill="#ffb703" fill-opacity="0.08" stroke="#ffb703" stroke-width="0.8" stroke-opacity="0.4"/>
+    <text x="340" y="22" text-anchor="middle" class="mono" font-size="7.5" font-weight="700" fill="#ffb703">TALENT PIPELINE</text>
 
-    <rect x="16" y="12" width="60" height="16" rx="3" fill="#f43f5e" fill-opacity="0.15" stroke="#f43f5e" stroke-width="0.5"/>
-    <text x="46" y="23" text-anchor="middle" class="mono" font-size="8" font-weight="700" fill="#fb7185">💎 EPIC</text>
-    <text x="110" y="24" class="mono" font-size="8.5" fill="#64748b">POPULAR AGENT</text>
-    <text x="398" y="24" text-anchor="end" class="mono" font-size="9" font-weight="700" fill="#fb7185">+4,000 XP</text>
+    <!-- Description -->
+    <text x="18" y="50" class="desc">Automated candidate sourcing and recruitment ingestion pipeline.</text>
+    <text x="18" y="66" class="desc">Extracts talent signals, skill topologies, and real-time contact</text>
+    <text x="18" y="82" class="desc">metadata across platforms with robust error recovery &amp; rate limits.</text>
 
-    <circle cx="22" cy="44" r="3.5" fill="#f43f5e"/>
-    <text x="32" y="48" class="card-title" fill="#fb7185">Dataa_Analyst_Agent</text>
+    <!-- Tech Stack Pills -->
+    <g transform="translate(18, 108)">
+      <rect x="0" y="0" width="60" height="20" rx="3" fill="#0f172a" stroke="#ffb703" stroke-width="0.75" stroke-opacity="0.5"/>
+      <text x="30" y="13" class="pill-text" fill="#ffb703">Python</text>
 
-    <text x="16" y="68" class="desc">Natural-Language-to-SQL multi-agent pipeline built on LangGraph.</text>
-    <text x="16" y="81" class="desc">Extracts schemas, builds SQL queries, auto-renders charts,</text>
-    <text x="16" y="94" class="desc">and writes executive briefings across CSV, PDF, and live DBs.</text>
+      <rect x="68" y="0" width="85" height="20" rx="3" fill="#0f172a" stroke="#38bdf8" stroke-width="0.75" stroke-opacity="0.5"/>
+      <text x="110" y="13" class="pill-text" fill="#38bdf8">Web Scraping</text>
 
-    <g transform="translate(16, 108)">
-      <rect x="0" y="0" width="70" height="16" rx="3" fill="#f43f5e" fill-opacity="0.1" stroke="#f43f5e" stroke-width="0.5"/>
-      <text x="35" y="11" class="tag-text" fill="#fb7185">LangGraph</text>
-      <rect x="76" y="0" width="64" height="16" rx="3" fill="#f43f5e" fill-opacity="0.1" stroke="#f43f5e" stroke-width="0.5"/>
-      <text x="108" y="11" class="tag-text" fill="#fb7185">Streamlit</text>
-      <rect x="146" y="0" width="40" height="16" rx="3" fill="#f43f5e" fill-opacity="0.1" stroke="#f43f5e" stroke-width="0.5"/>
-      <text x="166" y="11" class="tag-text" fill="#fb7185">SQL</text>
-      <rect x="192" y="0" width="68" height="16" rx="3" fill="#f43f5e" fill-opacity="0.1" stroke="#f43f5e" stroke-width="0.5"/>
-      <text x="226" y="11" class="tag-text" fill="#fb7185">TogetherAI</text>
+      <rect x="161" y="0" width="80" height="20" rx="3" fill="#0f172a" stroke="#00f5d4" stroke-width="0.75" stroke-opacity="0.5"/>
+      <text x="201" y="13" class="pill-text" fill="#00f5d4">Automation</text>
+
+      <rect x="249" y="0" width="45" height="20" rx="3" fill="#0f172a" stroke="#94a3b8" stroke-width="0.75" stroke-opacity="0.3"/>
+      <text x="271" y="13" class="pill-text" fill="#94a3b8">ETL</text>
+
+      <text x="390" y="13" text-anchor="end" class="mono" font-size="8" fill="#ffb703">PIPELINE</text>
     </g>
-
-    <line x1="16" y1="134" x2="398" y2="134" stroke="#151f33" stroke-width="1"/>
-    <text x="16" y="149" class="mono" font-size="8.5" font-weight="700" fill="#ffb703">⭐ 21 STARS · ACTIVELY DEPLOYED &amp; MAINTAINED</text>
   </g>
 
-  <!-- CARD 4: NexusPay (x402 AUTONOMOUS AGENT) -->
-  <g transform="translate(470, 256)">
-    <rect width="415" height="160" rx="8" fill="#090e18" stroke="#9d4edd" stroke-width="1.2" stroke-opacity="0.4"/>
-    <rect width="415" height="3" fill="#9d4edd" opacity="0.9" rx="2"/>
-    <rect width="415" height="160" rx="8" fill="none" stroke="#9d4edd" stroke-width="1" stroke-dasharray="90 1060">
-      <animate attributeName="stroke-dashoffset" values="1150;0" dur="5.5s" begin="2.4s" repeatCount="indefinite"/>
-    </rect>
+  <!-- PROJECT 4: Learning-Agent-System -->
+  <g transform="translate(470, 226)">
+    <rect width="426" height="150" class="card-bg"/>
+    <rect width="4" height="150" rx="1" fill="#a78bfa"/>
 
-    <rect x="16" y="12" width="60" height="16" rx="3" fill="#9d4edd" fill-opacity="0.15" stroke="#9d4edd" stroke-width="0.5"/>
-    <text x="46" y="23" text-anchor="middle" class="mono" font-size="8" font-weight="700" fill="#c77dff">💎 EPIC</text>
-    <text x="110" y="24" class="mono" font-size="8.5" fill="#64748b">AGENT PROTOCOL</text>
-    <text x="398" y="24" text-anchor="end" class="mono" font-size="9" font-weight="700" fill="#c77dff">+3,500 XP</text>
+    <!-- Title & Badge -->
+    <text x="18" y="24" class="title">Learning-Agent-System</text>
+    <rect x="270" y="10" width="140" height="18" rx="3" fill="#a78bfa" fill-opacity="0.08" stroke="#a78bfa" stroke-width="0.8" stroke-opacity="0.4"/>
+    <text x="340" y="22" text-anchor="middle" class="mono" font-size="7.5" font-weight="700" fill="#a78bfa">REINFORCEMENT RL</text>
 
-    <circle cx="22" cy="44" r="3.5" fill="#9d4edd"/>
-    <text x="32" y="48" class="card-title" fill="#e0aaff">NexusPay: Autonomous Billing Agent</text>
+    <!-- Description -->
+    <text x="18" y="50" class="desc">Adaptive multi-agent reinforcement learning architecture.</text>
+    <text x="18" y="66" class="desc">Implements dynamic policy iteration, memory retrieval loops,</text>
+    <text x="18" y="82" class="desc">and decentralized autonomous agent decision execution.</text>
 
-    <text x="16" y="68" class="desc">Pay-per-call data purchasing agent utilizing x402 HTTP protocol.</text>
-    <text x="16" y="81" class="desc">Budget caps, SQLite cryptographic audit log, and Gemini synthesis</text>
-    <text x="16" y="94" class="desc">for autonomous per-request cost governance.</text>
+    <!-- Tech Stack Pills -->
+    <g transform="translate(18, 108)">
+      <rect x="0" y="0" width="60" height="20" rx="3" fill="#0f172a" stroke="#a78bfa" stroke-width="0.75" stroke-opacity="0.5"/>
+      <text x="30" y="13" class="pill-text" fill="#a78bfa">PyTorch</text>
 
-    <g transform="translate(16, 108)">
-      <rect x="0" y="0" width="46" height="16" rx="3" fill="#9d4edd" fill-opacity="0.1" stroke="#9d4edd" stroke-width="0.5"/>
-      <text x="23" y="11" class="tag-text" fill="#c77dff">x402</text>
-      <rect x="52" y="0" width="56" height="16" rx="3" fill="#9d4edd" fill-opacity="0.1" stroke="#9d4edd" stroke-width="0.5"/>
-      <text x="80" y="11" class="tag-text" fill="#c77dff">Gemini</text>
-      <rect x="114" y="0" width="52" height="16" rx="3" fill="#9d4edd" fill-opacity="0.1" stroke="#9d4edd" stroke-width="0.5"/>
-      <text x="140" y="11" class="tag-text" fill="#c77dff">SQLite</text>
-      <rect x="172" y="0" width="66" height="16" rx="3" fill="#9d4edd" fill-opacity="0.1" stroke="#9d4edd" stroke-width="0.5"/>
-      <text x="205" y="11" class="tag-text" fill="#c77dff">Agents</text>
+      <rect x="68" y="0" width="60" height="20" rx="3" fill="#0f172a" stroke="#38bdf8" stroke-width="0.75" stroke-opacity="0.5"/>
+      <text x="98" y="13" class="pill-text" fill="#38bdf8">Python</text>
+
+      <rect x="136" y="0" width="55" height="20" rx="3" fill="#0f172a" stroke="#ffb703" stroke-width="0.75" stroke-opacity="0.5"/>
+      <text x="163" y="13" class="pill-text" fill="#ffb703">RL</text>
+
+      <rect x="199" y="0" width="60" height="20" rx="3" fill="#0f172a" stroke="#00f5d4" stroke-width="0.75" stroke-opacity="0.5"/>
+      <text x="229" y="13" class="pill-text" fill="#00f5d4">Agents</text>
+
+      <text x="390" y="13" text-anchor="end" class="mono" font-size="8" fill="#a78bfa">ADAPTIVE</text>
     </g>
-
-    <line x1="16" y1="134" x2="398" y2="134" stroke="#151f33" stroke-width="1"/>
-    <circle cx="22" cy="146" r="3" fill="#00f5d4"/>
-    <text x="30" y="149" class="mono" font-size="8" fill="#a78bfa">AUTONOMOUS AGENT FINANCIAL CONTROLLER</text>
-  </g>
-
-  <!-- ========================================================================= -->
-  <!-- ROW 3: SignalHire & Learning-Agent-System                                 -->
-  <!-- ========================================================================= -->
-
-  <!-- CARD 5: SignalHire (HACKATHON FINALIST) -->
-  <g transform="translate(35, 430)">
-    <rect width="415" height="160" rx="8" fill="#090e18" stroke="#00f5d4" stroke-width="1.2" stroke-opacity="0.4"/>
-    <rect width="415" height="3" fill="#00f5d4" opacity="0.9" rx="2"/>
-    <rect width="415" height="160" rx="8" fill="none" stroke="#00f5d4" stroke-width="1" stroke-dasharray="90 1060">
-      <animate attributeName="stroke-dashoffset" values="1150;0" dur="5.5s" begin="3.2s" repeatCount="indefinite"/>
-    </rect>
-
-    <rect x="16" y="12" width="60" height="16" rx="3" fill="#00f5d4" fill-opacity="0.15" stroke="#00f5d4" stroke-width="0.5"/>
-    <text x="46" y="23" text-anchor="middle" class="mono" font-size="8" font-weight="700" fill="#00f5d4">🔮 RARE</text>
-    <text x="110" y="24" class="mono" font-size="8.5" fill="#64748b">HACKATHON ELITE</text>
-    <text x="398" y="24" text-anchor="end" class="mono" font-size="9" font-weight="700" fill="#00f5d4">+3,000 XP</text>
-
-    <circle cx="22" cy="44" r="3.5" fill="#00f5d4"/>
-    <text x="32" y="48" class="card-title" fill="#5eead4">SignalHire: Unsupervised AI Ranker</text>
-
-    <text x="16" y="68" class="desc">Ranked 100K+ candidate profiles under 16GB RAM CPU constraints.</text>
-    <text x="16" y="81" class="desc">Two-phase pipeline: rule scoring + sentence-transformer embeddings.</text>
-    <text x="16" y="94" class="desc">Zero LLM at inference; constraint-first hackathon architecture.</text>
-
-    <g transform="translate(16, 108)">
-      <rect x="0" y="0" width="82" height="16" rx="3" fill="#00f5d4" fill-opacity="0.1" stroke="#00f5d4" stroke-width="0.5"/>
-      <text x="41" y="11" class="tag-text" fill="#00f5d4">MiniLM-L6-v2</text>
-      <rect x="88" y="0" width="56" height="16" rx="3" fill="#00f5d4" fill-opacity="0.1" stroke="#00f5d4" stroke-width="0.5"/>
-      <text x="116" y="11" class="tag-text" fill="#00f5d4">CPU-Only</text>
-      <rect x="150" y="0" width="76" height="16" rx="3" fill="#00f5d4" fill-opacity="0.1" stroke="#00f5d4" stroke-width="0.5"/>
-      <text x="188" y="11" class="tag-text" fill="#00f5d4">Semantic Rank</text>
-    </g>
-
-    <line x1="16" y1="134" x2="398" y2="134" stroke="#151f33" stroke-width="1"/>
-    <text x="16" y="149" class="mono" font-size="8.5" font-weight="700" fill="#00f5d4">🏆 REDROB HACKATHON FINALIST · 100K PROFILES</text>
-  </g>
-
-  <!-- CARD 6: Learning-Agent-System (FEYNMAN TUTOR) -->
-  <g transform="translate(470, 430)">
-    <rect width="415" height="160" rx="8" fill="#090e18" stroke="#10b981" stroke-width="1.2" stroke-opacity="0.4"/>
-    <rect width="415" height="3" fill="#10b981" opacity="0.9" rx="2"/>
-    <rect width="415" height="160" rx="8" fill="none" stroke="#10b981" stroke-width="1" stroke-dasharray="90 1060">
-      <animate attributeName="stroke-dashoffset" values="1150;0" dur="5.5s" begin="4.0s" repeatCount="indefinite"/>
-    </rect>
-
-    <rect x="16" y="12" width="60" height="16" rx="3" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="0.5"/>
-    <text x="46" y="23" text-anchor="middle" class="mono" font-size="8" font-weight="700" fill="#34d399">🔮 RARE</text>
-    <text x="110" y="24" class="mono" font-size="8.5" fill="#64748b">AUTONOMOUS TUTOR</text>
-    <text x="398" y="24" text-anchor="end" class="mono" font-size="9" font-weight="700" fill="#34d399">+2,800 XP</text>
-
-    <circle cx="22" cy="44" r="3.5" fill="#10b981"/>
-    <text x="32" y="48" class="card-title" fill="#6ee7b7">Learning Agent: Feynman Tutor</text>
-
-    <text x="16" y="68" class="desc">Adaptive multi-agent tutoring system with Feynman simplification.</text>
-    <text x="16" y="81" class="desc">Checkpoint evaluation, memory retention &amp; dynamic curriculum.</text>
-    <text x="16" y="94" class="desc">LangGraph + ChromaDB vectors with Ollama local inference.</text>
-
-    <g transform="translate(16, 108)">
-      <rect x="0" y="0" width="70" height="16" rx="3" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="0.5"/>
-      <text x="35" y="11" class="tag-text" fill="#34d399">LangGraph</text>
-      <rect x="76" y="0" width="64" height="16" rx="3" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="0.5"/>
-      <text x="108" y="11" class="tag-text" fill="#34d399">ChromaDB</text>
-      <rect x="146" y="0" width="50" height="16" rx="3" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="0.5"/>
-      <text x="171" y="11" class="tag-text" fill="#34d399">Ollama</text>
-      <rect x="202" y="0" width="58" height="16" rx="3" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="0.5"/>
-      <text x="231" y="11" class="tag-text" fill="#34d399">Feynman</text>
-    </g>
-
-    <line x1="16" y1="134" x2="398" y2="134" stroke="#151f33" stroke-width="1"/>
-    <circle cx="22" cy="146" r="3" fill="#10b981"/>
-    <text x="30" y="149" class="mono" font-size="8" fill="#34d399">DEPLOYED ON STREAMLIT CLOUD · LIVE TUTORING</text>
-  </g>
-
-  <!-- ========================================================================= -->
-  <!-- ROW 4: Hindi-Toxicity-Bias & FleetTax                                     -->
-  <!-- ========================================================================= -->
-
-  <!-- CARD 7: Hindi-Toxicity-Bias (NLP RESEARCH) -->
-  <g transform="translate(35, 604)">
-    <rect width="415" height="160" rx="8" fill="#090e18" stroke="#ffb703" stroke-width="1.2" stroke-opacity="0.4"/>
-    <rect width="415" height="3" fill="#ffb703" opacity="0.9" rx="2"/>
-    <rect width="415" height="160" rx="8" fill="none" stroke="#ffb703" stroke-width="1" stroke-dasharray="90 1060">
-      <animate attributeName="stroke-dashoffset" values="1150;0" dur="5.5s" begin="4.8s" repeatCount="indefinite"/>
-    </rect>
-
-    <rect x="16" y="12" width="76" height="16" rx="3" fill="#ffb703" fill-opacity="0.15" stroke="#ffb703" stroke-width="0.5"/>
-    <text x="54" y="23" text-anchor="middle" class="mono" font-size="8" font-weight="700" fill="#ffb703">📘 RESEARCH</text>
-    <text x="120" y="24" class="mono" font-size="8.5" fill="#64748b">HASOC '21</text>
-    <text x="398" y="24" text-anchor="end" class="mono" font-size="9" font-weight="700" fill="#ffb703">+2,500 XP</text>
-
-    <circle cx="22" cy="44" r="3.5" fill="#ffb703"/>
-    <text x="32" y="48" class="card-title" fill="#fbbf24">Hindi-Toxicity-Bias: NLP Fairness</text>
-
-    <text x="16" y="68" class="desc">Counterfactual data augmentation &amp; adversarial training to mitigate</text>
-    <text x="16" y="81" class="desc">demographic and regional bias in Hindi hate-speech detection.</text>
-    <text x="16" y="94" class="desc">Maintains F1 score while establishing demographic fairness.</text>
-
-    <g transform="translate(16, 108)">
-      <rect x="0" y="0" width="38" height="16" rx="3" fill="#ffb703" fill-opacity="0.1" stroke="#ffb703" stroke-width="0.5"/>
-      <text x="19" y="11" class="tag-text" fill="#ffb703">NLP</text>
-      <rect x="44" y="0" width="40" height="16" rx="3" fill="#ffb703" fill-opacity="0.1" stroke="#ffb703" stroke-width="0.5"/>
-      <text x="64" y="11" class="tag-text" fill="#ffb703">CDA</text>
-      <rect x="90" y="0" width="78" height="16" rx="3" fill="#ffb703" fill-opacity="0.1" stroke="#ffb703" stroke-width="0.5"/>
-      <text x="129" y="11" class="tag-text" fill="#ffb703">Adversarial</text>
-      <rect x="174" y="0" width="68" height="16" rx="3" fill="#ffb703" fill-opacity="0.1" stroke="#ffb703" stroke-width="0.5"/>
-      <text x="208" y="11" class="tag-text" fill="#ffb703">HASOC '21</text>
-    </g>
-
-    <line x1="16" y1="134" x2="398" y2="134" stroke="#151f33" stroke-width="1"/>
-    <text x="16" y="149" class="mono" font-size="8" fill="#fbbf24">FAIRNESS &amp; BIAS MITIGATION IN LOW-RESOURCE NLP</text>
-  </g>
-
-  <!-- CARD 8: FleetTax (FLUTTER VAHAN 4.0) -->
-  <g transform="translate(470, 604)">
-    <rect width="415" height="160" rx="8" fill="#090e18" stroke="#ff0055" stroke-width="1.2" stroke-opacity="0.4"/>
-    <rect width="415" height="3" fill="#ff0055" opacity="0.9" rx="2"/>
-    <rect width="415" height="160" rx="8" fill="none" stroke="#ff0055" stroke-width="1" stroke-dasharray="90 1060">
-      <animate attributeName="stroke-dashoffset" values="1150;0" dur="5.5s" begin="5.2s" repeatCount="indefinite"/>
-    </rect>
-
-    <rect x="16" y="12" width="72" height="16" rx="3" fill="#ff0055" fill-opacity="0.15" stroke="#ff0055" stroke-width="0.5"/>
-    <text x="52" y="23" text-anchor="middle" class="mono" font-size="8" font-weight="700" fill="#ff0055">🚀 SHIPPED</text>
-    <text x="120" y="24" class="mono" font-size="8.5" fill="#64748b">OVERNIGHT SPRINT</text>
-    <text x="398" y="24" text-anchor="end" class="mono" font-size="9" font-weight="700" fill="#ff0055">+2,500 XP</text>
-
-    <circle cx="22" cy="44" r="3.5" fill="#ff0055"/>
-    <text x="32" y="48" class="card-title" fill="#fb7185">FleetTax: Vahan 4.0 Tracker</text>
-
-    <text x="16" y="68" class="desc">National road tax tracker built for family commercial transport fleets.</text>
-    <text x="16" y="81" class="desc">Engineered in Flutter in a single night with zero prior framework setup.</text>
-    <text x="16" y="94" class="desc">Real operational payload: tracking active vehicle tax compliance.</text>
-
-    <g transform="translate(16, 108)">
-      <rect x="0" y="0" width="56" height="16" rx="3" fill="#ff0055" fill-opacity="0.1" stroke="#ff0055" stroke-width="0.5"/>
-      <text x="28" y="11" class="tag-text" fill="#fb7185">Flutter</text>
-      <rect x="62" y="0" width="68" height="16" rx="3" fill="#ff0055" fill-opacity="0.1" stroke="#ff0055" stroke-width="0.5"/>
-      <text x="96" y="11" class="tag-text" fill="#fb7185">Vahan 4.0</text>
-      <rect x="136" y="0" width="58" height="16" rx="3" fill="#ff0055" fill-opacity="0.1" stroke="#ff0055" stroke-width="0.5"/>
-      <text x="165" y="11" class="tag-text" fill="#fb7185">Android</text>
-      <rect x="200" y="0" width="54" height="16" rx="3" fill="#ff0055" fill-opacity="0.1" stroke="#ff0055" stroke-width="0.5"/>
-      <text x="227" y="11" class="tag-text" fill="#fb7185">Family</text>
-    </g>
-
-    <line x1="16" y1="134" x2="398" y2="134" stroke="#151f33" stroke-width="1"/>
-    <text x="16" y="149" class="mono" font-size="8" fill="#ff758f">⚡ SHIPPED SAME NIGHT · ZERO REGRESSIONS</text>
-  </g>
-
-  <!-- ==================== FOOTER ==================== -->
-  <line x1="35" y1="790" x2="885" y2="790" stroke="#172238" stroke-width="1"/>
-  <g transform="translate(35, 810)">
-    <text x="0" y="4" class="mono" font-size="9" fill="#475569">// END OF MISSIONS ARCHIVE · VIEW ALL 48+ REPOSITORIES ON GITHUB</text>
-    <text x="850" y="4" text-anchor="end" class="mono" font-size="9" font-weight="600" fill="#00f0ff">OPERATIONAL CLEARANCE: S-RANK</text>
   </g>
 </svg>
