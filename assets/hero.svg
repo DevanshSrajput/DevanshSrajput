@@ -1,40 +1,30 @@
-<svg viewBox="0 0 920 360" xmlns="http://www.w3.org/2000/svg" width="100%" height="360" style="background:#07090e;border-radius:12px;">
+<svg viewBox="0 0 920 290" xmlns="http://www.w3.org/2000/svg" width="100%" height="290" style="background:#07090e;border-radius:10px;">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&amp;family=Space+Grotesk:wght@500;700;800&amp;display=swap');
-      .title { font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif; font-weight: 800; letter-spacing: -0.5px; }
-      .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
-      .sans { font-family: 'Space Grotesk', system-ui, sans-serif; }
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&amp;family=Space+Grotesk:wght@600;700;800&amp;display=swap');
+      .title { font-family: 'Space Grotesk', -apple-system, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.5px; }
+      .mono { font-family: 'JetBrains Mono', monospace, ui-monospace; }
+      .sans { font-family: 'Space Grotesk', sans-serif; }
     </style>
 
-    <!-- Deep Space Background Gradient -->
     <linearGradient id="cyber-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#05070b"/>
-      <stop offset="50%" stop-color="#0a0e17"/>
-      <stop offset="100%" stop-color="#060911"/>
+      <stop offset="50%" stop-color="#080d16"/>
+      <stop offset="100%" stop-color="#05080f"/>
     </linearGradient>
 
-    <!-- Animated Chromatic Title Gradient -->
-    <linearGradient id="neon-title" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f0ff">
-        <animate attributeName="stop-color" values="#00f0ff;#ffb703;#9d4edd;#00f0ff" dur="10s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="50%" stop-color="#ffffff">
-        <animate attributeName="stop-color" values="#ffffff;#ff0055;#00f5d4;#ffffff" dur="10s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="100%" stop-color="#ffb703">
-        <animate attributeName="stop-color" values="#ffb703;#00f0ff;#ff0055;#ffb703" dur="10s" repeatCount="indefinite"/>
-      </stop>
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="60%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#ffb703"/>
     </linearGradient>
 
-    <!-- Ambient Grid Pattern -->
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#131c2e" stroke-width="0.75" stroke-opacity="0.6"/>
-      <circle cx="30" cy="30" r="0.75" fill="#1e2d4a"/>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#131c2e" stroke-width="0.6" stroke-opacity="0.4"/>
+      <circle cx="28" cy="28" r="0.6" fill="#1e2d4a" opacity="0.5"/>
     </pattern>
 
-    <!-- Glow Filters -->
-    <filter id="subtle-glow" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="2" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
@@ -42,279 +32,189 @@
       </feMerge>
     </filter>
 
-    <!-- 3D Globe Radial Gradients & Clip -->
-    <radialGradient id="globe-shading" cx="32%" cy="28%" r="68%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.45"/>
-      <stop offset="25%" stop-color="#ffffff" stop-opacity="0.2"/>
+    <radialGradient id="globe-shading" cx="30%" cy="28%" r="70%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.4"/>
+      <stop offset="25%" stop-color="#ffffff" stop-opacity="0.15"/>
       <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
-      <stop offset="85%" stop-color="#040812" stop-opacity="0.65"/>
+      <stop offset="85%" stop-color="#040812" stop-opacity="0.7"/>
       <stop offset="100%" stop-color="#020408" stop-opacity="0.95"/>
     </radialGradient>
+
     <radialGradient id="globe-space" cx="40%" cy="35%" r="65%">
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="65%" stop-color="#070c18"/>
       <stop offset="100%" stop-color="#03050a"/>
     </radialGradient>
+
     <clipPath id="hero-globe-clip">
-      <circle cx="0" cy="0" r="36"/>
+      <circle cx="0" cy="0" r="42"/>
     </clipPath>
   </defs>
 
-  <!-- 1. Background Frame -->
-  <rect width="920" height="360" fill="url(#cyber-bg)" rx="12"/>
-  <rect width="920" height="360" fill="url(#grid)" rx="12" opacity="0.85"/>
+  <!-- Background Frame -->
+  <rect width="920" height="290" fill="url(#cyber-bg)" rx="10"/>
+  <rect width="920" height="290" fill="url(#grid)" rx="10"/>
+  <rect width="918" height="288" x="1" y="1" fill="none" stroke="#151f33" stroke-width="1.5" rx="10"/>
 
-  <!-- Cyber Outer Border & Corner Accents -->
-  <rect width="918" height="358" x="1" y="1" fill="none" stroke="#172238" stroke-width="1.5" rx="12"/>
-  <path d="M 2 24 L 2 2 L 24 2" fill="none" stroke="#00f0ff" stroke-width="2.5" opacity="0.8"/>
-  <path d="M 918 24 L 918 2 L 896 2" fill="none" stroke="#ffb703" stroke-width="2.5" opacity="0.8"/>
-  <path d="M 2 336 L 2 358 L 24 358" fill="none" stroke="#00f0ff" stroke-width="2.5" opacity="0.8"/>
-  <path d="M 918 336 L 918 358 L 896 358" fill="none" stroke="#ffb703" stroke-width="2.5" opacity="0.8"/>
+  <!-- Minimal Corner Ticks -->
+  <path d="M 1 20 L 1 1 L 20 1" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
+  <path d="M 919 20 L 919 1 L 900 1" fill="none" stroke="#ffb703" stroke-width="2" opacity="0.8"/>
+  <path d="M 1 270 L 1 289 L 20 289" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
+  <path d="M 919 270 L 919 289 L 900 289" fill="none" stroke="#ffb703" stroke-width="2" opacity="0.8"/>
 
-  <!-- Horizontal Scan Laser -->
-  <line x1="0" y1="0" x2="920" y2="0" stroke="#00f0ff" stroke-width="1.5" opacity="0.4">
-    <animate attributeName="y1" values="0;360;0" dur="8s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0;360;0" dur="8s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.1;0.5;0.1" dur="8s" repeatCount="indefinite"/>
-  </line>
-
-  <!-- ==================== TOP TELEMETRY STRIP ==================== -->
-  <g transform="translate(30, 22)">
-    <circle cx="4" cy="5" r="4" fill="#00f5d4">
-      <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/>
+  <!-- Top Telemetry Strip -->
+  <g transform="translate(30, 24)">
+    <circle cx="4" cy="4" r="3.5" fill="#00f5d4">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
     </circle>
-    <text x="16" y="9" class="mono" font-size="9" font-weight="600" fill="#00f5d4" letter-spacing="1">SYSTEM: OPERATIONAL</text>
-    <text x="175" y="9" class="mono" font-size="9" fill="#475569">|</text>
-    <text x="190" y="9" class="mono" font-size="9" fill="#94a3b8" letter-spacing="0.5">CALLSIGN: <tspan fill="#e2e8f0" font-weight="600">DSR-2027</tspan></text>
-    <text x="330" y="9" class="mono" font-size="9" fill="#475569">|</text>
-    <text x="345" y="9" class="mono" font-size="9" fill="#94a3b8" letter-spacing="0.5">LOCATION: <tspan fill="#e2e8f0" font-weight="600">SRM-IST // EX-RESEARCH INTERN @ IIT(ISM)</tspan></text>
+    <text x="16" y="8" class="mono" font-size="9" font-weight="700" fill="#00f5d4" letter-spacing="1">SYSTEM: OPERATIONAL</text>
+    <text x="160" y="8" class="mono" font-size="9" fill="#334155">|</text>
+    <text x="175" y="8" class="mono" font-size="9" fill="#94a3b8">CALLSIGN: <tspan fill="#f8fafc" font-weight="700">DSR-2027</tspan></text>
+    <text x="300" y="8" class="mono" font-size="9" fill="#334155">|</text>
+    <text x="315" y="8" class="mono" font-size="9" fill="#94a3b8">CAMPUS: <tspan fill="#f8fafc" font-weight="600">SRM-IST</tspan> // EX-INTERN @ <tspan fill="#ffb703" font-weight="600">IIT(ISM)</tspan></text>
 
-    <!-- Right-aligned Latency Pill -->
-    <rect x="740" y="-4" width="120" height="18" rx="9" fill="#131c2e" stroke="#1e2d4a" stroke-width="1"/>
-    <circle cx="752" cy="5" r="3" fill="#ffb703">
-      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.4s" repeatCount="indefinite"/>
-    </circle>
-    <text x="762" y="8" class="mono" font-size="8.5" font-weight="600" fill="#ffb703">EDGE: 0.14ms</text>
+    <!-- Top Right Portfolio Link -->
+    <text x="860" y="8" text-anchor="end" class="mono" font-size="9" font-weight="600" fill="#00f0ff">devanshsingh.dev <tspan fill="#ffb703">&#9658;</tspan></text>
   </g>
-  <line x1="30" y1="38" x2="890" y2="38" stroke="#172238" stroke-width="1"/>
+  <line x1="30" y1="38" x2="890" y2="38" stroke="#151f33" stroke-width="1"/>
 
-  <!-- ==================== ZONE 1: LEFT OPERATOR HUD (x=35..210) ==================== -->
-  <g transform="translate(35, 60)">
-    <rect width="175" height="235" rx="10" fill="#090d16" stroke="#1c2842" stroke-width="1.5"/>
-    <rect width="175" height="235" rx="10" fill="none" stroke="#00f0ff" stroke-width="1" stroke-dasharray="25 80" stroke-opacity="0.6">
-      <animate attributeName="stroke-dashoffset" values="0;210" dur="12s" repeatCount="indefinite"/>
-    </rect>
+  <!-- LEFT COLUMN: Revolving 3D Globe &amp; Level Milestone -->
+  <g transform="translate(118, 126)">
+    <!-- Globe Atmosphere Ring -->
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#131e33" stroke-width="0.8" stroke-dasharray="3 3"/>
+    <circle cx="0" cy="0" r="44" fill="none" stroke="#00f0ff" stroke-width="1" stroke-opacity="0.4" filter="url(#glow)"/>
 
-    <!-- REVOLVING 3D HOLOGRAPHIC GLOBE -->
-    <g transform="translate(87, 66)">
-      <!-- Outer Atmosphere Glow & Reticle -->
-      <circle cx="0" cy="0" r="44" fill="none" stroke="#162238" stroke-width="0.75" stroke-dasharray="3 3"/>
-      <circle cx="0" cy="0" r="38" fill="none" stroke="#00f0ff" stroke-width="1" stroke-opacity="0.4" filter="url(#subtle-glow)"/>
+    <!-- Deep Spherical Fill -->
+    <circle cx="0" cy="0" r="42" fill="url(#globe-space)"/>
 
-      <!-- Deep Spherical Core Fill -->
-      <circle cx="0" cy="0" r="36" fill="url(#globe-space)"/>
+    <!-- Revolving Surface Clipped to Sphere -->
+    <g clip-path="url(#hero-globe-clip)">
+      <g transform="rotate(-15)">
+        <g>
+          <animateTransform attributeName="transform" type="translate" from="0,0" to="-120,0" dur="8s" repeatCount="indefinite"/>
 
-      <!-- Revolving Surface Features (Clipped to 3D Sphere) -->
-      <g clip-path="url(#hero-globe-clip)">
-        <!-- Planetary Axial Tilt (15 degrees) -->
-        <g transform="rotate(-15)">
-          <!-- Continuous Seamless Revolving Longitudes & Landmasses -->
-          <g>
-            <animateTransform attributeName="transform" type="translate" from="0,0" to="-120,0" dur="8s" repeatCount="indefinite"/>
+          <!-- Longitudinal Meridians (Periodic tiling) -->
+          <path d="M-120,-42 Q-128,0 -120,42 M-90,-42 Q-98,0 -90,42 M-60,-42 Q-68,0 -60,42 M-30,-42 Q-38,0 -30,42 M0,-42 Q-8,0 0,42 M30,-42 Q22,0 30,42 M60,-42 Q52,0 60,42 M90,-42 Q82,0 90,42 M120,-42 Q112,0 120,42 M150,-42 Q142,0 150,42 M180,-42 Q172,0 180,42 M210,-42 Q202,0 210,42 M240,-42 Q232,0 240,42" fill="none" stroke="#183252" stroke-width="0.75" stroke-dasharray="2 2"/>
 
-            <!-- Longitudinal Meridians (Tiles spanning -120 to +240) -->
-            <path d="M-120,-36 Q-126,0 -120,36 M-90,-36 Q-96,0 -90,36 M-60,-36 Q-66,0 -60,36 M-30,-36 Q-36,0 -30,36 M0,-36 Q-6,0 0,36 M30,-36 Q24,0 30,36 M60,-36 Q54,0 60,36 M90,-36 Q84,0 90,36 M120,-36 Q114,0 120,36 M150,-36 Q144,0 150,36 M180,-36 Q174,0 180,36 M210,-36 Q204,0 210,36 M240,-36 Q234,0 240,36" fill="none" stroke="#162e4a" stroke-width="0.75" stroke-dasharray="2 2"/>
+          <!-- Tile Left (-120..0) -->
+          <path d="M-105,-28 Q-98,-24 -100,-14 Q-95,-5 -102,5 Q-106,16 -103,28 Q-109,30 -112,21 Q-110,5 -114,-5 Q-116,-14 -110,-28 Z" fill="#00f0ff" fill-opacity="0.2" stroke="#00f0ff" stroke-width="0.8"/>
+          <path d="M-68,-28 Q-54,-25 -56,-14 Q-48,-2 -50,14 Q-55,28 -64,30 Q-70,21 -70,7 Q-74,-7 -72,-21 Z" fill="#ffb703" fill-opacity="0.2" stroke="#ffb703" stroke-width="0.8"/>
+          <path d="M-35,-26 Q-18,-24 -14,-12 Q-8,5 -16,16 Q-24,28 -28,21 Q-34,12 -32,-2 Q-40,-9 -38,-24 Z" fill="#00f5d4" fill-opacity="0.2" stroke="#00f5d4" stroke-width="0.8"/>
+          <circle cx="-102" cy="-9" r="1.6" fill="#ffffff"/>
+          <circle cx="-62" cy="-16" r="1.6" fill="#ffffff"/>
+          <circle cx="-22" cy="-5" r="1.6" fill="#ffffff"/>
 
-            <!-- Tile Left (-120..0) -->
-            <path d="M-105,-24 Q-98,-20 -100,-12 Q-95,-4 -102,4 Q-106,14 -103,24 Q-109,26 -112,18 Q-110,4 -114,-4 Q-116,-12 -110,-24 Z" fill="#00f0ff" fill-opacity="0.18" stroke="#00f0ff" stroke-width="0.8"/>
-            <path d="M-68,-24 Q-54,-22 -56,-12 Q-48,-2 -50,12 Q-55,24 -64,26 Q-70,18 -70,6 Q-74,-6 -72,-18 Z" fill="#ffb703" fill-opacity="0.18" stroke="#ffb703" stroke-width="0.8"/>
-            <path d="M-35,-22 Q-18,-20 -14,-10 Q-8,4 -16,14 Q-24,24 -28,18 Q-34,10 -32,-2 Q-40,-8 -38,-20 Z" fill="#00f5d4" fill-opacity="0.18" stroke="#00f5d4" stroke-width="0.8"/>
-            <circle cx="-102" cy="-8" r="1.5" fill="#ffffff"/>
-            <circle cx="-62" cy="-14" r="1.5" fill="#ffffff"/>
-            <circle cx="-22" cy="-4" r="1.5" fill="#ffffff"/>
+          <!-- Tile Center (0..120) -->
+          <path d="M15,-28 Q22,-24 20,-14 Q25,-5 18,5 Q14,16 17,28 Q11,30 8,21 Q10,5 6,-5 Q4,-14 10,-28 Z" fill="#00f0ff" fill-opacity="0.2" stroke="#00f0ff" stroke-width="0.8"/>
+          <path d="M52,-28 Q66,-25 64,-14 Q72,-2 70,14 Q65,28 56,30 Q50,21 50,7 Q46,-7 48,-21 Z" fill="#ffb703" fill-opacity="0.2" stroke="#ffb703" stroke-width="0.8"/>
+          <path d="M85,-26 Q102,-24 106,-12 Q112,5 104,16 Q96,28 92,21 Q86,12 88,-2 Q80,-9 82,-24 Z" fill="#00f5d4" fill-opacity="0.2" stroke="#00f5d4" stroke-width="0.8"/>
+          <circle cx="18" cy="-9" r="1.6" fill="#ffffff"/>
+          <circle cx="58" cy="-16" r="1.6" fill="#ffffff"/>
+          <circle cx="98" cy="-5" r="1.6" fill="#ffffff"/>
 
-            <!-- Tile Center (0..120) -->
-            <path d="M15,-24 Q22,-20 20,-12 Q25,-4 18,4 Q14,14 17,24 Q11,26 8,18 Q10,4 6,-4 Q4,-12 10,-24 Z" fill="#00f0ff" fill-opacity="0.18" stroke="#00f0ff" stroke-width="0.8"/>
-            <path d="M52,-24 Q66,-22 64,-12 Q72,-2 70,12 Q65,24 56,26 Q50,18 50,6 Q46,-6 48,-18 Z" fill="#ffb703" fill-opacity="0.18" stroke="#ffb703" stroke-width="0.8"/>
-            <path d="M85,-22 Q102,-20 106,-10 Q112,4 104,14 Q96,24 92,18 Q86,10 88,-2 Q80,-8 82,-20 Z" fill="#00f5d4" fill-opacity="0.18" stroke="#00f5d4" stroke-width="0.8"/>
-            <circle cx="18" cy="-8" r="1.5" fill="#ffffff"/>
-            <circle cx="58" cy="-14" r="1.5" fill="#ffffff"/>
-            <circle cx="98" cy="-4" r="1.5" fill="#ffffff"/>
-
-            <!-- Tile Right (120..240) -->
-            <path d="M135,-24 Q142,-20 140,-12 Q145,-4 138,4 Q134,14 137,24 Q131,26 128,18 Q130,4 126,-4 Q124,-12 130,-24 Z" fill="#00f0ff" fill-opacity="0.18" stroke="#00f0ff" stroke-width="0.8"/>
-            <path d="M172,-24 Q186,-22 184,-12 Q192,-2 190,12 Q185,24 176,26 Q170,18 170,6 Q166,-6 168,-18 Z" fill="#ffb703" fill-opacity="0.18" stroke="#ffb703" stroke-width="0.8"/>
-            <path d="M205,-22 Q222,-20 226,-10 Q232,4 224,14 Q216,24 212,18 Q206,10 208,-2 Q200,-8 202,-20 Z" fill="#00f5d4" fill-opacity="0.18" stroke="#00f5d4" stroke-width="0.8"/>
-            <circle cx="138" cy="-8" r="1.5" fill="#ffffff"/>
-            <circle cx="178" cy="-14" r="1.5" fill="#ffffff"/>
-            <circle cx="218" cy="-4" r="1.5" fill="#ffffff"/>
-          </g>
-
-          <!-- Fixed Latitude Parallels with 3D Perspective -->
-          <ellipse cx="0" cy="-22" rx="28" ry="6" fill="none" stroke="#1d304a" stroke-width="0.75" stroke-dasharray="2 2"/>
-          <ellipse cx="0" cy="-11" rx="34" ry="7.5" fill="none" stroke="#1d3554" stroke-width="0.75"/>
-          <ellipse cx="0" cy="0" rx="36" ry="8.5" fill="none" stroke="#00f0ff" stroke-width="1.1" stroke-opacity="0.7"/>
-          <ellipse cx="0" cy="11" rx="34" ry="7.5" fill="none" stroke="#1d3554" stroke-width="0.75"/>
-          <ellipse cx="0" cy="22" rx="28" ry="6" fill="none" stroke="#1d304a" stroke-width="0.75" stroke-dasharray="2 2"/>
+          <!-- Tile Right (120..240) -->
+          <path d="M135,-28 Q142,-24 140,-14 Q145,-5 138,5 Q134,16 137,28 Q131,30 128,21 Q130,5 126,-5 Q124,-14 130,-28 Z" fill="#00f0ff" fill-opacity="0.2" stroke="#00f0ff" stroke-width="0.8"/>
+          <path d="M172,-28 Q186,-25 184,-14 Q192,-2 190,14 Q185,28 176,30 Q170,21 170,7 Q166,-7 168,-21 Z" fill="#ffb703" fill-opacity="0.2" stroke="#ffb703" stroke-width="0.8"/>
+          <path d="M205,-26 Q222,-24 226,-12 Q232,5 224,16 Q216,28 212,21 Q206,12 208,-2 Q200,-9 202,-24 Z" fill="#00f5d4" fill-opacity="0.2" stroke="#00f5d4" stroke-width="0.8"/>
+          <circle cx="138" cy="-9" r="1.6" fill="#ffffff"/>
+          <circle cx="178" cy="-16" r="1.6" fill="#ffffff"/>
+          <circle cx="218" cy="-5" r="1.6" fill="#ffffff"/>
         </g>
-      </g>
 
-      <!-- 3D Specular Spherical Shading & Shadow Overlay -->
-      <circle cx="0" cy="0" r="36" fill="url(#globe-shading)" pointer-events="none"/>
-
-      <!-- Holographic Axis Markers -->
-      <line x1="0" y1="-41" x2="0" y2="41" stroke="#00f0ff" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.4" transform="rotate(-15)"/>
-      <circle cx="0" cy="-38" r="1.5" fill="#00f0ff" transform="rotate(-15)"/>
-      <circle cx="0" cy="38" r="1.5" fill="#00f0ff" transform="rotate(-15)"/>
-
-      <!-- Revolving Satellite Orbital Ring -->
-      <g transform="rotate(-26)">
-        <ellipse cx="0" cy="0" rx="46" ry="14" fill="none" stroke="#ffb703" stroke-width="0.9" stroke-dasharray="4 3" stroke-opacity="0.6"/>
-        <!-- Orbiting Satellite Marker -->
-        <circle r="3" fill="#ffb703" filter="url(#subtle-glow)">
-          <animateMotion dur="4.5s" repeatCount="indefinite" path="M -46,0 A 46 14 0 1,1 46,0 A 46 14 0 1,1 -46,0"/>
-        </circle>
-        <circle r="1.3" fill="#ffffff">
-          <animateMotion dur="4.5s" repeatCount="indefinite" path="M -46,0 A 46 14 0 1,1 46,0 A 46 14 0 1,1 -46,0"/>
-        </circle>
+        <!-- Latitude Parallels -->
+        <ellipse cx="0" cy="-26" rx="33" ry="7" fill="none" stroke="#1d324d" stroke-width="0.75" stroke-dasharray="2 2"/>
+        <ellipse cx="0" cy="-13" rx="40" ry="8.5" fill="none" stroke="#1d3858" stroke-width="0.75"/>
+        <ellipse cx="0" cy="0" rx="42" ry="10" fill="none" stroke="#00f0ff" stroke-width="1.1" stroke-opacity="0.7"/>
+        <ellipse cx="0" cy="13" rx="40" ry="8.5" fill="none" stroke="#1d3858" stroke-width="0.75"/>
+        <ellipse cx="0" cy="26" rx="33" ry="7" fill="none" stroke="#1d324d" stroke-width="0.75" stroke-dasharray="2 2"/>
       </g>
     </g>
 
-    <!-- LEVEL 27 WITH EXPLICIT DEFINITION -->
-    <g transform="translate(18, 124)">
-      <rect width="139" height="26" rx="4" fill="#ffb703" fill-opacity="0.12" stroke="#ffb703" stroke-width="1" stroke-opacity="0.6"/>
-      <text x="69" y="14" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#ffb703" letter-spacing="1">LEVEL 27</text>
-      <text x="69" y="23" text-anchor="middle" class="mono" font-size="6.5" font-weight="600" fill="#94a3b8">B.TECH CLASS OF '27</text>
+    <!-- 3D Shading Overlay -->
+    <circle cx="0" cy="0" r="42" fill="url(#globe-shading)" pointer-events="none"/>
+
+    <!-- Holographic Axis Markers -->
+    <line x1="0" y1="-48" x2="0" y2="48" stroke="#00f0ff" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.4" transform="rotate(-15)"/>
+    <circle cx="0" cy="-45" r="1.5" fill="#00f0ff" transform="rotate(-15)"/>
+    <circle cx="0" cy="45" r="1.5" fill="#00f0ff" transform="rotate(-15)"/>
+
+    <!-- Revolving Satellite Orbital Ring -->
+    <g transform="rotate(-26)">
+      <ellipse cx="0" cy="0" rx="54" ry="16" fill="none" stroke="#ffb703" stroke-width="0.9" stroke-dasharray="4 3" stroke-opacity="0.6"/>
+      <circle r="3" fill="#ffb703" filter="url(#glow)">
+        <animateMotion dur="4.5s" repeatCount="indefinite" path="M -54,0 A 54 16 0 1,1 54,0 A 54 16 0 1,1 -54,0"/>
+      </circle>
+      <circle r="1.3" fill="#ffffff">
+        <animateMotion dur="4.5s" repeatCount="indefinite" path="M -54,0 A 54 16 0 1,1 54,0 A 54 16 0 1,1 -54,0"/>
+      </circle>
     </g>
-
-    <!-- Role Specialization -->
-    <text x="87" y="168" text-anchor="middle" class="sans" font-size="9.5" font-weight="700" fill="#e2e8f0" letter-spacing="0.5">AI &amp; ML RESEARCHER</text>
-    <text x="87" y="182" text-anchor="middle" class="mono" font-size="8" fill="#ffb703">EX-INTERN @ IIT(ISM)</text>
-
-    <!-- Sub-specs Grid -->
-    <line x1="18" y1="194" x2="157" y2="194" stroke="#162238" stroke-width="1"/>
-    <text x="24" y="210" class="mono" font-size="8" fill="#94a3b8">CGPA</text>
-    <text x="151" y="210" text-anchor="end" class="mono" font-size="9" font-weight="700" fill="#00f0ff">8.91 / 10</text>
-    <text x="24" y="224" class="mono" font-size="8" fill="#94a3b8">MAJOR</text>
-    <text x="151" y="224" text-anchor="end" class="mono" font-size="8" font-weight="700" fill="#a78bfa">CSE (SRM-IST)</text>
   </g>
 
-  <!-- ==================== ZONE 2: CENTER TITLE & IDENTITY (x=245..655) ==================== -->
-  <g transform="translate(245, 65)">
-    <!-- Identity Badge Tag -->
-    <rect x="0" y="0" width="175" height="20" rx="3" fill="#131e33" stroke="#1e2e4e" stroke-width="1"/>
-    <circle cx="10" cy="10" r="3" fill="#00f0ff"/>
-    <text x="20" y="14" class="mono" font-size="8.5" font-weight="700" fill="#00f0ff" letter-spacing="1">ML SYSTEMS &amp; DATA AGENT</text>
+  <!-- Level 27 Brutalist Tag below Globe -->
+  <g transform="translate(40, 196)">
+    <rect width="156" height="24" rx="3" fill="#ffb703" fill-opacity="0.08" stroke="#ffb703" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="78" y="16" text-anchor="middle" class="mono" font-size="9" font-weight="700" fill="#ffb703" letter-spacing="1">LEVEL 27 · CLASS OF '27</text>
+    <text x="78" y="38" text-anchor="middle" class="mono" font-size="8" fill="#64748b">SRM-IST CSE · CGPA 8.91</text>
+  </g>
 
-    <!-- MAIN NAME -->
-    <text x="0" y="52" class="title" font-size="34" fill="url(#neon-title)" filter="url(#subtle-glow)">DEVANSH SINGH RAJPUT</text>
+  <!-- Vertical Subtle Divider -->
+  <line x1="235" y1="52" x2="235" y2="265" stroke="#151f33" stroke-width="1"/>
 
-    <!-- Sub-Identity Deck -->
-    <text x="0" y="74" class="mono" font-size="11.5" fill="#94a3b8" letter-spacing="0.5">
-      // ML Engineer <tspan fill="#ffb703">·</tspan> Applied Researcher <tspan fill="#00f0ff">·</tspan> Analytics Architect
+  <!-- RIGHT COLUMN: Minimalist High-Legibility Information -->
+  <g transform="translate(265, 52)">
+    <!-- Domain Tag -->
+    <text x="0" y="16" class="mono" font-size="9" font-weight="700" fill="#00f0ff" letter-spacing="1.5">// MACHINE LEARNING &amp; DATA SYSTEMS ARCHITECT</text>
+
+    <!-- Main Title Name -->
+    <text x="0" y="52" class="title" font-size="34" fill="url(#title-grad)">DEVANSH SINGH RAJPUT</text>
+
+    <!-- Role Summary Subtitle -->
+    <text x="0" y="74" class="mono" font-size="11" fill="#94a3b8">
+      ML Engineer <tspan fill="#ffb703">&#183;</tspan> Applied Researcher <tspan fill="#00f0ff">&#183;</tspan> Ex-Intern @ IIT(ISM) Dhanbad
     </text>
 
-    <!-- Dynamic Terminal Prompt Card -->
+    <!-- Minimalist Latest Dispatch Box -->
     <g transform="translate(0, 92)">
-      <rect width="410" height="66" rx="6" fill="#090e18" stroke="#17233a" stroke-width="1"/>
-      <!-- Window Dots -->
-      <circle cx="16" cy="14" r="3" fill="#ff0055" opacity="0.7"/>
-      <circle cx="28" cy="14" r="3" fill="#ffb703" opacity="0.7"/>
-      <circle cx="40" cy="14" r="3" fill="#00f5d4" opacity="0.7"/>
-      <line x1="0" y1="26" x2="410" y2="26" stroke="#141e30" stroke-width="1"/>
+      <rect width="595" height="52" rx="4" fill="#090e18" stroke="#17233a" stroke-width="1"/>
+      <rect width="4" height="52" rx="1" fill="#00f0ff"/>
 
-      <!-- Console output (UPDATED TO LATEST PROJECT) -->
-      <text x="16" y="42" class="mono" font-size="9.5" fill="#64748b">&gt; latest_completed:</text>
-      <text x="168" y="42" class="mono" font-size="9.5" font-weight="600" fill="#00f5d4">olist-delivery-analysis</text>
-      
-      <text x="16" y="56" class="mono" font-size="9.5" fill="#64748b">&gt; pipeline_stack:</text>
-      <text x="140" y="56" class="mono" font-size="9.5" font-weight="600" fill="#e2e8f0">DuckDB + Tableau (96.4K orders)</text>
-      <!-- Blinking Cursor -->
-      <rect x="375" y="46" width="6" height="11" fill="#00f0ff">
-        <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/>
-      </rect>
+      <text x="16" y="22" class="mono" font-size="9" fill="#64748b">LATEST DISPATCH:</text>
+      <text x="128" y="22" class="mono" font-size="10" font-weight="700" fill="#00f5d4">olist-delivery-analysis</text>
+      <text x="320" y="22" class="mono" font-size="8.5" fill="#ffb703">[DUCKDB + TABLEAU BI]</text>
+
+      <text x="16" y="40" class="mono" font-size="8.5" fill="#94a3b8">Analyzed 96,470 orders &#183; Delay bottlenecks vs customer reviews &#183; Interactive Tableau Dashboard</text>
     </g>
 
-    <!-- Specialty Tags -->
-    <g transform="translate(0, 175)">
-      <rect x="0" y="0" width="94" height="24" rx="4" fill="#00f0ff" fill-opacity="0.08" stroke="#00f0ff" stroke-width="0.75" stroke-opacity="0.4"/>
-      <text x="47" y="16" text-anchor="middle" class="mono" font-size="9" font-weight="600" fill="#00f0ff">DuckDB</text>
+    <!-- Minimalist Tech Stack Pills -->
+    <g transform="translate(0, 160)">
+      <!-- Pill 1: DuckDB -->
+      <rect x="0" y="0" width="80" height="22" rx="3" fill="#00f0ff" fill-opacity="0.08" stroke="#00f0ff" stroke-width="0.8" stroke-opacity="0.5"/>
+      <text x="40" y="15" text-anchor="middle" class="mono" font-size="8.5" font-weight="700" fill="#00f0ff">DuckDB</text>
 
-      <rect x="104" y="0" width="94" height="24" rx="4" fill="#ffb703" fill-opacity="0.08" stroke="#ffb703" stroke-width="0.75" stroke-opacity="0.4"/>
-      <text x="151" y="16" text-anchor="middle" class="mono" font-size="9" font-weight="600" fill="#ffb703">Tableau</text>
+      <!-- Pill 2: Tableau -->
+      <rect x="88" y="0" width="80" height="22" rx="3" fill="#ffb703" fill-opacity="0.08" stroke="#ffb703" stroke-width="0.8" stroke-opacity="0.5"/>
+      <text x="128" y="15" text-anchor="middle" class="mono" font-size="8.5" font-weight="700" fill="#ffb703">Tableau</text>
 
-      <rect x="208" y="0" width="96" height="24" rx="4" fill="#9d4edd" fill-opacity="0.08" stroke="#9d4edd" stroke-width="0.75" stroke-opacity="0.4"/>
-      <text x="256" y="16" text-anchor="middle" class="mono" font-size="9" font-weight="600" fill="#a78bfa">LangGraph</text>
+      <!-- Pill 3: PyTorch -->
+      <rect x="176" y="0" width="80" height="22" rx="3" fill="#00f5d4" fill-opacity="0.08" stroke="#00f5d4" stroke-width="0.8" stroke-opacity="0.5"/>
+      <text x="216" y="15" text-anchor="middle" class="mono" font-size="8.5" font-weight="700" fill="#00f5d4">PyTorch</text>
 
-      <rect x="314" y="0" width="96" height="24" rx="4" fill="#00f5d4" fill-opacity="0.08" stroke="#00f5d4" stroke-width="0.75" stroke-opacity="0.4"/>
-      <text x="362" y="16" text-anchor="middle" class="mono" font-size="9" font-weight="600" fill="#00f5d4">PyTorch</text>
-    </g>
-  </g>
+      <!-- Pill 4: LangGraph -->
+      <rect x="264" y="0" width="92" height="22" rx="3" fill="#a78bfa" fill-opacity="0.08" stroke="#a78bfa" stroke-width="0.8" stroke-opacity="0.5"/>
+      <text x="310" y="15" text-anchor="middle" class="mono" font-size="8.5" font-weight="700" fill="#a78bfa">LangGraph</text>
 
-  <!-- ==================== ZONE 3: RIGHT HOLOGRAPHIC HUD GAUGES (x=685..885) ==================== -->
-  <g transform="translate(685, 60)">
-    <rect width="200" height="235" rx="10" fill="#090d16" stroke="#1c2842" stroke-width="1.5"/>
-    <text x="16" y="24" class="mono" font-size="9.5" font-weight="700" fill="#94a3b8" letter-spacing="1">TELEMETRY MATRIX</text>
-    <line x1="16" y1="32" x2="184" y2="32" stroke="#162238" stroke-width="1"/>
+      <!-- Pill 5: SQL -->
+      <rect x="364" y="0" width="60" height="22" rx="3" fill="#38bdf8" fill-opacity="0.08" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.5"/>
+      <text x="394" y="15" text-anchor="middle" class="mono" font-size="8.5" font-weight="700" fill="#38bdf8">SQL</text>
 
-    <!-- Stat 1: REPOSITORIES -->
-    <g transform="translate(16, 44)">
-      <text x="0" y="10" class="mono" font-size="8.5" fill="#64748b">REPOSITORIES</text>
-      <text x="168" y="10" text-anchor="end" class="mono" font-size="10" font-weight="700" fill="#00f0ff">48+</text>
-      <rect x="0" y="16" width="168" height="6" rx="3" fill="#141c2c"/>
-      <rect x="0" y="16" width="0" height="6" rx="3" fill="#00f0ff">
-        <animate attributeName="width" from="0" to="155" dur="1.8s" fill="freeze"/>
-      </rect>
+      <!-- Pill 6: Amazon ML '25 -->
+      <rect x="432" y="0" width="130" height="22" rx="3" fill="#ff0055" fill-opacity="0.08" stroke="#ff0055" stroke-width="0.8" stroke-opacity="0.5"/>
+      <text x="497" y="15" text-anchor="middle" class="mono" font-size="8.5" font-weight="700" fill="#ff6b8b">AMAZON ML '25</text>
     </g>
 
-    <!-- Stat 2: TOP STARS -->
-    <g transform="translate(16, 80)">
-      <text x="0" y="10" class="mono" font-size="8.5" fill="#64748b">TOP PROJECT STARS</text>
-      <text x="168" y="10" text-anchor="end" class="mono" font-size="10" font-weight="700" fill="#ffb703">21 ★</text>
-      <rect x="0" y="16" width="168" height="6" rx="3" fill="#141c2c"/>
-      <rect x="0" y="16" width="0" height="6" rx="3" fill="#ffb703">
-        <animate attributeName="width" from="0" to="90" dur="1.8s" begin="0.2s" fill="freeze"/>
-      </rect>
-    </g>
-
-    <!-- Stat 3: ACADEMIC ACCURACY / CGPA -->
-    <g transform="translate(16, 116)">
-      <text x="0" y="10" class="mono" font-size="8.5" fill="#64748b">ACADEMIC METRIC</text>
-      <text x="168" y="10" text-anchor="end" class="mono" font-size="10" font-weight="700" fill="#a78bfa">8.91 CGPA</text>
-      <rect x="0" y="16" width="168" height="6" rx="3" fill="#141c2c"/>
-      <rect x="0" y="16" width="0" height="6" rx="3" fill="#a78bfa">
-        <animate attributeName="width" from="0" to="149" dur="1.8s" begin="0.4s" fill="freeze"/>
-      </rect>
-    </g>
-
-    <!-- Stat 4: HONORS -->
-    <g transform="translate(16, 152)">
-      <text x="0" y="10" class="mono" font-size="8.5" fill="#64748b">ELITE SELECTION</text>
-      <text x="168" y="10" text-anchor="end" class="mono" font-size="9" font-weight="700" fill="#00f5d4">AMAZON ML</text>
-      <rect x="0" y="16" width="168" height="6" rx="3" fill="#141c2c"/>
-      <rect x="0" y="16" width="0" height="6" rx="3" fill="#00f5d4">
-        <animate attributeName="width" from="0" to="160" dur="1.8s" begin="0.6s" fill="freeze"/>
-      </rect>
-    </g>
-
-    <!-- Mini Hackathon Badge -->
-    <g transform="translate(16, 188)">
-      <rect width="168" height="32" rx="4" fill="#0f1624" stroke="#1d2a45" stroke-width="1"/>
-      <circle cx="12" cy="16" r="3" fill="#ff0055">
-        <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
-      </circle>
-      <text x="22" y="15" class="mono" font-size="8" font-weight="700" fill="#e2e8f0">AUTO-CODER HACKATHON</text>
-      <text x="22" y="25" class="mono" font-size="7.5" fill="#ffb703">🥈 2ND PLACE PODIUM</text>
-    </g>
-  </g>
-
-  <!-- ==================== BOTTOM SYSTEM BAR ==================== -->
-  <line x1="30" y1="315" x2="890" y2="315" stroke="#172238" stroke-width="1"/>
-  <g transform="translate(35, 335)">
-    <text x="0" y="4" class="mono" font-size="9" fill="#475569">// LEVEL 27: UNDERGRAD CLASS OF 2027 · SHIP REAL CODE WITH REPO EVIDENCE</text>
-    
-    <text x="840" y="4" text-anchor="end" class="mono" font-size="9.5" font-weight="600" fill="#00f0ff">
-      PORTFOLIO: devanshsingh.dev <tspan fill="#ffb703">►</tspan>
+    <!-- Bottom Status Note -->
+    <text x="0" y="204" class="mono" font-size="8.5" fill="#475569">
+      // PHILOSOPHY: SHIP REAL THINGS &#183; EVIDENCE OVER PROMISES &#183; OPEN TO COLLABORATION
     </text>
   </g>
 </svg>

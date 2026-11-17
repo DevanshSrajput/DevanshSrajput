@@ -1,0 +1,190 @@
+<svg viewBox="0 0 920 330" xmlns="http://www.w3.org/2000/svg" width="100%" height="330" style="background:#07090e;border-radius:10px;">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&amp;family=Space+Grotesk:wght@700;800&amp;display=swap');
+      .mono { font-family: 'JetBrains Mono', monospace, ui-monospace; }
+      .bold { font-family: 'Space Grotesk', -apple-system, sans-serif; font-weight: 800; }
+    </style>
+
+    <pattern id="stats-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#131c2e" stroke-width="0.5" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect width="920" height="330" fill="#07090e" rx="10"/>
+  <rect width="920" height="330" fill="url(#stats-grid)" rx="10"/>
+  <rect width="918" height="328" x="1" y="1" fill="none" stroke="#1c2842" stroke-width="1.5" rx="10"/>
+
+  <!-- Top Brutalist Header Bar -->
+  <g transform="translate(20, 18)">
+    <rect width="880" height="32" rx="2" fill="#0d1424" stroke="#223254" stroke-width="1.5"/>
+    <rect x="0" y="0" width="6" height="32" fill="#00f0ff"/>
+
+    <text x="16" y="20" class="mono" font-size="10" font-weight="800" fill="#00f0ff" letter-spacing="1">// TELEMETRY_MATRIX.SYS :: BRUTALIST GITHUB STATS</text>
+    
+    <!-- Badges Right -->
+    <rect x="540" y="6" width="140" height="20" rx="2" fill="#16233b" stroke="#263a5f" stroke-width="1"/>
+    <text x="610" y="19" text-anchor="middle" class="mono" font-size="8.5" font-weight="700" fill="#94a3b8">USER: @DevanshSrajput</text>
+
+    <rect x="690" y="6" width="90" height="20" rx="2" fill="#00f5d4" fill-opacity="0.1" stroke="#00f5d4" stroke-width="1"/>
+    <circle cx="702" cy="16" r="3" fill="#00f5d4"/>
+    <text x="740" y="19" text-anchor="middle" class="mono" font-size="8.5" font-weight="800" fill="#00f5d4">ACTIVE</text>
+
+    <rect x="790" y="6" width="80" height="20" rx="2" fill="#ffb703" fill-opacity="0.1" stroke="#ffb703" stroke-width="1"/>
+    <text x="830" y="19" text-anchor="middle" class="mono" font-size="8.5" font-weight="800" fill="#ffb703">LEVEL 27</text>
+  </g>
+
+  <!-- ==================== ROW 1 (Cards 1, 2, 3) ==================== -->
+  
+  <!-- CARD 1: ANNUAL CONTRIBUTIONS -->
+  <g transform="translate(20, 62)">
+    <!-- Hard Brutalist Shadow -->
+    <rect x="4" y="4" width="280" height="118" rx="2" fill="#000000"/>
+    <!-- Card Body -->
+    <rect width="280" height="118" rx="2" fill="#0a0f1d" stroke="#00f0ff" stroke-width="2"/>
+    <rect width="280" height="22" fill="#00f0ff" fill-opacity="0.1"/>
+    <line x1="0" y1="22" x2="280" y2="22" stroke="#00f0ff" stroke-width="1"/>
+
+    <text x="10" y="15" class="mono" font-size="8.5" font-weight="800" fill="#00f0ff">[01] TRAILING YEAR COMMITS</text>
+    <text x="270" y="15" text-anchor="end" class="mono" font-size="8" fill="#64748b">LIVE_DATA</text>
+
+    <!-- Giant Number -->
+    <text x="14" y="64" class="bold" font-size="36" fill="#f8fafc" letter-spacing="-1">1,096</text>
+    <text x="135" y="58" class="mono" font-size="12" font-weight="700" fill="#00f0ff">COMMITS</text>
+
+    <text x="14" y="82" class="mono" font-size="8.5" fill="#94a3b8">2,500+ ALL-TIME &#183; 53-WEEK WINDOW</text>
+
+    <!-- Spark Density Line -->
+    <g transform="translate(14, 96)">
+      <rect x="0" y="0" width="32" height="8" fill="#0e263d" stroke="#00f0ff" stroke-width="0.5"/>
+      <rect x="36" y="0" width="32" height="8" fill="#00f0ff" fill-opacity="0.3" stroke="#00f0ff" stroke-width="0.5"/>
+      <rect x="72" y="0" width="32" height="8" fill="#00f0ff" fill-opacity="0.6" stroke="#00f0ff" stroke-width="0.5"/>
+      <rect x="108" y="0" width="32" height="8" fill="#00f0ff" stroke="#00f0ff" stroke-width="0.5"/>
+      <rect x="144" y="0" width="32" height="8" fill="#00f0ff" stroke="#00f0ff" stroke-width="0.5"/>
+      <rect x="180" y="0" width="32" height="8" fill="#00f0ff" fill-opacity="0.7" stroke="#00f0ff" stroke-width="0.5"/>
+      <rect x="216" y="0" width="36" height="8" fill="#00f5d4" stroke="#00f5d4" stroke-width="0.5"/>
+    </g>
+  </g>
+
+  <!-- CARD 2: PUBLIC REPOSITORIES -->
+  <g transform="translate(320, 62)">
+    <rect x="4" y="4" width="280" height="118" rx="2" fill="#000000"/>
+    <rect width="280" height="118" rx="2" fill="#0a0f1d" stroke="#ffb703" stroke-width="2"/>
+    <rect width="280" height="22" fill="#ffb703" fill-opacity="0.1"/>
+    <line x1="0" y1="22" x2="280" y2="22" stroke="#ffb703" stroke-width="1"/>
+
+    <text x="10" y="15" class="mono" font-size="8.5" font-weight="800" fill="#ffb703">[02] PUBLIC ARCHITECTURES</text>
+    <text x="270" y="15" text-anchor="end" class="mono" font-size="8" fill="#64748b">VERIFIED</text>
+
+    <text x="14" y="64" class="bold" font-size="36" fill="#f8fafc" letter-spacing="-1">48+</text>
+    <text x="96" y="58" class="mono" font-size="12" font-weight="700" fill="#ffb703">REPOSITORIES</text>
+
+    <text x="14" y="82" class="mono" font-size="8.5" fill="#94a3b8">8 PINNED MULTI-DOMAIN ENGINES</text>
+
+    <!-- Domain Distribution Ticks -->
+    <g transform="translate(14, 96)">
+      <rect x="0" y="0" width="75" height="12" fill="#1e2d42"/>
+      <text x="37" y="9" text-anchor="middle" class="mono" font-size="7.5" font-weight="700" fill="#00f0ff">ML / AGENTS</text>
+      <rect x="82" y="0" width="75" height="12" fill="#1e2d42"/>
+      <text x="119" y="9" text-anchor="middle" class="mono" font-size="7.5" font-weight="700" fill="#ffb703">ANALYTICS</text>
+      <rect x="164" y="0" width="88" height="12" fill="#1e2d42"/>
+      <text x="208" y="9" text-anchor="middle" class="mono" font-size="7.5" font-weight="700" fill="#00f5d4">EDGE INFERENCE</text>
+    </g>
+  </g>
+
+  <!-- CARD 3: TOP STARS -->
+  <g transform="translate(620, 62)">
+    <rect x="4" y="4" width="280" height="118" rx="2" fill="#000000"/>
+    <rect width="280" height="118" rx="2" fill="#0a0f1d" stroke="#00f5d4" stroke-width="2"/>
+    <rect width="280" height="22" fill="#00f5d4" fill-opacity="0.1"/>
+    <line x1="0" y1="22" x2="280" y2="22" stroke="#00f5d4" stroke-width="1"/>
+
+    <text x="10" y="15" class="mono" font-size="8.5" font-weight="800" fill="#00f5d4">[03] TOP PROJECT STARS</text>
+    <text x="270" y="15" text-anchor="end" class="mono" font-size="8" fill="#64748b">IMPACT</text>
+
+    <text x="14" y="64" class="bold" font-size="36" fill="#f8fafc" letter-spacing="-1">21 &#9733;</text>
+    <text x="105" y="58" class="mono" font-size="11" font-weight="700" fill="#00f5d4">Dataa_Analyst_Agent</text>
+
+    <text x="14" y="82" class="mono" font-size="8.5" fill="#94a3b8">AUTONOMOUS DATA QUERYING PIPELINE</text>
+
+    <g transform="translate(14, 96)">
+      <rect x="0" y="0" width="252" height="12" fill="#11202e" stroke="#1c384f" stroke-width="1"/>
+      <rect x="0" y="0" width="210" height="12" fill="#00f5d4" fill-opacity="0.2"/>
+      <text x="126" y="9" text-anchor="middle" class="mono" font-size="7.5" font-weight="700" fill="#00f5d4">COMMUNITY RECOGNIZED REPO</text>
+    </g>
+  </g>
+
+  <!-- ==================== ROW 2 (Cards 4, 5, 6) ==================== -->
+
+  <!-- CARD 4: ACADEMIC MERIT -->
+  <g transform="translate(20, 192)">
+    <rect x="4" y="4" width="280" height="118" rx="2" fill="#000000"/>
+    <rect width="280" height="118" rx="2" fill="#0a0f1d" stroke="#a78bfa" stroke-width="2"/>
+    <rect width="280" height="22" fill="#a78bfa" fill-opacity="0.1"/>
+    <line x1="0" y1="22" x2="280" y2="22" stroke="#a78bfa" stroke-width="1"/>
+
+    <text x="10" y="15" class="mono" font-size="8.5" font-weight="800" fill="#a78bfa">[04] ACADEMIC METRIC</text>
+    <text x="270" y="15" text-anchor="end" class="mono" font-size="8" fill="#64748b">SRM-IST</text>
+
+    <text x="14" y="64" class="bold" font-size="36" fill="#f8fafc" letter-spacing="-1">8.91</text>
+    <text x="110" y="58" class="mono" font-size="12" font-weight="700" fill="#a78bfa">CGPA / 10</text>
+
+    <text x="14" y="82" class="mono" font-size="8.5" fill="#94a3b8">B.TECH CSE &#183; CLASS OF 2027</text>
+
+    <!-- Progress Meter -->
+    <g transform="translate(14, 96)">
+      <rect width="252" height="8" fill="#161b2c" rx="1"/>
+      <rect width="224" height="8" fill="#a78bfa" rx="1"/>
+    </g>
+  </g>
+
+  <!-- CARD 5: VERIFIED MILESTONES -->
+  <g transform="translate(320, 192)">
+    <rect x="4" y="4" width="280" height="118" rx="2" fill="#000000"/>
+    <rect width="280" height="118" rx="2" fill="#0a0f1d" stroke="#ff3366" stroke-width="2"/>
+    <rect width="280" height="22" fill="#ff3366" fill-opacity="0.1"/>
+    <line x1="0" y1="22" x2="280" y2="22" stroke="#ff3366" stroke-width="1"/>
+
+    <text x="10" y="15" class="mono" font-size="8.5" font-weight="800" fill="#ff3366">[05] VERIFIED MILESTONES</text>
+    <text x="270" y="15" text-anchor="end" class="mono" font-size="8" fill="#64748b">HONORS</text>
+
+    <g transform="translate(14, 34)">
+      <!-- Item 1 -->
+      <circle cx="4" cy="6" r="2.5" fill="#ff3366"/>
+      <text x="14" y="9" class="mono" font-size="8.5" font-weight="700" fill="#f8fafc">AMAZON ML SUMMER SCHOOL '25</text>
+      <text x="14" y="20" class="mono" font-size="7.5" fill="#ffb703">TOP TIER NATIONAL SELECTION</text>
+
+      <!-- Item 2 -->
+      <circle cx="4" cy="32" r="2.5" fill="#ffb703"/>
+      <text x="14" y="35" class="mono" font-size="8.5" font-weight="700" fill="#f8fafc">AUTO-CODER HACKATHON</text>
+      <text x="14" y="46" class="mono" font-size="7.5" fill="#00f5d4">🥈 2ND PLACE PODIUM RUNNER-UP</text>
+
+      <!-- Item 3 -->
+      <circle cx="4" cy="58" r="2.5" fill="#00f0ff"/>
+      <text x="14" y="61" class="mono" font-size="8.5" font-weight="700" fill="#f8fafc">RESEARCH @ IIT(ISM) DHANBAD</text>
+      <text x="14" y="72" class="mono" font-size="7.5" fill="#94a3b8">TENURE COMPLETED &#183; EDGE AI</text>
+    </g>
+  </g>
+
+  <!-- CARD 6: LATEST PRODUCTION PIPELINE -->
+  <g transform="translate(620, 192)">
+    <rect x="4" y="4" width="280" height="118" rx="2" fill="#000000"/>
+    <rect width="280" height="118" rx="2" fill="#0a0f1d" stroke="#38bdf8" stroke-width="2"/>
+    <rect width="280" height="22" fill="#38bdf8" fill-opacity="0.1"/>
+    <line x1="0" y1="22" x2="280" y2="22" stroke="#38bdf8" stroke-width="1"/>
+
+    <text x="10" y="15" class="mono" font-size="8.5" font-weight="800" fill="#38bdf8">[06] PRODUCTION PIPELINE</text>
+    <text x="270" y="15" text-anchor="end" class="mono" font-size="8" fill="#64748b">SHIPPED</text>
+
+    <text x="14" y="64" class="bold" font-size="36" fill="#f8fafc" letter-spacing="-1">96.4K</text>
+    <text x="135" y="58" class="mono" font-size="12" font-weight="700" fill="#38bdf8">ORDERS</text>
+
+    <text x="14" y="82" class="mono" font-size="8.5" font-weight="700" fill="#00f5d4">olist-delivery-analysis</text>
+    <text x="14" y="94" class="mono" font-size="8" fill="#94a3b8">DuckDB SQL + Tableau Public BI</text>
+
+    <!-- Pill tag -->
+    <rect x="14" y="100" width="130" height="12" fill="#0284c7" fill-opacity="0.2" stroke="#38bdf8" stroke-width="0.5"/>
+    <text x="79" y="109" text-anchor="middle" class="mono" font-size="7" font-weight="700" fill="#38bdf8">OLAP ETL ARCHITECTURE</text>
+  </g>
+</svg>

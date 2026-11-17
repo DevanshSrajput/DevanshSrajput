@@ -19,47 +19,12 @@
 
 ---
 
-<!-- ========================================================================= -->
-<!--                      ⚔️ OPERATOR / ARCHITECT SPEC                         -->
-<!-- ========================================================================= -->
+<div align="center">
 
-```yaml
-operator_profile:
-  callsign: "Devansh Singh Rajput"
-  classification: "ML Systems Architect & Data Analytics Engineer"
-  institution: "SRM-IST Delhi-NCR (B.Tech CSE '27) · CGPA 8.91"
-  research_station: "Ex-Research Intern @ IIT(ISM) Dhanbad (Tenure Completed)"
-  level: 27  # Defined by B.Tech CSE Class of 2027 (Undergrad Milestone)
+> *"Ship real things. Never claim tools without GitHub commit evidence."*  
+> **ML Systems &amp; Data Analytics Engineer** &#183; SRM-IST Class of '27 (`CGPA 8.91`) &#183; Ex-Research Intern @ **IIT (ISM) Dhanbad** &#183; **Amazon ML '25**
 
-latest_completed_dispatch:
-  mission_id: "olist-delivery-analysis"
-  repository: "https://github.com/DevanshSrajput/olist-delivery-analysis"
-  dashboard: "https://public.tableau.com/app/profile/devansh.singh5277"
-  architecture: ["DuckDB OLAP SQL", "Tableau Public BI", "Python", "NLP Text Mining"]
-  scope: "Case study of 96,470 delivered orders — delay bottlenecks vs customer reviews"
-  status: "Completed & Deployed"
-
-completed_research_milestones:
-  - id: "IIT-ISM-2025"
-    focus: "Research Internship @ IIT(ISM) Dhanbad"
-    status: "Completed"
-  - id: "HiSLM-ORIN"
-    focus: "HiSLM: Distributed Edge Inference on NVIDIA Jetson AGX Orin + NX"
-    status: "Completed & Archived"
-
-achievements_unlocked:
-  - id: "AMZN-ML-25"
-    title: "Amazon ML Summer School '25"
-    status: "Selected / Top Tier"
-  - id: "AUTO-CODER-02"
-    title: "Auto-Coder National Hackathon"
-    status: "🥈 2nd Place Runner-Up"
-  - id: "GSSOC-CONTRIB"
-    title: "GirlScript Summer of Code"
-    status: "Active Open-Source Contributor"
-
-motto: "Ship real things. Never claim tools without GitHub commit evidence."
-```
+</div>
 
 ---
 
@@ -97,36 +62,18 @@ motto: "Ship real things. Never claim tools without GitHub commit evidence."
 
 <div align="center">
 
-## 📊 Combat Telemetry &amp; Battle Stats
+## 📊 Combat Telemetry &amp; Brutalist Stats Matrix
 
-<!-- RELIABLE HIGH-UPTIME STATS (NO PAT LIMIT ERRORS) -->
-<table align="center" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td valign="top" align="center" style="padding-right: 10px;">
-      <a href="https://github.com/DevanshSrajput">
-        <img height="185" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=DevanshSrajput&theme=2077" alt="Combat Record Stats" />
-      </a>
-    </td>
-    <td valign="top" align="center" style="padding-left: 10px;">
-      <a href="https://github.com/DevanshSrajput">
-        <img height="185" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=DevanshSrajput&theme=2077" alt="Weapon Proficiency Top Languages" />
-      </a>
-    </td>
-  </tr>
-</table>
-
-<br/>
-
-<!-- COMBO STREAK TRACKER -->
+<!-- CUSTOM BRUTALIST GITHUB STATS -->
 <a href="https://github.com/DevanshSrajput">
-  <img src="https://streak-stats.demolab.com?user=DevanshSrajput&background=090e18&border=172238&stroke=172238&ring=00F0FF&fire=FFB703&currStreakNum=00F5D4&sideNums=94A3B8&currStreakLabel=FFB703&sideLabels=64748B&dates=475569&type=svg" alt="GitHub Streak Meter" width="820"/>
+  <img src="assets/stats.svg" alt="Devansh's Brutalist GitHub Stats Matrix" width="100%"/>
 </a>
 
 <br/><br/>
 
-<!-- ACTIVITY POWER FLUX VECTOR -->
+<!-- COMBO STREAK TRACKER -->
 <a href="https://github.com/DevanshSrajput">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=DevanshSrajput&bg_color=090e18&color=94a3b8&line=00f0ff&point=ffb703&area_color=00f0ff&area=true&hide_border=true&custom_title=%E2%9A%A1%20Activity%20Power%20Flux%20Vector" alt="Activity Power Graph" width="820"/>
+  <img src="https://streak-stats.demolab.com?user=DevanshSrajput&background=090e18&border=172238&stroke=172238&ring=00F0FF&fire=FFB703&currStreakNum=00F5D4&sideNums=94A3B8&currStreakLabel=FFB703&sideLabels=64748B&dates=475569&type=svg" alt="GitHub Streak Meter" width="820"/>
 </a>
 
 </div>
@@ -171,10 +118,12 @@ motto: "Ship real things. Never claim tools without GitHub commit evidence."
 
 [![Profile Views](https://komarev.com/ghpvc/?username=DevanshSrajput&color=ffb703&style=for-the-badge&label=SYSTEM+VISITS&labelColor=05070b)](https://github.com/DevanshSrajput)
 
-<br/>
+<br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ffb703,50:9d4edd,100:00f0ff&height=80&section=footer" alt="Cyberpunk Neon Waving Footer" width="100%"/>
+---
 
-<sub>⚡ Systems Architected by Devansh Singh Rajput · Level 27 (Class of 2027) · Built for the Next Frontier ▲</sub>
+<p align="center">
+  <code>SYSTEM: OPERATIONAL</code> &nbsp;&#183;&nbsp; <b>Devansh Singh Rajput</b> &nbsp;&#183;&nbsp; Level 27 (Class of '27) &nbsp;&#183;&nbsp; Built for the Next Frontier
+</p>
 
 </div>
