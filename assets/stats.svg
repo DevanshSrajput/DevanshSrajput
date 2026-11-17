@@ -1,131 +1,93 @@
-<svg viewBox="0 0 920 250" xmlns="http://www.w3.org/2000/svg" width="100%" height="250">
+<svg viewBox="0 0 920 185" xmlns="http://www.w3.org/2000/svg" width="100%" height="185">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap');
-      .glass-text-main { font-family: 'Space Grotesk', -apple-system, sans-serif; font-weight: 700; fill: #f8fafc; }
-      .glass-text-muted { font-family: 'JetBrains Mono', monospace; font-size: 8.5px; fill: #94a3b8; letter-spacing: 0.5px; }
-      .glass-text-sub { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; }
-      .glass-card { fill: #0b1120; fill-opacity: 0.55; stroke: url(#glass-border); stroke-width: 1; rx: 8px; }
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700;800&amp;display=swap');
+      .glass-card { fill: #0b1120; fill-opacity: 0.55; stroke: url(#rim-border); stroke-width: 1; rx: 8px; }
+      .num-val { font-family: 'Space Grotesk', -apple-system, sans-serif; font-weight: 700; font-size: 32px; fill: #f8fafc; }
+      .lbl-main { font-family: 'JetBrains Mono', monospace; font-size: 8.5px; fill: #94a3b8; letter-spacing: 0.5px; }
+      .lbl-sub { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 600; }
     </style>
 
-    <!-- Ambient Subtle Glows for Glassmorphism Depth -->
-    <radialGradient id="amb-cyan" cx="20%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.12"/>
+    <radialGradient id="amb-cyan-s" cx="25%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.10"/>
       <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="amb-purple" cx="80%" cy="70%" r="50%">
-      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.10"/>
+    <radialGradient id="amb-purple-s" cx="75%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.08"/>
       <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Frosted Glass Specular Rim Border -->
-    <linearGradient id="glass-border" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="rim-border" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0.22"/>
-      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.05"/>
       <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.18"/>
     </linearGradient>
 
-    <linearGradient id="glass-header-border" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.2"/>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.05"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.15"/>
-    </linearGradient>
-
-    <!-- Minimal Dot Grid -->
-    <pattern id="glass-grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="12" cy="12" r="0.6" fill="#334155" opacity="0.4"/>
+    <pattern id="s-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="0.5" fill="#1e293b" opacity="0.4"/>
     </pattern>
   </defs>
 
-  <!-- Deep Canvas Background -->
-  <rect width="920" height="250" fill="#07090e" rx="10"/>
-  <rect width="920" height="250" fill="url(#amb-cyan)" rx="10"/>
-  <rect width="920" height="250" fill="url(#amb-purple)" rx="10"/>
-  <rect width="920" height="250" fill="url(#glass-grid)" rx="10"/>
-  <rect width="918" height="248" x="1" y="1" fill="none" stroke="#1e293b" stroke-width="1" rx="10"/>
+  <rect width="920" height="185" fill="#07090e" rx="10"/>
+  <rect width="920" height="185" fill="url(#amb-cyan-s)" rx="10"/>
+  <rect width="920" height="185" fill="url(#amb-purple-s)" rx="10"/>
+  <rect width="920" height="185" fill="url(#s-grid)" rx="10"/>
+  <rect width="918" height="183" x="1" y="1" fill="none" stroke="#172238" stroke-width="1" rx="10"/>
 
   <!-- Top Glass Header Bar -->
-  <g transform="translate(24, 20)">
-    <rect width="872" height="34" rx="6" fill="#0f172a" fill-opacity="0.45" stroke="url(#glass-header-border)" stroke-width="1"/>
-    
-    <circle cx="16" cy="17" r="3.5" fill="#00f5d4"/>
-    <text x="28" y="21" class="glass-text-muted" font-size="9" font-weight="700" fill="#00f5d4">LIVE GITHUB TELEMETRY</text>
-    
-    <text x="185" y="21" class="glass-text-muted" fill="#475569">|</text>
-    <text x="200" y="21" class="glass-text-muted">SOURCE: <tspan fill="#f8fafc" font-weight="600">GITHUB GRAPHQL API</tspan></text>
-    
-    <text x="380" y="21" class="glass-text-muted" fill="#475569">|</text>
-    <text x="395" y="21" class="glass-text-muted">USER: <tspan fill="#f8fafc" font-weight="600">@DevanshSrajput</tspan></text>
-
-    <!-- Right-aligned Verified Badge -->
-    <rect x="735" y="7" width="125" height="20" rx="4" fill="#00f0ff" fill-opacity="0.08" stroke="#00f0ff" stroke-width="0.8" stroke-opacity="0.4"/>
-    <text x="797" y="20" text-anchor="middle" class="glass-text-muted" font-size="8" font-weight="700" fill="#00f0ff">&#10003; REAL-TIME SYNCED</text>
+  <g transform="translate(24, 16)">
+    <rect width="872" height="28" rx="5" fill="#0f172a" fill-opacity="0.45" stroke="url(#rim-border)" stroke-width="1"/>
+    <circle cx="14" cy="14" r="3" fill="#00f5d4"/>
+    <text x="24" y="17" class="lbl-main" font-size="8.5" font-weight="700" fill="#00f5d4">GITHUB TELEMETRY</text>
+    <text x="145" y="17" class="lbl-main" fill="#475569">|</text>
+    <text x="158" y="17" class="lbl-main">USER: <tspan fill="#f8fafc" font-weight="600">@DevanshSrajput</tspan></text>
+    <text x="290" y="17" class="lbl-main" fill="#475569">|</text>
+    <text x="302" y="17" class="lbl-main">ROLE: <tspan fill="#f8fafc" font-weight="600">ML &amp; DATA SYSTEMS</tspan></text>
+    <text x="856" y="17" text-anchor="end" class="lbl-main" font-size="8" fill="#38bdf8">&#10003; LIVE GRAPHQL SYNC</text>
   </g>
 
-  <!-- ==================== 4 GLASS STATS TILES ==================== -->
-
-  <!-- TILE 1: ANNUAL CONTRIBUTIONS -->
-  <g transform="translate(24, 68)">
-    <rect width="206" height="158" class="glass-card"/>
-    <!-- Top Glass Highlight Line -->
-    <line x1="12" y1="1" x2="194" y2="1" stroke="#00f0ff" stroke-width="1.2" stroke-opacity="0.6"/>
-
-    <text x="16" y="24" class="glass-text-muted">ANNUAL COMMITS</text>
-    <text x="190" y="24" text-anchor="end" class="glass-text-muted" fill="#00f0ff">53 WEEKS</text>
-
-    <text x="16" y="68" class="glass-text-main" font-size="34">1,088</text>
-    <text x="16" y="90" class="glass-text-sub" fill="#00f0ff">Total Contributions</text>
-
-    <line x1="16" y1="104" x2="190" y2="104" stroke="#1e293b" stroke-width="0.8"/>
-    <text x="16" y="122" class="glass-text-muted">ALL-TIME: <tspan fill="#f8fafc" font-weight="600">2,500+</tspan></text>
-    <text x="16" y="140" class="glass-text-muted">FREQUENCY: <tspan fill="#00f5d4" font-weight="600">DAILY SHIPPER</tspan></text>
+  <!-- 4 Glass Metric Cards -->
+  <!-- CARD 1: REPOSITORIES -->
+  <g transform="translate(24, 52)">
+    <rect width="206" height="116" class="glass-card"/>
+    <line x1="12" y1="1" x2="194" y2="1" stroke="#00f0ff" stroke-width="1.2" stroke-opacity="0.7"/>
+    <text x="16" y="22" class="lbl-main">REPOSITORIES</text>
+    <text x="190" y="22" text-anchor="end" class="lbl-main" fill="#00f0ff">PUBLIC</text>
+    <text x="16" y="62" class="num-val">60</text>
+    <text x="16" y="82" class="lbl-sub" fill="#00f0ff">Active Codebases</text>
+    <text x="16" y="100" class="lbl-main">8 PINNED ARCHITECTURES</text>
   </g>
 
-  <!-- TILE 2: COMMIT STREAK -->
-  <g transform="translate(246, 68)">
-    <rect width="206" height="158" class="glass-card"/>
-    <line x1="12" y1="1" x2="194" y2="1" stroke="#ffb703" stroke-width="1.2" stroke-opacity="0.6"/>
-
-    <text x="16" y="24" class="glass-text-muted">COMMIT STREAK</text>
-    <text x="190" y="24" text-anchor="end" class="glass-text-muted" fill="#ffb703">CONSISTENCY</text>
-
-    <text x="16" y="68" class="glass-text-main" font-size="34">83 <tspan font-size="18" fill="#ffb703">DAYS</tspan></text>
-    <text x="16" y="90" class="glass-text-sub" fill="#ffb703">Longest Streak</text>
-
-    <line x1="16" y1="104" x2="190" y2="104" stroke="#1e293b" stroke-width="0.8"/>
-    <text x="16" y="122" class="glass-text-muted">CURRENT: <tspan fill="#f8fafc" font-weight="600">ACTIVE PACE</tspan></text>
-    <text x="16" y="140" class="glass-text-muted">DISCIPLINE: <tspan fill="#ffb703" font-weight="600">CODE EVERY WEEK</tspan></text>
+  <!-- CARD 2: STARS & FORKS -->
+  <g transform="translate(246, 52)">
+    <rect width="206" height="116" class="glass-card"/>
+    <line x1="12" y1="1" x2="194" y2="1" stroke="#00f5d4" stroke-width="1.2" stroke-opacity="0.7"/>
+    <text x="16" y="22" class="lbl-main">EARNED STARS</text>
+    <text x="190" y="22" text-anchor="end" class="lbl-main" fill="#00f5d4">IMPACT</text>
+    <text x="16" y="62" class="num-val">47 <tspan font-size="20" fill="#00f5d4">&#9733;</tspan></text>
+    <text x="16" y="82" class="lbl-sub" fill="#00f5d4">13 Repository Forks</text>
+    <text x="16" y="100" class="lbl-main">TOP: Dataa_Analyst_Agent</text>
   </g>
 
-  <!-- TILE 3: REPOSITORIES & ARCHITECTURES -->
-  <g transform="translate(468, 68)">
-    <rect width="206" height="158" class="glass-card"/>
-    <line x1="12" y1="1" x2="194" y2="1" stroke="#a78bfa" stroke-width="1.2" stroke-opacity="0.6"/>
-
-    <text x="16" y="24" class="glass-text-muted">REPOSITORIES</text>
-    <text x="190" y="24" text-anchor="end" class="glass-text-muted" fill="#a78bfa">CODEBASES</text>
-
-    <text x="16" y="68" class="glass-text-main" font-size="34">60</text>
-    <text x="16" y="90" class="glass-text-sub" fill="#a78bfa">Public Repositories</text>
-
-    <line x1="16" y1="104" x2="190" y2="104" stroke="#1e293b" stroke-width="0.8"/>
-    <text x="16" y="122" class="glass-text-muted">CORE STACK: <tspan fill="#f8fafc" font-weight="600">PYTHON &#183; SQL</tspan></text>
-    <text x="16" y="140" class="glass-text-muted">DOMAIN: <tspan fill="#a78bfa" font-weight="600">ML &#183; BI &#183; AGENTS</tspan></text>
+  <!-- CARD 3: PRIMARY STACK -->
+  <g transform="translate(468, 52)">
+    <rect width="206" height="116" class="glass-card"/>
+    <line x1="12" y1="1" x2="194" y2="1" stroke="#ffb703" stroke-width="1.2" stroke-opacity="0.7"/>
+    <text x="16" y="22" class="lbl-main">PRIMARY LANGUAGE</text>
+    <text x="190" y="22" text-anchor="end" class="lbl-main" fill="#ffb703">53% SHARE</text>
+    <text x="16" y="62" class="num-val">Python</text>
+    <text x="16" y="82" class="lbl-sub" fill="#ffb703">32 Python Repositories</text>
+    <text x="16" y="100" class="lbl-main">FOLLOWED BY JAVA &amp; SQL</text>
   </g>
 
-  <!-- TILE 4: TOTAL STARS & IMPACT -->
-  <g transform="translate(690, 68)">
-    <rect width="206" height="158" class="glass-card"/>
-    <line x1="12" y1="1" x2="194" y2="1" stroke="#00f5d4" stroke-width="1.2" stroke-opacity="0.6"/>
-
-    <text x="16" y="24" class="glass-text-muted">PROJECT STARS</text>
-    <text x="190" y="24" text-anchor="end" class="glass-text-muted" fill="#00f5d4">COMMUNITY</text>
-
-    <text x="16" y="68" class="glass-text-main" font-size="34">47 <tspan font-size="20" fill="#00f5d4">&#9733;</tspan></text>
-    <text x="16" y="90" class="glass-text-sub" fill="#00f5d4">Earned Stars (13 Forks)</text>
-
-    <line x1="16" y1="104" x2="190" y2="104" stroke="#1e293b" stroke-width="0.8"/>
-    <text x="16" y="122" class="glass-text-muted">TOP REPO: <tspan fill="#f8fafc" font-weight="600">Dataa_Analyst_Agent</tspan></text>
-    <text x="16" y="140" class="glass-text-muted">REPUTATION: <tspan fill="#00f5d4" font-weight="600">TOP 2% STUDENT ML</tspan></text>
+  <!-- CARD 4: ACADEMIC LEVEL -->
+  <g transform="translate(690, 52)">
+    <rect width="206" height="116" class="glass-card"/>
+    <line x1="12" y1="1" x2="194" y2="1" stroke="#a78bfa" stroke-width="1.2" stroke-opacity="0.7"/>
+    <text x="16" y="22" class="lbl-main">ACADEMIC METRIC</text>
+    <text x="190" y="22" text-anchor="end" class="lbl-main" fill="#a78bfa">LEVEL 27</text>
+    <text x="16" y="62" class="num-val">8.91</text>
+    <text x="16" y="82" class="lbl-sub" fill="#a78bfa">CGPA / 10 &#183; SRM-IST</text>
+    <text x="16" y="100" class="lbl-main">B.TECH CLASS OF 2027</text>
   </g>
 </svg>

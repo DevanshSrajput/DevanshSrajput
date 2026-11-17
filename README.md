@@ -45,14 +45,19 @@
 <div align="center">
 
 <!-- ========================================================================= -->
-<!--                      📊 TELEMETRY & ACTIVITY (GLASSMORPHISM)              -->
+<!--                      📊 TELEMETRY & STREAKS (GLASSMORPHISM)               -->
 <!-- ========================================================================= -->
 
-## 📊 Telemetry &amp; Activity
+## 📊 Telemetry &amp; Streaks
 
-<!-- CUSTOM MINIMAL GLASSMORPHISM STATS (REAL-TIME DATA) -->
 <a href="https://github.com/DevanshSrajput">
   <img src="assets/stats.svg" alt="Devansh's Live Glassmorphic GitHub Telemetry" width="100%"/>
+</a>
+
+<br/><br/>
+
+<a href="https://github.com/DevanshSrajput">
+  <img src="assets/streak.svg" alt="Devansh's Live Glassmorphic Contribution & Streak Telemetry" width="100%"/>
 </a>
 
 </div>
