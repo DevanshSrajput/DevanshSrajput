@@ -2,6 +2,7 @@ import subprocess
 import json
 import os
 import sys
+import re
 
 def fetch_github_data():
     try:
@@ -348,6 +349,141 @@ def generate_streak_svg(stats):
   </g>
 </svg>'''
 
+def transform_3d_glass():
+    import xml.etree.ElementTree as ET
+
+    dark_files = [
+        'profile-3d-contrib/profile-night-view.svg',
+        'profile-3d-contrib/profile-night-rainbow.svg',
+        'profile-3d-contrib/profile-gitblock.svg'
+    ]
+    light_files = [
+        'profile-3d-contrib/profile-green-animate.svg'
+    ]
+
+    glass_dark_css = """
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&amp;family=Space+Grotesk:wght@600;700;800&amp;display=swap');
+* { font-family: 'Space Grotesk', -apple-system, sans-serif; }
+.fill-fg { fill: #f8fafc; }
+.stroke-fg { stroke: #f8fafc; }
+.fill-bg { fill: #07090e; }
+.stroke-bg { stroke: #07090e; }
+.fill-strong { fill: #00f0ff; font-weight: 800; }
+.fill-weak { fill: #64748b; font-family: 'JetBrains Mono', monospace; }
+.stroke-weak { stroke: #1e293b; }
+.radar {
+  stroke-width: 1.5px;
+  stroke: #00f0ff;
+  fill: rgba(0, 240, 255, 0.18);
+}
+/* Liquid Glass 3D Isometric Buildings */
+.cont-top-0 { fill: #0d1527; stroke: rgba(56, 189, 248, 0.22); stroke-width: 0.6px; }
+.cont-left-0 { fill: #090e1b; }
+.cont-right-0 { fill: #060a14; }
+
+.cont-top-1 { fill: #0284c7; fill-opacity: 0.82; stroke: rgba(255, 255, 255, 0.25); stroke-width: 0.5px; }
+.cont-left-1 { fill: #0369a1; fill-opacity: 0.88; }
+.cont-right-1 { fill: #075985; fill-opacity: 0.92; }
+
+.cont-top-2 { fill: #0ea5e9; fill-opacity: 0.90; stroke: rgba(255, 255, 255, 0.35); stroke-width: 0.5px; }
+.cont-left-2 { fill: #0284c7; fill-opacity: 0.92; }
+.cont-right-2 { fill: #0369a1; fill-opacity: 0.95; }
+
+.cont-top-3 { fill: #38bdf8; stroke: #ffffff; stroke-width: 0.6px; }
+.cont-left-3 { fill: #0ea5e9; }
+.cont-right-3 { fill: #0284c7; }
+
+.cont-top-4 { fill: #00f5d4; stroke: #ffffff; stroke-width: 0.8px; }
+.cont-left-4 { fill: #00f0ff; }
+.cont-right-4 { fill: #0ea5e9; }
+"""
+
+    ambient_defs_dark = """<defs>
+  <radialGradient id="amb-skyline-cyan" cx="25%" cy="35%" r="55%">
+    <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.10"/>
+    <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="amb-skyline-purple" cx="80%" cy="65%" r="55%">
+    <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.08"/>
+    <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="1280" height="850" fill="url(#amb-skyline-cyan)"/>
+<rect width="1280" height="850" fill="url(#amb-skyline-purple)"/>
+<rect width="1278" height="848" x="1" y="1" fill="none" stroke="#1e293b" stroke-width="1.5" rx="10"/>
+"""
+
+    for p in dark_files:
+        if os.path.exists(p):
+            with open(p, 'r', encoding='utf-8') as f:
+                svg = f.read()
+            svg = re.sub(r'<style>.*?</style>', f'<style>{glass_dark_css}</style>', svg, flags=re.DOTALL)
+            if 'amb-skyline-cyan' not in svg:
+                tag_end = svg.find('>')
+                svg = svg[:tag_end+1] + ambient_defs_dark + svg[tag_end+1:]
+            ET.fromstring(svg)
+            with open(p, 'w', encoding='utf-8') as f:
+                f.write(svg)
+            print(f"Applied liquid glass to {p}")
+
+    glass_light_css = """
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&amp;family=Space+Grotesk:wght@600;700;800&amp;display=swap');
+* { font-family: 'Space Grotesk', -apple-system, sans-serif; }
+.fill-fg { fill: #0f172a; }
+.stroke-fg { stroke: #0f172a; }
+.fill-bg { fill: #f8fafc; }
+.stroke-bg { stroke: #f8fafc; }
+.fill-strong { fill: #0f766e; font-weight: 800; }
+.fill-weak { fill: #64748b; font-family: 'JetBrains Mono', monospace; }
+.stroke-weak { stroke: #cbd5e1; }
+.radar {
+  stroke-width: 1.5px;
+  stroke: #10b981;
+  fill: rgba(16, 185, 129, 0.15);
+}
+.cont-top-0 { fill: #f1f5f9; stroke: rgba(203, 213, 225, 0.6); stroke-width: 0.6px; }
+.cont-left-0 { fill: #e2e8f0; }
+.cont-right-0 { fill: #cbd5e1; }
+
+.cont-top-1 { fill: #a7f3d0; fill-opacity: 0.85; stroke: rgba(255, 255, 255, 0.5); stroke-width: 0.5px; }
+.cont-left-1 { fill: #6ee7b7; }
+.cont-right-1 { fill: #34d399; }
+
+.cont-top-2 { fill: #6ee7b7; fill-opacity: 0.90; stroke: rgba(255, 255, 255, 0.6); stroke-width: 0.5px; }
+.cont-left-2 { fill: #34d399; }
+.cont-right-2 { fill: #10b981; }
+
+.cont-top-3 { fill: #34d399; stroke: #ffffff; stroke-width: 0.6px; }
+.cont-left-3 { fill: #10b981; }
+.cont-right-3 { fill: #059669; }
+
+.cont-top-4 { fill: #10b981; stroke: #ffffff; stroke-width: 0.8px; }
+.cont-left-4 { fill: #059669; }
+.cont-right-4 { fill: #047857; }
+"""
+    ambient_defs_light = """<defs>
+  <radialGradient id="amb-skyline-mint" cx="25%" cy="35%" r="55%">
+    <stop offset="0%" stop-color="#10b981" stop-opacity="0.06"/>
+    <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="1280" height="850" fill="url(#amb-skyline-mint)"/>
+<rect width="1278" height="848" x="1" y="1" fill="none" stroke="#cbd5e1" stroke-width="1.5" rx="10"/>
+"""
+
+    for p in light_files:
+        if os.path.exists(p):
+            with open(p, 'r', encoding='utf-8') as f:
+                svg = f.read()
+            svg = re.sub(r'<style>.*?</style>', f'<style>{glass_light_css}</style>', svg, flags=re.DOTALL)
+            if 'amb-skyline-mint' not in svg:
+                tag_end = svg.find('>')
+                svg = svg[:tag_end+1] + ambient_defs_light + svg[tag_end+1:]
+            ET.fromstring(svg)
+            with open(p, 'w', encoding='utf-8') as f:
+                f.write(svg)
+            print(f"Applied liquid glass to {p}")
+
 if __name__ == '__main__':
     stats = fetch_github_data()
     
@@ -362,3 +498,6 @@ if __name__ == '__main__':
     with open('assets/streak.svg', 'w', encoding='utf-8') as f:
         f.write(svg_streak)
     print("Generated assets/streak.svg with live GitHub data!")
+
+    # Apply Liquid Glassmorphism to 3D Skyline
+    transform_3d_glass()
