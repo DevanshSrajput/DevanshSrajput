@@ -64,8 +64,8 @@
     <text x="16" y="20" class="lbl-main">CURRENT STREAK</text>
     <circle cx="258" cy="16" r="3" fill="#00f5d4"/>
     <text x="250" y="20" text-anchor="end" class="lbl-main" fill="#00f5d4">ACTIVE</text>
-    <text x="16" y="56" class="num-val">1 <tspan font-size="18" fill="#00f5d4">DAYS</tspan></text>
-    <text x="16" y="74" class="lbl-sub" fill="#00f5d4">Nov 18 &#8211; Nov 18 &#183; 12 Commits</text>
+    <text x="16" y="56" class="num-val">2 <tspan font-size="18" fill="#00f5d4">DAYS</tspan></text>
+    <text x="16" y="74" class="lbl-sub" fill="#00f5d4">Nov 15 &#8211; Nov 16 &#183; 12 Commits</text>
   </g>
 
   <!-- PANEL 3: LONGEST STREAK -->
