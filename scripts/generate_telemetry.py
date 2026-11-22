@@ -31,16 +31,16 @@ def fetch_github_data():
         'total_repos': 60,
         'total_stars': 47,
         'total_forks': 13,
-        'total_contributions': 1088,
+        'total_contributions': 1312,
         'longest_streak': 83,
         'longest_start': 'Feb 01',
         'longest_end': 'Apr 24',
         'current_streak': 2,
-        'current_start': 'Nov 15',
-        'current_end': 'Nov 16',
-        'active_days': 187,
+        'current_start': 'Nov 21',
+        'current_end': 'Nov 22',
+        'active_days': 237,
         'weeks_density': [0, 1, 2, 3, 2, 4, 3, 4, 4, 3, 2, 4, 3, 2, 1, 0, 1, 2, 3, 4, 3, 2, 3, 4, 2, 1, 0, 1, 2, 3, 2, 1, 2, 3, 4, 3, 2, 1, 0, 1, 2, 3, 2, 1, 2, 3, 4, 2, 1, 2, 3, 2],
-        'top_languages': [('Python', 32), ('Java', 8), ('HTML', 8), ('JavaScript', 3), ('C', 2)]
+        'top_languages': [('Python', 33), ('Java', 8), ('HTML', 8), ('JavaScript', 3), ('C', 2)]
     }
 
 def parse_data(data):
