@@ -53,7 +53,7 @@
     <line x1="12" y1="1" x2="194" y2="1" stroke="#00f0ff" stroke-width="1.2" stroke-opacity="0.7"/>
     <text x="16" y="22" class="lbl-main">REPOSITORIES</text>
     <text x="190" y="22" text-anchor="end" class="lbl-main" fill="#00f0ff">PUBLIC</text>
-    <text x="16" y="62" class="num-val">60</text>
+    <text x="16" y="62" class="num-val">61</text>
     <text x="16" y="82" class="lbl-sub" fill="#00f0ff">Active Codebases</text>
     <text x="16" y="100" class="lbl-main">8 PINNED ARCHITECTURES</text>
   </g>
@@ -74,9 +74,9 @@
     <rect width="206" height="116" class="glass-card"/>
     <line x1="12" y1="1" x2="194" y2="1" stroke="#ffb703" stroke-width="1.2" stroke-opacity="0.7"/>
     <text x="16" y="22" class="lbl-main">PRIMARY LANGUAGE</text>
-    <text x="190" y="22" text-anchor="end" class="lbl-main" fill="#ffb703">55% SHARE</text>
+    <text x="190" y="22" text-anchor="end" class="lbl-main" fill="#ffb703">56% SHARE</text>
     <text x="16" y="62" class="num-val">Python</text>
-    <text x="16" y="82" class="lbl-sub" fill="#ffb703">33 Python Repositories</text>
+    <text x="16" y="82" class="lbl-sub" fill="#ffb703">34 Python Repositories</text>
     <text x="16" y="100" class="lbl-main">FOLLOWED BY JAVA &amp; SQL</text>
   </g>
 
