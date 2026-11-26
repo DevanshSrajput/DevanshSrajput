@@ -1,15 +1,15 @@
 <table width="100%">
 <tr>
-<td width="68%" align="left" valign="middle">
+<td width="60%" align="left" valign="middle">
 <h1>Devansh Singh Rajput</h1>
 <p><strong>ML Systems · Autonomous Agents · Applied Research</strong></p>
 <p>B.Tech CSE '27 (SRM-IST) · Ex-Research Intern @ <strong>IIT (ISM) Dhanbad</strong> · Amazon ML '25</p>
-<p>I like problems that hit messy reality — agents that buy their own data over HTTP, entity resolution across 12M records, debiasing code-mixed Hindi NLP, and quantized SLMs running on a Jetson.</p>
+<p>I like problems that hit messy reality - agents that buy their own data over HTTP, entity resolution across 12M records, debiasing code-mixed Hindi NLP, and quantized SLMs running on a Jetson.</p>
 <p><sub>Ship real things. Commits and benchmarks over buzzwords.</sub></p>
 <p><a href="https://devanshsingh.dev">devanshsingh.dev</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/devansh-singh9/">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/DevanshSrajput?tab=repositories">Repositories</a></p>
 </td>
-<td width="32%" align="center" valign="middle">
-<img src="https://avatars.githubusercontent.com/u/157361908?v=4" width="160" alt="Devansh Singh Rajput" />
+<td width="40%" align="center" valign="middle">
+<img src="./assets/Neon%20Purple%20AI%20Developer%20Avatar.png" width="288" alt="Devansh Singh Rajput" />
 </td>
 </tr>
 </table>
